@@ -14,6 +14,10 @@ public:
     AppDelegate();
     virtual ~AppDelegate();
 
+    //添加寻找资源的路径
+    void loadSearchPaths();
+    
+    
     virtual void initGLContextAttrs();
 
     /**

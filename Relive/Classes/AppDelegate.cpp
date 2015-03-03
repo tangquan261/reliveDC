@@ -1,5 +1,5 @@
 #include "AppDelegate.h"
-#include "HelloWorldScene.h"
+#include "LoginViewScene.h"
 
 USING_NS_CC;
 
@@ -9,6 +9,16 @@ AppDelegate::AppDelegate() {
 
 AppDelegate::~AppDelegate() 
 {
+}
+
+void AppDelegate::loadSearchPaths()
+{
+    std::vector<std::string> searchPaths;
+    
+    searchPaths.push_back("BackgroundComponentTest");
+    
+    
+    cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
 }
 
 //if you want a different context,just modify the value of glContextAttrs
@@ -22,14 +32,31 @@ void AppDelegate::initGLContextAttrs()
     GLView::setGLContextAttrs(glContextAttrs);
 }
 
-bool AppDelegate::applicationDidFinishLaunching() {
+bool AppDelegate::applicationDidFinishLaunching()
+{
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
-    if(!glview) {
+    
+    if(!glview)
+    {
         glview = GLViewImpl::create("My Game");
         director->setOpenGLView(glview);
     }
+
+    auto screenSize = glview->getFrameSize();
+    
+    auto designSize = Size(480, 320);
+    
+    if (screenSize.width/screenSize.height > 480.f/320.f)
+    {
+       glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_WIDTH);; //fix height for wide screen
+    }
+    else
+    {
+        glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);;
+    }
+    
 
     // turn on display FPS
     director->setDisplayStats(true);
@@ -37,8 +64,12 @@ bool AppDelegate::applicationDidFinishLaunching() {
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 
+    
+    loadSearchPaths();
+    
+    
     // create a scene. it's an autorelease object
-    auto scene = HelloWorld::createScene();
+    auto scene = LoginViewScene::createScene();
 
     // run
     director->runWithScene(scene);
@@ -47,7 +78,8 @@ bool AppDelegate::applicationDidFinishLaunching() {
 }
 
 // This function will be called when the app is inactive. When comes a phone call,it's be invoked too
-void AppDelegate::applicationDidEnterBackground() {
+void AppDelegate::applicationDidEnterBackground()
+{
     Director::getInstance()->stopAnimation();
 
     // if you use SimpleAudioEngine, it must be pause
@@ -55,7 +87,8 @@ void AppDelegate::applicationDidEnterBackground() {
 }
 
 // this function will be called when the app is active again
-void AppDelegate::applicationWillEnterForeground() {
+void AppDelegate::applicationWillEnterForeground()
+{
     Director::getInstance()->startAnimation();
 
     // if you use SimpleAudioEngine, it must resume here

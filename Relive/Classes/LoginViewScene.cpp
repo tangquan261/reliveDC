@@ -1,29 +1,49 @@
-#include "HelloWorldScene.h"
+///
+//	Copyright (c) 2014 Hoolai	 All rights reserved.
+//	FileName    :	LoginViewScene.cpp
+//	Author      :	tq
+//	Date        :   2015-03-03
+//	Description :	登陆场景
+//
+
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
 
-USING_NS_CC;
+#include "LoginViewScene.h"
 
 using namespace cocos2d;
 using namespace cocostudio;
 using namespace ui;
 
-Scene* HelloWorld::createScene()
+Scene* LoginViewScene::createScene()
 {
-    // 'scene' is an autorelease object
+    
     auto scene = Scene::create();
- 
-    // add layer as a child to scene
-    scene->addChild(HelloWorld::create());
-
-    // return the scene
+    
+    scene->addChild(LoginViewScene::create());
+    
     return scene;
 }
 
-// on "init" you need to initialize your instance
-bool HelloWorld::init()
+
+LoginViewScene::LoginViewScene()
 {
-    //////////////////////////////
+    clear();
+}
+
+LoginViewScene::~LoginViewScene()
+{
+
+}
+
+void LoginViewScene::clear()
+{
+
+}
+
+
+bool LoginViewScene::init()
+{
     // 1. super init first
     if ( !Layer::init() )
     {
@@ -32,44 +52,44 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
+    
 
+    
     std::string  _filePath = "BackgroundComponentTest/BackgroundComponentTest.json";
     auto _rootNode = SceneReader::getInstance()->createNodeWithSceneFile(_filePath.c_str());
     // add a label shows "Hello World"
     // create and initialize a label
     _rootNode->setAnchorPoint(Vec2(0 ,0));
-    _rootNode->setPosition(Vec2(240, 160));
+    _rootNode->setPosition(Vec2(120, 80));
+    _rootNode->setScale(0.5);
     this->addChild(_rootNode);
     
-    // add a "close" icon to exit the progress. it's an autorelease object
+    
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",
                                            "CloseSelected.png",
-                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
+                                           CC_CALLBACK_1(LoginViewScene::menuCloseCallback, this));
     
     closeItem->setPosition(Vec2(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
                                 origin.y + closeItem->getContentSize().height/2));
-
+    
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Vec2::ZERO);
     this->addChild(menu, 1);
-    
     return true;
 }
 
 
-void HelloWorld::menuCloseCallback(Ref* pSender)
+void LoginViewScene::menuCloseCallback(Ref* pSender)
 {
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
-    return;
-#endif
-
     SceneReader::getInstance()->destroyInstance();
     Director::getInstance()->end();
-
+    
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
     exit(0);
 #endif
 }
+
+
+
