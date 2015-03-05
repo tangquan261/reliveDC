@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
-		11F78DCD1AA80F7F008034E5 /* Default in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DCB1AA80F7F008034E5 /* Default */; };
-		11F78DCE1AA80F7F008034E5 /* Default in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DCB1AA80F7F008034E5 /* Default */; };
-		11F78DCF1AA80F7F008034E5 /* MainScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DCC1AA80F7F008034E5 /* MainScene.csb */; };
-		11F78DD01AA80F7F008034E5 /* MainScene.csb in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DCC1AA80F7F008034E5 /* MainScene.csb */; };
-		11F78DD51AA81168008034E5 /* BackgroundComponentTest in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DD41AA81168008034E5 /* BackgroundComponentTest */; };
-		11F78DD61AA81168008034E5 /* BackgroundComponentTest in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DD41AA81168008034E5 /* BackgroundComponentTest */; };
-		11F78DD91AA8126E008034E5 /* Layer.csb in Resources */ = {isa = PBXBuildFile; fileRef = 11F78DD81AA8126E008034E5 /* Layer.csb */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
 		1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FB07180E9839004C840B /* libcocos2d iOS.a */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -109,10 +102,6 @@
 /* Begin PBXFileReference section */
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
-		11F78DCB1AA80F7F008034E5 /* Default */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Default; sourceTree = "<group>"; };
-		11F78DCC1AA80F7F008034E5 /* MainScene.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = MainScene.csb; sourceTree = "<group>"; };
-		11F78DD41AA81168008034E5 /* BackgroundComponentTest */ = {isa = PBXFileReference; lastKnownFileType = folder; path = BackgroundComponentTest; sourceTree = "<group>"; };
-		11F78DD81AA8126E008034E5 /* Layer.csb */ = {isa = PBXFileReference; lastKnownFileType = file; path = Layer.csb; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +214,15 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		11F78DDC1AA8430D008034E5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */,
+				11F78DC81AA80F74008034E5 /* LoginViewScene.h */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,10 +281,6 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				11F78DD81AA8126E008034E5 /* Layer.csb */,
-				11F78DD41AA81168008034E5 /* BackgroundComponentTest */,
-				11F78DCB1AA80F7F008034E5 /* Default */,
-				11F78DCC1AA80F7F008034E5 /* MainScene.csb */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -300,8 +294,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */,
-				11F78DC81AA80F74008034E5 /* LoginViewScene.h */,
+				11F78DDC1AA8430D008034E5 /* Login */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 			);
@@ -456,7 +449,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F78DD91AA8126E008034E5 /* Layer.csb in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -469,7 +461,6 @@
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
-				11F78DCD1AA80F7F008034E5 /* Default in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
@@ -479,8 +470,6 @@
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				11F78DD51AA81168008034E5 /* BackgroundComponentTest in Resources */,
-				11F78DCF1AA80F7F008034E5 /* MainScene.csb in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
@@ -494,10 +483,7 @@
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
-				11F78DCE1AA80F7F008034E5 /* Default in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
-				11F78DD01AA80F7F008034E5 /* MainScene.csb in Resources */,
-				11F78DD61AA81168008034E5 /* BackgroundComponentTest in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

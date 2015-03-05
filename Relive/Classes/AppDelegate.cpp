@@ -14,12 +14,11 @@ AppDelegate::~AppDelegate()
 void AppDelegate::loadSearchPaths()
 {
     std::vector<std::string> searchPaths;
-    
-    searchPaths.push_back("BackgroundComponentTest");
-    searchPaths.push_back("Default");
+
     searchPaths.push_back("res");
+    searchPaths.push_back("res/GUI");
     
-    //FileUtils::getInstance()->addSearchPath("res");
+    
     
     cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
 }
@@ -49,18 +48,9 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     auto screenSize = glview->getFrameSize();
     
-    auto designSize = Size(320, 640);
+    auto designSize = Size(480, 320);
     
-    if (screenSize.width/screenSize.height > 320.f/640.f)
-    {
-        //width过大，固定高度，调整宽度的适应
-       glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);
-    }
-    else
-    {
-        //height过大，固定宽度，调整高度的适应
-        glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_WIDTH);
-    }
+    glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::SHOW_ALL);
     
 #ifdef COCOS2D_DEBUG
     // turn on display FPS
