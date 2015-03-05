@@ -65,8 +65,14 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCDirector.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCScene.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGLView.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCAsyncTaskPool.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCScheduler.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/uthash.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCLight.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCFileUtils.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCValue.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCData.h \

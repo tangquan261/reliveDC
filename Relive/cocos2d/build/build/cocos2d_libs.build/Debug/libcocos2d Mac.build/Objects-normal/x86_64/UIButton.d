@@ -64,4 +64,5 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCAnimation.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCValue.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCFileUtils.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCData.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCData.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/UIHelper.h

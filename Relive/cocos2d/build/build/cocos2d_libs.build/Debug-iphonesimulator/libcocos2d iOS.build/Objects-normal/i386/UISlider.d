@@ -52,6 +52,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCTextureAtlas.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCBatchCommand.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderCommand.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/UIHelper.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCSprite.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCDrawNode.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCCustomCommand.h \

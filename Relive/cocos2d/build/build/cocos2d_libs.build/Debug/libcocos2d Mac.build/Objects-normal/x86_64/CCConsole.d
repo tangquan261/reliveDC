@@ -50,4 +50,8 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCTextureCache.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCImage.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/base64.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ccUtils.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ccUtils.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/allocator/CCAllocatorDiagnostics.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/allocator/CCAllocatorMacros.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/allocator/CCAllocatorMutex.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/allocator/CCAllocatorBase.h

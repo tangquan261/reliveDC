@@ -91,6 +91,10 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderer.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCGLProgram.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCUserDefault.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ccFPSImages.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCScheduler.h \
@@ -100,6 +104,10 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventCustom.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCAutoreleasePool.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCConfiguration.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCAsyncTaskPool.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCApplication.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/ios/CCApplication-ios.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCApplicationProtocol.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCApplicationProtocol.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsWorld.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsBody.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsShape.h

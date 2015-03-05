@@ -50,8 +50,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/cpSpace.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsBody.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsBody.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsShape.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCVector.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsContactInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsHelper_chipmunk.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsHelper.h

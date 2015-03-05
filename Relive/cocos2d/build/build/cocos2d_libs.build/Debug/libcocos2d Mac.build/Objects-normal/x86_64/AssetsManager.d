@@ -41,6 +41,13 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/CCAffineTransform.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../extensions/ExtensionMacros.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../extensions/ExtensionExport.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curl.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlver.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlbuild.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlbuild-64.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlrules.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/easy.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/multi.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCDirector.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCScene.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGLView.h \

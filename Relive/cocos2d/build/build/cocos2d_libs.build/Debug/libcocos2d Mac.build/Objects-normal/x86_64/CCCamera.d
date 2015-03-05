@@ -39,6 +39,10 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEvent.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventKeyboard.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/CCAffineTransform.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCDirector.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCScene.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGLView.h

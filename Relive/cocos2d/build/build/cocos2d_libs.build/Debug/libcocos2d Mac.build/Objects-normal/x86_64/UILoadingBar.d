@@ -46,6 +46,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/GUIDefine.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ObjectFactory.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCMap.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/UIHelper.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/UIScale9Sprite.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCSpriteFrame.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCSpriteBatchNode.h \

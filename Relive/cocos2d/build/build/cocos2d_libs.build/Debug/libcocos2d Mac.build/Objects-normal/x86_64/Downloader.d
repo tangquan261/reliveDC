@@ -134,6 +134,10 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCGrabber.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCGrid.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCLight.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderCommandPool.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderer.h \
@@ -174,8 +178,6 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCFastTMXLayer.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponent.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponentContainer.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCRay.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCSprite3D.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCMeshCommand.h \
@@ -201,4 +203,11 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/deprecated/CCDouble.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/deprecated/CCBool.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/deprecated/CCNotificationCenter.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/deprecated/CCDeprecated.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/deprecated/CCDeprecated.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curl.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlver.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlbuild.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlbuild-64.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/curlrules.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/easy.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/mac/curl/multi.h

@@ -59,4 +59,8 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventFocus.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventDispatcher.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/UILayoutComponent.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponent.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponent.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCGLProgram.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCGLProgramState.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/ccShaders.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/shaders/UIShaders.h

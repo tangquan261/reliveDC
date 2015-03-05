@@ -38,9 +38,8 @@ LoginViewScene::~LoginViewScene()
 
 void LoginViewScene::clear()
 {
-
+    
 }
-
 
 bool LoginViewScene::init()
 {
@@ -53,17 +52,8 @@ bool LoginViewScene::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Vec2 origin = Director::getInstance()->getVisibleOrigin();
     
-
-    
-    std::string  _filePath = "BackgroundComponentTest/BackgroundComponentTest.json";
-    auto _rootNode = SceneReader::getInstance()->createNodeWithSceneFile(_filePath.c_str());
-    // add a label shows "Hello World"
-    // create and initialize a label
-    _rootNode->setAnchorPoint(Vec2(0 ,0));
-    _rootNode->setPosition(Vec2(120, 80));
-    _rootNode->setScale(0.5);
-    this->addChild(_rootNode);
-    
+    auto rootNode = CSLoader::createNode("Login.csb");
+    addChild(rootNode);
     
     auto closeItem = MenuItemImage::create(
                                            "CloseNormal.png",

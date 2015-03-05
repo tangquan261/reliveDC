@@ -1,3 +1,4 @@
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAllocatorGlobalNewDelete.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIVideoPlayer-ios.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCTableViewCell.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/ButtonReader.o
@@ -34,7 +35,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/SimpleAudioEngine_objc.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCMesh.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCImage-ios.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsJointInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsBody.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCControlButton.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCGLProgramState.o
@@ -62,6 +62,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCActionGrid.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2PolygonAndCircleContact.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2Rope.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/HttpClient-ios.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/BoundingBoxAttachment.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/FlatBuffersSerialize.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCClippingRectangleNode.o
@@ -117,8 +118,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2CircleContact.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/Attachment.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCLayerColorLoader.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsWorldInfo_chipmunk.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/HttpClient.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/TransformUtils.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIEditBoxImpl-android.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCArmature.o
@@ -153,7 +152,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/MathUtil.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCDataVisitor.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCNode.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsShapeInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCDrawingPrimitives.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCDrawNode.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCGrabber.o
@@ -161,6 +159,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/Json.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCGrid.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAnimation3D.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPlane.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCFont.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2PrismaticJoint.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCSpriteFrameCacheHelper.o
@@ -181,6 +180,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/base64.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCFontAtlasCache.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/TriggerObj.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCActionTimelineNode.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/WidgetReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2World.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2ChainAndPolygonContact.o
@@ -207,7 +207,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UILayoutParameter.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/SingleNodeReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/BoneData.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsContactInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/ListViewReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCLabelTextFormatter.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCLabelTTF.o
@@ -267,6 +266,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/TextBMFontReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCInvocation.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCFastTMXTiledMap.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/ArmatureNodeReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCNodeLoader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/WidgetCallBackHandlerProtocol.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIWebViewImpl-ios.o
@@ -318,6 +318,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCNS.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/IkConstraintData.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/spine-cocos2dx.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAllocatorGlobal.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIVBox.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCRenderer.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/idl_gen_go.o
@@ -328,14 +329,15 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCComponent.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIDeprecated.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/pvr.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCFrustum.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIPageView.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCComponentContainer.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/ccCArray.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCActionNode.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCDisplayFactory.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCThread-apple.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCPhysicsBodyInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCUserDefault-android.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UIShaders.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/tinyxml2.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCTexture2D.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UILayout.o
@@ -366,6 +368,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCVertex.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCUserDefault.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCEventDispatcher.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/HttpAsynConnection.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/UITextAtlas.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCProcessBase.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCParticleSystemQuadLoader.o
@@ -387,6 +390,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCEAGLView-ios.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/AudioEngine.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/flatc.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/HttpCookie.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/AssetsManagerEx.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCQuadCommand.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCLayerGradientLoader.o
@@ -408,6 +412,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAABB.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/b2Island.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCEventController.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAsyncTaskPool.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCConsole.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/Bone.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCDirectorCaller-ios.o
@@ -430,6 +435,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCTween.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/xxhash.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCObjLoader.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCAllocatorDiagnostics.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/TGAlib.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/CCArray.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug-iphonesimulator/libcocos2d iOS.build/Objects-normal/i386/PolygonBatch.o

@@ -12,6 +12,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_Position_uColor.vert \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionColor.frag \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionColor.vert \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionColorTextureAsPointsize.vert \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionTexture.frag \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionTexture.vert \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/renderer/ccShader_PositionTextureA8Color.frag \

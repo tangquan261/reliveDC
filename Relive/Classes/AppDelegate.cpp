@@ -16,7 +16,10 @@ void AppDelegate::loadSearchPaths()
     std::vector<std::string> searchPaths;
     
     searchPaths.push_back("BackgroundComponentTest");
+    searchPaths.push_back("Default");
+    searchPaths.push_back("res");
     
+    //FileUtils::getInstance()->addSearchPath("res");
     
     cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
 }
@@ -40,27 +43,29 @@ bool AppDelegate::applicationDidFinishLaunching()
     
     if(!glview)
     {
-        glview = GLViewImpl::create("My Game");
+        glview = GLViewImpl::create("Relive online");
         director->setOpenGLView(glview);
     }
 
     auto screenSize = glview->getFrameSize();
     
-    auto designSize = Size(480, 320);
+    auto designSize = Size(320, 640);
     
-    if (screenSize.width/screenSize.height > 480.f/320.f)
+    if (screenSize.width/screenSize.height > 320.f/640.f)
     {
-       glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_WIDTH);; //fix height for wide screen
+        //width过大，固定高度，调整宽度的适应
+       glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);
     }
     else
     {
-        glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_HEIGHT);;
+        //height过大，固定宽度，调整高度的适应
+        glview->setDesignResolutionSize(designSize.width, designSize.height, ResolutionPolicy::FIXED_WIDTH);
     }
     
-
+#ifdef COCOS2D_DEBUG
     // turn on display FPS
     director->setDisplayStats(true);
-
+#endif
     // set FPS. the default value is 1.0/60 if you don't call this
     director->setAnimationInterval(1.0 / 60);
 

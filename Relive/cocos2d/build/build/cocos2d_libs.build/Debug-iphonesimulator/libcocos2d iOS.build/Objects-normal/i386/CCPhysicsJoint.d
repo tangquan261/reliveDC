@@ -46,14 +46,11 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpGearJoint.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/constraints/cpSimpleMotor.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/chipmunk/include/chipmunk/cpSpace.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsBody.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsBody.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsShape.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCVector.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsWorld.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsJointInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsBodyInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsShapeInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsHelper_chipmunk.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsWorld.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsHelper.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCNode.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCProtocols.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ccTypes.h \

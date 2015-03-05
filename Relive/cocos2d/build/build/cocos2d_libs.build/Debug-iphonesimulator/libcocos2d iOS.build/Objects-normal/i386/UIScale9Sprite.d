@@ -55,4 +55,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCMap.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCDirector.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCScene.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGLView.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGLView.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCGLProgram.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/ui/shaders/UIShaders.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/ccShaders.h

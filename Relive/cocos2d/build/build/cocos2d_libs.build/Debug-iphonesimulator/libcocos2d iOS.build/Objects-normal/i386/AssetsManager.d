@@ -44,6 +44,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/curl.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/curlver.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/curlbuild.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/curlbuild-32.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/curlrules.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/easy.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/curl/include/ios/curl/multi.h \

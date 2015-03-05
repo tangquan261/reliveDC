@@ -62,4 +62,8 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventListener.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventListenerCustom.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventType.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h

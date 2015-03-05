@@ -47,6 +47,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCMenuItemLoader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2Settings.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAutoreleasePool.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPlane.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCTimeLine.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCLabelTTFLoader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2ChainShape.o
@@ -76,12 +77,10 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2GearJoint.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionGrid.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/AudioPlayer.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsJointInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCFileUtils-apple.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionGrid3D.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/idl_gen_general.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsSprite.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsWorldInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/NodeReaderProtocol.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2ContactManager.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UIVBox.o
@@ -112,9 +111,9 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UITextField.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCBFileLoader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCEventListenerCustom.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAllocatorDiagnostics.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCNode+CCBRelativePositioning.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCRay.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsShapeInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCData.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCDrawingPrimitives.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/ZipUtils.o
@@ -166,7 +165,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/MathUtil.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCSpriteFrameCacheHelper.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/edtaa3func.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsContactInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCBatchCommand.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCComAudio.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCLabelTextFormatter.o
@@ -187,6 +185,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCFastTMXLayer.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2ChainAndCircleContact.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/Manifest.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAsyncTaskPool.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCTransitionPageTurn.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/SimpleAudioEngine.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCRenderer.o
@@ -237,6 +236,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/flatc.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCSpriteFrameCache.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionFrameEasing.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/ArmatureNodeReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/SlotData.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCInputDelegate.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCBundle3D.o
@@ -245,7 +245,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAnimationCache.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/SkeletonJson.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCConsole.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/HttpClient.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCUserDefault.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCControlButton.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCEventMouse.o
@@ -298,7 +297,6 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/SkinnedMeshAttachment.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCComponentContainer.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCDatas.o
-/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCPhysicsBodyInfo_chipmunk.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCString.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCGeometry.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/BoneData.o
@@ -316,6 +314,8 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionTimelineCache.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCUserDefault-apple.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCUserDefault-android.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCFrustum.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/HttpClient.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UIWebViewImpl-ios.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/idl_gen_text.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/ccFPSImages.o
@@ -377,6 +377,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCClippingRectangleNode.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/AudioEngine.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2PolygonShape.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAllocatorGlobalNewDelete.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/ccGLStateCache.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCBReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCTextureAtlas.o
@@ -389,6 +390,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/TGAlib.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/SliderReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCEvent.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAllocatorGlobal.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCEventListenerAcceleration.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCGroupCommand.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2RopeJoint.o
@@ -420,6 +422,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCMeshSkin.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/TextReader.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/ButtonReader.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionTimelineNode.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2Island.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/b2Joint.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/Vec4.o
@@ -432,6 +435,7 @@
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UIPageView.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UIEditBoxImpl-wp8.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCActionObject.o
+/Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/UIShaders.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCDictionary.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/CCAffineTransform.o
 /Users/tq/work/ReliveDC/Relive/cocos2d/build/build/cocos2d_libs.build/Debug/libcocos2d Mac.build/Objects-normal/x86_64/xxhash.o

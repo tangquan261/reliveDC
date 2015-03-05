@@ -27,4 +27,20 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/Quaternion.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/Quaternion.inl \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCGL.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/mac/CCGL-mac.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/mac/CCGL-mac.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCNode.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCVector.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCProtocols.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCTexture2D.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCScriptSupport.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/platform/CCCommon.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCTouch.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventTouch.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEvent.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventKeyboard.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/CCAffineTransform.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h

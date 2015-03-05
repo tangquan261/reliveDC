@@ -24,4 +24,5 @@ dependencies: /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/3d/CCRay.cpp \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/Quaternion.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/Quaternion.inl \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h

@@ -139,6 +139,10 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCGrabber.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCGrid.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCCamera.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCFrustum.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCPlane.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCLight.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderCommandPool.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCRenderer.h \
@@ -178,8 +182,6 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCFastTMXLayer.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponent.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCComponentContainer.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCAABB.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCOBB.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCRay.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/3d/CCSprite3D.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCMeshCommand.h \
@@ -241,6 +243,7 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimeline.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCTimeLine.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCFrame.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/CCActionTimelineNode.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/editor-support/cocostudio/ActionTimeline/../CCSGUIReader.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetReader/WidgetReaderProtocol.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/CocoStudio.h \
@@ -303,8 +306,8 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetReader/ScrollViewReader/ScrollViewReader.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetReader/PageViewReader/PageViewReader.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetReader/ListViewReader/ListViewReader.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/flatbuffers/util.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetReader/ArmatureNodeReader/ArmatureNodeReader.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/FlatBuffersSerialize.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../extensions/ExtensionMacros.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/tinyxml2/tinyxml2.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../external/flatbuffers/util.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/editor-support/cocostudio/WidgetCallBackHandlerProtocol.h

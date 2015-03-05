@@ -42,4 +42,5 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/renderer/CCTexture2D.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/math/CCAffineTransform.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/ui/GUIDefine.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ObjectFactory.h
+  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/ObjectFactory.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/ui/UIHelper.h

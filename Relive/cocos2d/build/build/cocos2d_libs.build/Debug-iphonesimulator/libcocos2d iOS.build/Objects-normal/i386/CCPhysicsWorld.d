@@ -54,13 +54,8 @@ dependencies: \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventListener.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEvent.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCEventCustom.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/physics/CCPhysicsJoint.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsWorldInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsBodyInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsShapeInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsContactInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsJointInfo_chipmunk.h \
-  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/chipmunk/CCPhysicsHelper_chipmunk.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsJoint.h \
+  /Users/tq/work/ReliveDC/Relive/cocos2d/cocos/physics/CCPhysicsHelper.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCDrawNode.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/2d/CCNode.h \
   /Users/tq/work/ReliveDC/Relive/cocos2d/build/../cocos/base/CCProtocols.h \
