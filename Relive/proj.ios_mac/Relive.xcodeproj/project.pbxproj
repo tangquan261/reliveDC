@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1139F90E1AA9876300E7530C /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1139F90D1AA9876300E7530C /* config.plist */; };
+		1139F90F1AA9876300E7530C /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1139F90D1AA9876300E7530C /* config.plist */; };
+		1139F9781AA9A5BD00E7530C /* libb64.c in Sources */ = {isa = PBXBuildFile; fileRef = 1139F96E1AA9A5BD00E7530C /* libb64.c */; };
+		1139F9791AA9A5BD00E7530C /* libb64.c in Sources */ = {isa = PBXBuildFile; fileRef = 1139F96E1AA9A5BD00E7530C /* libb64.c */; };
+		1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9701AA9A5BD00E7530C /* CCSafety.cpp */; };
+		1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9701AA9A5BD00E7530C /* CCSafety.cpp */; };
+		1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9731AA9A5BD00E7530C /* md5.cpp */; };
+		1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9731AA9A5BD00E7530C /* md5.cpp */; };
+		1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9761AA9A5BD00E7530C /* sha1.cpp */; };
+		1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9761AA9A5BD00E7530C /* sha1.cpp */; };
 		11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -100,6 +110,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1139F90D1AA9876300E7530C /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		1139F9111AA98DD800E7530C /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
+		1139F96E1AA9A5BD00E7530C /* libb64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libb64.c; sourceTree = "<group>"; };
+		1139F96F1AA9A5BD00E7530C /* libb64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libb64.h; sourceTree = "<group>"; };
+		1139F9701AA9A5BD00E7530C /* CCSafety.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CCSafety.cpp; sourceTree = "<group>"; };
+		1139F9711AA9A5BD00E7530C /* CCSafety.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSafety.h; sourceTree = "<group>"; };
+		1139F9731AA9A5BD00E7530C /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		1139F9741AA9A5BD00E7530C /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		1139F9761AA9A5BD00E7530C /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sha1.cpp; sourceTree = "<group>"; };
+		1139F9771AA9A5BD00E7530C /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -214,6 +234,54 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		1139F9101AA98DAE00E7530C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1139F96C1AA9A5BD00E7530C /* Safety */,
+				1139F9111AA98DD800E7530C /* CommonDefine.h */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		1139F96C1AA9A5BD00E7530C /* Safety */ = {
+			isa = PBXGroup;
+			children = (
+				1139F96D1AA9A5BD00E7530C /* base64 */,
+				1139F9701AA9A5BD00E7530C /* CCSafety.cpp */,
+				1139F9711AA9A5BD00E7530C /* CCSafety.h */,
+				1139F9721AA9A5BD00E7530C /* md5 */,
+				1139F9751AA9A5BD00E7530C /* sha1 */,
+			);
+			path = Safety;
+			sourceTree = "<group>";
+		};
+		1139F96D1AA9A5BD00E7530C /* base64 */ = {
+			isa = PBXGroup;
+			children = (
+				1139F96E1AA9A5BD00E7530C /* libb64.c */,
+				1139F96F1AA9A5BD00E7530C /* libb64.h */,
+			);
+			path = base64;
+			sourceTree = "<group>";
+		};
+		1139F9721AA9A5BD00E7530C /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				1139F9731AA9A5BD00E7530C /* md5.cpp */,
+				1139F9741AA9A5BD00E7530C /* md5.h */,
+			);
+			path = md5;
+			sourceTree = "<group>";
+		};
+		1139F9751AA9A5BD00E7530C /* sha1 */ = {
+			isa = PBXGroup;
+			children = (
+				1139F9761AA9A5BD00E7530C /* sha1.cpp */,
+				1139F9771AA9A5BD00E7530C /* sha1.h */,
+			);
+			path = sha1;
+			sourceTree = "<group>";
+		};
 		11F78DDC1AA8430D008034E5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -281,6 +349,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1139F90D1AA9876300E7530C /* config.plist */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
@@ -294,6 +363,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1139F9101AA98DAE00E7530C /* Common */,
 				11F78DDC1AA8430D008034E5 /* Login */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
@@ -469,6 +539,7 @@
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				1139F90E1AA9876300E7530C /* config.plist in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
@@ -479,6 +550,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1139F90F1AA9876300E7530C /* config.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
@@ -497,9 +569,13 @@
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
+				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
+				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -507,6 +583,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
+				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
+				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,

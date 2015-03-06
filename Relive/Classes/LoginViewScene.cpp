@@ -12,12 +12,18 @@
 
 
 #include "LoginViewScene.h"
+#include "CommonDefine.h"
+
+#include "CCSafety.h"
 
 
 using namespace cocos2d;
 using namespace cocostudio;
 using namespace ui;
 using namespace cocos2d::network;
+
+extern config_msg g_configMsg;
+
 
 Scene* LoginViewScene::createScene()
 {
@@ -72,7 +78,14 @@ bool LoginViewScene::init()
     
     
     addChild(rootNode);
-    std::string url = "http://user.sq.hoolai.net/user/v2/user/shengQuLoginPlatform?email=tangquan261&password=25f9e794323b453885f5181f1b624d0b&appKey=ekVETXlBQ1ZUTkVJekVqTzFNak96RURJMUVESW5WWFFnVUhhVTFpTXdBak0=&udid=anysssssdfsf1&idfa=&platformType=";
+    
+    std::string input = "111111";
+    
+    unsigned char OutPut[100];
+  
+    CCSafety::MD5((void*)input.c_str(), input.size(), OutPut);
+    
+    std::string url = StringUtils::format("%s/v2/user/registerUser?email=%s&nickname=0&password=%s&appKey=%s&udid=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),"xixihaha1",(char*)OutPut,  g_configMsg.strAppKey.c_str(), "anysssssdfsf1","");
     
     HttpRequest* request = new (std::nothrow) HttpRequest();
     request->setUrl(url.c_str());
@@ -123,7 +136,8 @@ void LoginViewScene::onHttpRequestCompleted(cocos2d::network::HttpClient *sender
         return;
     }
     
-   
+    response->setResponseDataString(&(*response->getResponseData())[0], response->getResponseData()->size());
+
     CCLOG("http 返回成功 : Tag: %s data:%s",response->getHttpRequest()->getTag(), response->getResponseDataString());
     
     DoTaskRequest(atoi(response->getHttpRequest()->getTag()), response);
@@ -131,8 +145,6 @@ void LoginViewScene::onHttpRequestCompleted(cocos2d::network::HttpClient *sender
 
 void LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {
-    response->setResponseDataString(&(*response->getResponseData())[0], response->getResponseData()->size());
-
     std::string strMsg = response->getResponseDataString();
     rapidjson::Document doc;
     
@@ -147,15 +159,7 @@ void LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *re
             
             doc.Parse<rapidjson::kParseDefaultFlags>(strMsg.c_str());
             
-            
-            if (doc.HasParseError() || !doc.IsArray())
-            {
-                CCLOG("get json data error");
-                return;
-            }
-            
-            int i = 0;
-            rapidjson::Value &jsonMap=doc[i];
+            rapidjson::Value &jsonMap=doc;
             
             std::string strMessage = jsonMap["message"].GetString();
             int nCode = 0;
@@ -176,6 +180,18 @@ void LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *re
         }
         case 2:
         {
+            rapidjson::Document _doc;
+            
+            std::string strData =  FileUtils::getInstance()->getStringFromFile("config.json");
+            
+            _doc.Parse<rapidjson::kParseDefaultFlags>(strData.c_str());
+            
+            if (_doc.HasParseError() || !_doc.IsArray())
+            {
+                CCLOG("load config error %u %u",strData.size(), strMsg.size());
+                return;
+            }
+
             
             break;
         }

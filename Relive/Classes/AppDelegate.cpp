@@ -1,7 +1,13 @@
 #include "AppDelegate.h"
 #include "LoginViewScene.h"
+#include "ui/CocosGUI.h"
+#include "extensions/cocos-ext.h"
+
+#include "CommonDefine.h"
 
 USING_NS_CC;
+
+config_msg g_configMsg;
 
 AppDelegate::AppDelegate() {
 
@@ -23,6 +29,20 @@ void AppDelegate::loadSearchPaths()
     cocos2d::FileUtils::getInstance()->setSearchPaths(searchPaths);
 }
 
+void AppDelegate::LoadConfigFile()
+{
+    Configuration::getInstance()->loadConfigFile("config.plist");
+    
+    Configuration *conf = Configuration::getInstance();
+    
+    g_configMsg.strBaseUrl = conf->getValue("baseUrl").asString();
+    g_configMsg.strSNSUrl = conf->getValue("baseSNSUrl").asString();
+    g_configMsg.strAppKey = conf->getValue("appkey").asString();
+  
+    CCLOG("%s, %s, %s", g_configMsg.strAppKey.c_str(), g_configMsg.strBaseUrl.c_str(), g_configMsg.strSNSUrl.c_str());
+    
+    Configuration::getInstance()->destroyInstance();
+}
 //if you want a different context,just modify the value of glContextAttrs
 //it will takes effect on all platforms
 void AppDelegate::initGLContextAttrs()
@@ -61,6 +81,7 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     
     loadSearchPaths();
+    LoadConfigFile();
     
     
     // create a scene. it's an autorelease object
