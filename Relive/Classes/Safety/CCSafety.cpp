@@ -12,7 +12,9 @@ extern "C"
 #include "sha1/sha1.h"
 #include "base64/libb64.h"
 #include "md5/md5.h"
+#include "md5/md5String.h"
 }
+
 
 
 /** @brief Encoding data with Base64 algorithm, return encoded string length */
@@ -61,6 +63,14 @@ void CCSafety::MD5(void* input, int inputLength,unsigned char* output)
     MD5_Init(&ctx);
     MD5_Update(&ctx, input, inputLength);
     MD5_Final(output, &ctx);
+}
+
+std::string CCSafety::ToMD5String(const char *pMsg)
+{
+    MD5String iMD5;
+    iMD5.GenerateMD5((unsigned char*)pMsg, strlen(pMsg));
+    
+    return iMD5.ToString();
 }
 
 /** @brief Calculate SHA1 with a secret key. */

@@ -15,7 +15,7 @@
 #include "CommonDefine.h"
 
 #include "CCSafety.h"
-
+#include "URL.h"
 
 using namespace cocos2d;
 using namespace cocostudio;
@@ -81,12 +81,25 @@ bool LoginViewScene::init()
     
     std::string input = "111111";
     
-    unsigned char OutPut[100];
-  
+    unsigned char OutPut[101];
+    memset(OutPut, 0, 101);
+    
     CCSafety::MD5((void*)input.c_str(), input.size(), OutPut);
+  
+    std::string url;
     
-    std::string url = StringUtils::format("%s/v2/user/registerUser?email=%s&nickname=0&password=%s&appKey=%s&udid=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),"xixihaha1",(char*)OutPut,  g_configMsg.strAppKey.c_str(), "anysssssdfsf1","");
+    std::string username = "xixihaha1";
     
+    if (username.length() < 1)
+    {
+        // 去除游客登陆
+        url = StringUtils::format("%s/v2/user/shengQuLoginPlatformByUdid?appKey=%s&udid=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","");
+    }
+    else {
+        url = StringUtils::format("%s/v2/user/shengQuLoginPlatform?email=%s&password=%s&appKey=%s&udid=%s&idfa=%s&platformType=%s",g_configMsg.strSNSUrl.c_str(),username.c_str(),CCSafety::ToMD5String((const char *)"111111").c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","","");
+    }
+
+
     HttpRequest* request = new (std::nothrow) HttpRequest();
     request->setUrl(url.c_str());
     request->setRequestType(HttpRequest::Type::GET);

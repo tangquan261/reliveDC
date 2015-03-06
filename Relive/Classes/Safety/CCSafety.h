@@ -29,12 +29,13 @@ public:
     static void MD5(void* input, int inputLength,
                     unsigned char* output);
     
+    static std::string ToMD5String(const char *pMsg);
+    
     /** @brief Calculate SHA1 with a secret key. */
     static void sha1(unsigned char* input, int inputLength,
                      unsigned char* key, int keyLength,
                      unsigned char* buffer, int bufferLength);
     
-
 };
 
 

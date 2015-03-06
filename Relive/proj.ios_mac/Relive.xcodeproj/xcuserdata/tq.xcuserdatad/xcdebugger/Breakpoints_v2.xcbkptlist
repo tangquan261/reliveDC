@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/LoginViewScene.cpp"
-            timestampString = "447314917.18474"
+            timestampString = "447328222.758622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "195"
+            endingLineNumber = "195"
             landmarkName = "LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../Classes/LoginViewScene.cpp"
-            timestampString = "447315725.657997"
+            timestampString = "447328222.758622"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../Classes/LoginViewScene.cpp"
+            timestampString = "447328315.454558"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "LoginViewScene::init()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

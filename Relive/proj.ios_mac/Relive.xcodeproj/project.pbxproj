@@ -17,6 +17,8 @@
 		1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9731AA9A5BD00E7530C /* md5.cpp */; };
 		1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9761AA9A5BD00E7530C /* sha1.cpp */; };
 		1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9761AA9A5BD00E7530C /* sha1.cpp */; };
+		1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
+		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -120,6 +122,9 @@
 		1139F9741AA9A5BD00E7530C /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
 		1139F9761AA9A5BD00E7530C /* sha1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = sha1.cpp; sourceTree = "<group>"; };
 		1139F9771AA9A5BD00E7530C /* sha1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sha1.h; sourceTree = "<group>"; };
+		1139F9801AA9AAF800E7530C /* URL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URL.h; sourceTree = "<group>"; };
+		1139F9811AA9B32D00E7530C /* md5String.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5String.cpp; sourceTree = "<group>"; };
+		1139F9821AA9B32D00E7530C /* md5String.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5String.h; sourceTree = "<group>"; };
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -251,6 +256,7 @@
 				1139F9711AA9A5BD00E7530C /* CCSafety.h */,
 				1139F9721AA9A5BD00E7530C /* md5 */,
 				1139F9751AA9A5BD00E7530C /* sha1 */,
+				1139F9801AA9AAF800E7530C /* URL.h */,
 			);
 			path = Safety;
 			sourceTree = "<group>";
@@ -269,6 +275,8 @@
 			children = (
 				1139F9731AA9A5BD00E7530C /* md5.cpp */,
 				1139F9741AA9A5BD00E7530C /* md5.h */,
+				1139F9811AA9B32D00E7530C /* md5String.cpp */,
+				1139F9821AA9B32D00E7530C /* md5String.h */,
 			);
 			path = md5;
 			sourceTree = "<group>";
@@ -574,6 +582,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
+				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 			);
@@ -586,6 +595,7 @@
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
