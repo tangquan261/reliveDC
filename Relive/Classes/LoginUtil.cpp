@@ -56,6 +56,7 @@ void LoginUtil::ApplyServerList()
     request->setResponseCallback(CC_CALLBACK_2(LoginUtil::onHttpRequestCompleted, this));
     HttpClient::getInstance()->sendImmediate(request);
     request->setTag("1");
+    request->release();
 }
 
 void LoginUtil::ApplyEnterGame()
@@ -70,6 +71,7 @@ void LoginUtil::ApplyEnterGame()
     request->setResponseCallback(CC_CALLBACK_2(LoginUtil::onHttpRequestCompleted, this));
     HttpClient::getInstance()->sendImmediate(request);
     request->setTag("2");
+    request->release();
 
 }
 
@@ -91,6 +93,7 @@ void LoginUtil::ApplySelectList()
     request->setResponseCallback(CC_CALLBACK_2(LoginUtil::onHttpRequestCompleted, this));
     HttpClient::getInstance()->sendImmediate(request);
     request->setTag("3");
+    request->release();
 
 }
 
