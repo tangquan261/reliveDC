@@ -9,8 +9,6 @@
 #ifndef __RL_RELIVE_LOGINVIEW_SCENE_H__
 #define __RL_RELIVE_LOGINVIEW_SCENE_H__
 
-#include "network/HttpClient.h"
-
 class LoginViewScene : public cocos2d::Layer
 {
 public:
@@ -29,10 +27,7 @@ public:
     
     
     
-    void onHttpRequestCompleted(cocos2d::network::HttpClient *sender, cocos2d::network::HttpResponse *response);
-    
-    
-    void DoTaskRequest(int nType, cocos2d::network::HttpResponse *response);
+  
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     CREATE_FUNC(LoginViewScene);

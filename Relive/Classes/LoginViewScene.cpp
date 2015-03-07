@@ -14,8 +14,8 @@
 #include "LoginViewScene.h"
 #include "CommonDefine.h"
 
-#include "CCSafety.h"
-#include "URL.h"
+
+#include "LoginUtil.h"
 
 using namespace cocos2d;
 using namespace cocostudio;
@@ -79,33 +79,7 @@ bool LoginViewScene::init()
     
     addChild(rootNode);
     
-    std::string input = "111111";
-    
-    unsigned char OutPut[101];
-    memset(OutPut, 0, 101);
-    
-    CCSafety::MD5((void*)input.c_str(), input.size(), OutPut);
-  
-    std::string url;
-    
-    std::string username = "xixihaha1";
-    
-    if (username.length() < 1)
-    {
-        // 去除游客登陆
-        url = StringUtils::format("%s/v2/user/shengQuLoginPlatformByUdid?appKey=%s&udid=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","");
-    }
-    else {
-        url = StringUtils::format("%s/v2/user/shengQuLoginPlatform?email=%s&password=%s&appKey=%s&udid=%s&idfa=%s&platformType=%s",g_configMsg.strSNSUrl.c_str(),username.c_str(),CCSafety::ToMD5String((const char *)"111111").c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","","");
-    }
-
-
-    HttpRequest* request = new (std::nothrow) HttpRequest();
-    request->setUrl(url.c_str());
-    request->setRequestType(HttpRequest::Type::GET);
-    request->setResponseCallback(CC_CALLBACK_2(LoginViewScene::onHttpRequestCompleted, this));
-    HttpClient::getInstance()->sendImmediate(request);
-    request->setTag("1");
+    LoginUtil::getSingleton()->ApplyServerList();
 
     return true;
 }
@@ -118,102 +92,14 @@ void LoginViewScene::onActionLogin(Ref *pSender)
 }
 
 
-
 void LoginViewScene::onActionEnterGame(Ref *pSender)
 {
     CCLOG("onActionEnterGame");
     
-    std::string url = "http://61.148.167.74:11116/user/v2/user/shengQuLoginServer?site=nw_001&appKey=ekVETXlBQ1ZUTkVJekVqTzFNak96RURJMUVESW5WWFFnVUhhVTFpTXdBRE0=&udid=anysssssdfsf1&sessionId=M1VXT2pGRE5tTm1ZMkVXTWtaRE9tZHpNNGdETnlralptTm1ZMkFqWWtsak9rSjNiM04zY2hCWEx4QURNd0FETXdZek4=&idfa=";
-    
-    HttpRequest* request = new (std::nothrow) HttpRequest();
-    request->setUrl(url.c_str());
-    request->setRequestType(HttpRequest::Type::GET);
-    request->setResponseCallback(CC_CALLBACK_2(LoginViewScene::onHttpRequestCompleted, this));
-    HttpClient::getInstance()->sendImmediate(request);
-    request->setTag("2");
-    
-
-    
+    LoginUtil::getSingleton()->ApplyEnterGame();
 }
 
-void LoginViewScene::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, cocos2d::network::HttpResponse *response)
-{
-    if (NULL == response)
-    {
-        return;
-    }
-    
-    if (!response->isSucceed())
-    {
-        CCLOG("http error %s,  %s",response->getHttpRequest()->getTag(), response->getErrorBuffer());
-        return;
-    }
-    
-    response->setResponseDataString(&(*response->getResponseData())[0], response->getResponseData()->size());
 
-    CCLOG("http 返回成功 : Tag: %s data:%s",response->getHttpRequest()->getTag(), response->getResponseDataString());
-    
-    DoTaskRequest(atoi(response->getHttpRequest()->getTag()), response);
-}
-
-void LoginViewScene::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
-{
-    std::string strMsg = response->getResponseDataString();
-    rapidjson::Document doc;
-    
-    switch (nType)
-    {
-        case 1:
-        {
-            if (strMsg.empty())
-            {
-                return;
-            }
-            
-            doc.Parse<rapidjson::kParseDefaultFlags>(strMsg.c_str());
-            
-            rapidjson::Value &jsonMap=doc;
-            
-            std::string strMessage = jsonMap["message"].GetString();
-            int nCode = 0;
-            nCode = jsonMap["code"].GetInt();
-            
-            CCLOG("社区登陆成功: %s", strMessage.c_str());
-            
-            if (1000 != nCode)
-            {
-                CCLOG("error : %s", strMsg.c_str());
-            }
-            
-            
-            
-            
-            
-            break;
-        }
-        case 2:
-        {
-            rapidjson::Document _doc;
-            
-            std::string strData =  FileUtils::getInstance()->getStringFromFile("config.json");
-            
-            _doc.Parse<rapidjson::kParseDefaultFlags>(strData.c_str());
-            
-            if (_doc.HasParseError() || !_doc.IsArray())
-            {
-                CCLOG("load config error %u %u",strData.size(), strMsg.size());
-                return;
-            }
-
-            
-            break;
-        }
-        default:
-            break;
-    }
-
-    
-}
 
 void LoginViewScene::onActionSelectServer(Ref *pSender)
 {

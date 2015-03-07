@@ -40,8 +40,6 @@ void AppDelegate::LoadConfigFile()
     g_configMsg.strAppKey = conf->getValue("appkey").asString();
   
     CCLOG("%s, %s, %s", g_configMsg.strAppKey.c_str(), g_configMsg.strBaseUrl.c_str(), g_configMsg.strSNSUrl.c_str());
-    
-    Configuration::getInstance()->destroyInstance();
 }
 //if you want a different context,just modify the value of glContextAttrs
 //it will takes effect on all platforms
