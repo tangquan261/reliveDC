@@ -1,0 +1,14 @@
+
+package com.road.yishi.proto.box;
+option java_package = "com.road.yishi.pb.box";
+option java_outer_classname = "BoxMsgProto";
+option optimize_for = LITE_RUNTIME;
+message BoxMsg {	
+	optional int32 time = 1;
+	optional int32 grade = 2;
+	optional bool operate = 3;
+    optional int32 timerun=4;
+}
+message BoxStarMsg{
+	optional int32 timerun=1;
+}

@@ -16,13 +16,20 @@
 #include "CCSafety.h"
 #include "URL.h"
 
+#include "BoxMsg.pb.h"
+
 using namespace cocos2d;
 using namespace cocos2d::network;
+using namespace com::road::yishi::proto::box;
 
 extern config_msg g_configMsg;
 
 LoginUtil::LoginUtil()
 {
+    BoxMsg *p = new BoxMsg();
+    
+    p->set_grade(11);
+    
     m_vecServerNameList.clear();
     m_vecUserServerNameList.clear();
 }

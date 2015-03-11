@@ -21,6 +21,16 @@
 		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
+		11AF13061AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */; };
+		11AF13071AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */; };
+		11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
+		11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
+		11AF130A1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */; };
+		11AF130B1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */; };
+		11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
+		11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
+		11AF13101AB0221B00EFCEAE /* libprotobuff-lite-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */; };
+		11AF13111AB0222300EFCEAE /* libprotobuff-lite-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF12F41AB01FE200EFCEAE /* libprotobuff-lite-mac.a */; };
 		11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -83,6 +93,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		11AF12ED1AB01FE200EFCEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F88F5B1AAF4C3E00708352;
+			remoteInfo = "protobuff-full-mac";
+		};
+		11AF12EF1AB01FE200EFCEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F891121AAF4DDE00708352;
+			remoteInfo = "protobuff-full-ios";
+		};
+		11AF12F11AB01FE200EFCEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F891781AAF50F200708352;
+			remoteInfo = "protobuff-lite-ios";
+		};
+		11AF12F31AB01FE200EFCEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11F891801AAF510A00708352;
+			remoteInfo = "protobuff-lite-mac";
+		};
 		1AC6FAF8180E9839004C840B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
@@ -130,6 +168,13 @@
 		1139F9851AA9B91E00E7530C /* LoginUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginUtil.cpp; sourceTree = "<group>"; };
 		1139F9861AA9B91E00E7530C /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
+		11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protoc.xcodeproj; path = "../protobuf-2.5.0/protoc/protoc.xcodeproj"; sourceTree = "<group>"; };
+		11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cc; sourceTree = "<group>"; };
+		11AF12FC1AB0205800EFCEAE /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
+		11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
+		11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cc; sourceTree = "<group>"; };
+		11AF12FF1AB0205800EFCEAE /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
+		11AF13001AB0205800EFCEAE /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -194,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AF13101AB0221B00EFCEAE /* libprotobuff-lite-ios.a in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
@@ -213,6 +259,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AF13111AB0222300EFCEAE /* libprotobuff-lite-mac.a in Frameworks */,
 				1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */,
 				5087E76717EB910900C73F5D /* libz.dylib in Frameworks */,
 				503AE11B17EB9C5A00D1A890 /* IOKit.framework in Frameworks */,
@@ -247,6 +294,7 @@
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11AF12F61AB0205800EFCEAE /* model */,
 				1139F96C1AA9A5BD00E7530C /* Safety */,
 				1139F9111AA98DD800E7530C /* CommonDefine.h */,
 				1139F9891AA9BBA400E7530C /* HLSingleton.h */,
@@ -296,6 +344,46 @@
 			path = sha1;
 			sourceTree = "<group>";
 		};
+		11AF12E71AB01FE100EFCEAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11AF12EE1AB01FE200EFCEAE /* libprotobuff-full-mac.a */,
+				11AF12F01AB01FE200EFCEAE /* libprotobuff-full-ios.a */,
+				11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */,
+				11AF12F41AB01FE200EFCEAE /* libprotobuff-lite-mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11AF12F61AB0205800EFCEAE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				11AF12F91AB0205800EFCEAE /* proto */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		11AF12F91AB0205800EFCEAE /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				11AF12FA1AB0205800EFCEAE /* box */,
+			);
+			path = proto;
+			sourceTree = "<group>";
+		};
+		11AF12FA1AB0205800EFCEAE /* box */ = {
+			isa = PBXGroup;
+			children = (
+				11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */,
+				11AF12FC1AB0205800EFCEAE /* BoxMsg.pb.h */,
+				11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */,
+				11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */,
+				11AF12FF1AB0205800EFCEAE /* HangupInfo.pb.h */,
+				11AF13001AB0205800EFCEAE /* HangupInfo.proto */,
+			);
+			path = box;
+			sourceTree = "<group>";
+		};
 		11F78DDC1AA8430D008034E5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +418,7 @@
 			children = (
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
+				11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */,
 				1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				080E96DDFE201D6D7F000001 /* ios */,
@@ -504,6 +593,10 @@
 					ProductGroup = 1AC6FAE6180E9839004C840B /* Products */;
 					ProjectRef = 1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */;
 				},
+				{
+					ProductGroup = 11AF12E71AB01FE100EFCEAE /* Products */;
+					ProjectRef = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -514,6 +607,34 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		11AF12EE1AB01FE200EFCEAE /* libprotobuff-full-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprotobuff-full-mac.a";
+			remoteRef = 11AF12ED1AB01FE200EFCEAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11AF12F01AB01FE200EFCEAE /* libprotobuff-full-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprotobuff-full-ios.a";
+			remoteRef = 11AF12EF1AB01FE200EFCEAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprotobuff-lite-ios.a";
+			remoteRef = 11AF12F11AB01FE200EFCEAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11AF12F41AB01FE200EFCEAE /* libprotobuff-lite-mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libprotobuff-lite-mac.a";
+			remoteRef = 11AF12F31AB01FE200EFCEAE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -538,6 +659,7 @@
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
+				11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
@@ -557,6 +679,7 @@
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				1139F90E1AA9876300E7530C /* config.plist in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
+				11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 			);
@@ -568,6 +691,8 @@
 			files = (
 				1139F90F1AA9876300E7530C /* config.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
+				11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */,
+				11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
@@ -583,12 +708,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11AF13061AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */,
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				11AF130A1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
@@ -604,9 +731,11 @@
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				11AF130B1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				11AF13071AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
@@ -634,7 +763,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TuYou Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
@@ -651,6 +780,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"\"$(SRCROOT)/../protobuf-2.5.0/src\"",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -659,6 +789,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "cf884670-a1bd-4a82-aba6-24c609c879fd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -671,7 +802,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TuYou Technology Co. Ltd";
 				COMPRESS_PNG_FILES = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -686,6 +817,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios",
 					"$(SRCROOT)/../cocos2d/cocos/platform/ios/Simulation",
+					"\"$(SRCROOT)/../protobuf-2.5.0/src\"",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -694,6 +826,7 @@
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
 				);
+				PROVISIONING_PROFILE = "cf884670-a1bd-4a82-aba6-24c609c879fd";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -708,6 +841,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -723,6 +857,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
+					"\"$(SRCROOT)/../protobuf-2.5.0/src\"",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
@@ -730,6 +865,7 @@
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
 			};
 			name = Debug;
@@ -741,6 +877,7 @@
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_IDENTITY = "";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;
@@ -754,6 +891,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../cocos2d/cocos/platform/mac",
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
+					"\"$(SRCROOT)/../protobuf-2.5.0/src\"",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "";
@@ -761,6 +899,7 @@
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
 				);
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_MAC_BEGIN) $(_COCOS_HEADER_MAC_END)";
 			};
 			name = Release;

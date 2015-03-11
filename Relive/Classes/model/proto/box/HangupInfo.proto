@@ -1,0 +1,11 @@
+package com.road.yishi.proto.campaign;
+option java_package = "com.road.yishi.pb.campaign";
+option java_outer_classname = "HangupInfoMsgProto";
+option optimize_for = LITE_RUNTIME;
+// 挂机信息
+message HangupInfoMsg {
+	optional int32 left_weay = 1;			// 剩余获得体力
+	optional bool is_startHangup = 2;		// 是否挂机
+	optional int32 add_weay = 3;			// 获得体力
+    optional int32 hangupLeftTime = 4;		// 挂机剩余时间
+}
