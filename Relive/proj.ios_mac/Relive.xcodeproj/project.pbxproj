@@ -21,8 +21,6 @@
 		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
-		11DCBBB31AAB3A38007A9964 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DCBBB21AAB3A38007A9964 /* libsqlite3.0.dylib */; };
-		11DCBBB41AAB3A3B007A9964 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 11DCBBB21AAB3A38007A9964 /* libsqlite3.0.dylib */; };
 		11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */; };
 		1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AC6FAF9180E9839004C840B /* libcocos2d Mac.a */; };
@@ -132,7 +130,6 @@
 		1139F9851AA9B91E00E7530C /* LoginUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginUtil.cpp; sourceTree = "<group>"; };
 		1139F9861AA9B91E00E7530C /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
-		11DCBBB21AAB3A38007A9964 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
 		1AC6FAE5180E9839004C840B /* cocos2d_libs.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cocos2d_libs.xcodeproj; path = ../cocos2d/build/cocos2d_libs.xcodeproj; sourceTree = "<group>"; };
@@ -197,7 +194,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11DCBBB31AAB3A38007A9964 /* libsqlite3.0.dylib in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
 				D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */,
@@ -224,7 +220,6 @@
 				5087E78917EB974C00C73F5D /* AppKit.framework in Frameworks */,
 				5087E76317EB910900C73F5D /* Foundation.framework in Frameworks */,
 				5087E76817EB910900C73F5D /* QuartzCore.framework in Frameworks */,
-				11DCBBB41AAB3A3B007A9964 /* libsqlite3.0.dylib in Frameworks */,
 				5087E76917EB910900C73F5D /* OpenAL.framework in Frameworks */,
 				5087E76A17EB910900C73F5D /* AVFoundation.framework in Frameworks */,
 				5087E76B17EB910900C73F5D /* AudioToolbox.framework in Frameworks */,
@@ -347,7 +342,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				11DCBBB21AAB3A38007A9964 /* libsqlite3.0.dylib */,
 				52B47A461A53D09B004E4C60 /* Security.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
@@ -729,7 +723,7 @@
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
@@ -760,7 +754,7 @@
 					"$(SRCROOT)/../cocos2d/external/glfw3/include/mac",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
-				LIBRARY_SEARCH_PATHS = "$(DEVELOPER_DIR)/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib";
+				LIBRARY_SEARCH_PATHS = "";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_MAC_BEGIN)",
 					"$(_COCOS_LIB_MAC_END)",
