@@ -9,6 +9,8 @@
 #ifndef __RL_RELIVE_LOGINVIEW_SCENE_H__
 #define __RL_RELIVE_LOGINVIEW_SCENE_H__
 
+#include "cocostudio/WidgetCallBackHandlerProtocol.h"
+
 class LoginViewScene : public cocos2d::Layer
 {
 public:
@@ -25,6 +27,10 @@ public:
     void onActionEnterGame(Ref *pSender);
     void onActionSelectServer(Ref *pSender);
     
+    
+    virtual cocos2d::ui::Widget::ccWidgetTouchCallback onLocateTouchCallback(const std::string &callBackName);
+    virtual cocos2d::ui::Widget::ccWidgetClickCallback onLocateClickCallback(const std::string &callBackName);
+    virtual cocos2d::ui::Widget::ccWidgetEventCallback onLocateEventCallback(const std::string &callBackName);
     
     
   

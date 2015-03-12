@@ -109,8 +109,9 @@ bool CppGenerator::Generate(const FileDescriptor* file,
 
   // Generate cc file.
   {
+      //modify by tangquan cc 改为cpp
     scoped_ptr<io::ZeroCopyOutputStream> output(
-      generator_context->Open(basename + ".cc"));
+      generator_context->Open(basename + ".cpp"));
     io::Printer printer(output.get(), '$');
     file_generator.GenerateSource(&printer);
   }

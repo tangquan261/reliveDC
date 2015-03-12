@@ -4738,16 +4738,18 @@ inline void FileOptions::clear_has_optimize_for() {
   _has_bits_[0] &= ~0x00000010u;
 }
 inline void FileOptions::clear_optimize_for() {
-  optimize_for_ = 1;
+  //optimize_for_ = 1;
+  optimize_for_ = 3;//modify by tangquan
   clear_has_optimize_for();
 }
 inline ::google::protobuf::FileOptions_OptimizeMode FileOptions::optimize_for() const {
-  return static_cast< ::google::protobuf::FileOptions_OptimizeMode >(optimize_for_);
+  return FileOptions_OptimizeMode_LITE_RUNTIME;
 }
 inline void FileOptions::set_optimize_for(::google::protobuf::FileOptions_OptimizeMode value) {
   assert(::google::protobuf::FileOptions_OptimizeMode_IsValid(value));
   set_has_optimize_for();
-  optimize_for_ = value;
+  //optimize_for_ = value;
+    optimize_for_ = 3;//modify by tangquan
 }
 
 // optional string go_package = 11;

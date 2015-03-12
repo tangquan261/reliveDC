@@ -4400,7 +4400,8 @@ void FileOptions::SharedCtor() {
   java_outer_classname_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   java_multiple_files_ = false;
   java_generate_equals_and_hash_ = false;
-  optimize_for_ = 1;
+  optimize_for_ = 3;
+     //optimize_for_ = 1;//modify by tangquan
   go_package_ = const_cast< ::std::string*>(&::google::protobuf::internal::kEmptyString);
   cc_generic_services_ = false;
   java_generic_services_ = false;
@@ -4462,7 +4463,8 @@ void FileOptions::Clear() {
     }
     java_multiple_files_ = false;
     java_generate_equals_and_hash_ = false;
-    optimize_for_ = 1;
+    optimize_for_ = 3;
+       //optimize_for_ = 1;//modify by tangquan
     if (has_go_package()) {
       if (go_package_ != &::google::protobuf::internal::kEmptyString) {
         go_package_->clear();
@@ -4996,6 +4998,8 @@ void FileOptions::Swap(FileOptions* other) {
     _unknown_fields_.Swap(&other->_unknown_fields_);
     std::swap(_cached_size_, other->_cached_size_);
     _extensions_.Swap(&other->_extensions_);
+      
+    optimize_for_ = 3;// optimize_for_ = 1;//modify by tangquan
   }
 }
 

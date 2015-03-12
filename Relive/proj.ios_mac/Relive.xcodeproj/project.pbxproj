@@ -21,12 +21,12 @@
 		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
-		11AF13061AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */; };
-		11AF13071AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */; };
+		11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
+		11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
+		11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
+		11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
 		11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
 		11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
-		11AF130A1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */; };
-		11AF130B1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */ = {isa = PBXBuildFile; fileRef = 11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */; };
 		11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
 		11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
 		11AF13101AB0221B00EFCEAE /* libprotobuff-lite-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */; };
@@ -93,6 +93,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		11644DAA1AB0A1390059ECE2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 11AF131B1AB0713300EFCEAE;
+			remoteInfo = protoc;
+		};
 		11AF12ED1AB01FE200EFCEAE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */;
@@ -168,12 +175,12 @@
 		1139F9851AA9B91E00E7530C /* LoginUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginUtil.cpp; sourceTree = "<group>"; };
 		1139F9861AA9B91E00E7530C /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
+		11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cpp; sourceTree = "<group>"; };
+		11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
+		11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cpp; sourceTree = "<group>"; };
+		11644DAF1AB0A1450059ECE2 /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
 		11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protoc.xcodeproj; path = "../protobuf-2.5.0/protoc/protoc.xcodeproj"; sourceTree = "<group>"; };
-		11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cc; sourceTree = "<group>"; };
-		11AF12FC1AB0205800EFCEAE /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
 		11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
-		11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cc; sourceTree = "<group>"; };
-		11AF12FF1AB0205800EFCEAE /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
 		11AF13001AB0205800EFCEAE /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
 		11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginViewScene.cpp; sourceTree = "<group>"; };
 		11F78DC81AA80F74008034E5 /* LoginViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewScene.h; sourceTree = "<group>"; };
@@ -351,6 +358,7 @@
 				11AF12F01AB01FE200EFCEAE /* libprotobuff-full-ios.a */,
 				11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */,
 				11AF12F41AB01FE200EFCEAE /* libprotobuff-lite-mac.a */,
+				11644DAB1AB0A1390059ECE2 /* protoc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -374,11 +382,11 @@
 		11AF12FA1AB0205800EFCEAE /* box */ = {
 			isa = PBXGroup;
 			children = (
-				11AF12FB1AB0205800EFCEAE /* BoxMsg.pb.cc */,
-				11AF12FC1AB0205800EFCEAE /* BoxMsg.pb.h */,
+				11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */,
+				11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */,
+				11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */,
+				11644DAF1AB0A1450059ECE2 /* HangupInfo.pb.h */,
 				11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */,
-				11AF12FE1AB0205800EFCEAE /* HangupInfo.pb.cc */,
-				11AF12FF1AB0205800EFCEAE /* HangupInfo.pb.h */,
 				11AF13001AB0205800EFCEAE /* HangupInfo.proto */,
 			);
 			path = box;
@@ -607,6 +615,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		11644DAB1AB0A1390059ECE2 /* protoc */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = protoc;
+			remoteRef = 11644DAA1AB0A1390059ECE2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		11AF12EE1AB01FE200EFCEAE /* libprotobuff-full-mac.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -708,14 +723,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11AF13061AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */,
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				11AF130A1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */,
+				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
@@ -731,14 +746,14 @@
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
-				11AF130B1AB0205800EFCEAE /* HangupInfo.pb.cc in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
-				11AF13071AB0205800EFCEAE /* BoxMsg.pb.cc in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
+				11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
+				11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
