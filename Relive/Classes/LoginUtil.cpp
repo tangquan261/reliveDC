@@ -17,6 +17,7 @@
 #include "URL.h"
 
 #include "BoxMsg.pb.h"
+#include "Config_info.hpp"
 
 using namespace cocos2d;
 using namespace cocos2d::network;
@@ -26,9 +27,9 @@ extern config_msg g_configMsg;
 
 LoginUtil::LoginUtil()
 {
-    BoxMsg *p = new BoxMsg();
+    Config_info info;
     
-    p->set_grade(11);
+    Config_info::findDataById(info, 1);
     
     m_vecServerNameList.clear();
     m_vecUserServerNameList.clear();

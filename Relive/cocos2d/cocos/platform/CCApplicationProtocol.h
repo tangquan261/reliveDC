@@ -142,6 +142,8 @@ public:
      * @lua NA
      */
     virtual bool openURL(const std::string &url) = 0;
+    
+    int m_nLanguageType;
 };
 
 // end of platform group

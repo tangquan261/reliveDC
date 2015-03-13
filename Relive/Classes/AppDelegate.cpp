@@ -4,10 +4,14 @@
 #include "extensions/cocos-ext.h"
 
 #include "CommonDefine.h"
+#include "DataBaseHelper.h"
 
 USING_NS_CC;
 
 config_msg g_configMsg;
+
+//游戏中根据版本的多语言设置
+cocos2d::LanguageType g_nLanguageType = cocos2d::LanguageType::UKRAINIAN;
 
 AppDelegate::AppDelegate() {
 
@@ -38,6 +42,8 @@ void AppDelegate::LoadConfigFile()
     g_configMsg.strBaseUrl = conf->getValue("baseUrl").asString();
     g_configMsg.strSNSUrl = conf->getValue("baseSNSUrl").asString();
     g_configMsg.strAppKey = conf->getValue("appkey").asString();
+    
+    g_nLanguageType = cocos2d::LanguageType::CHINESE;
   
     CCLOG("%s, %s, %s", g_configMsg.strAppKey.c_str(), g_configMsg.strBaseUrl.c_str(), g_configMsg.strSNSUrl.c_str());
 }
@@ -79,7 +85,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 
     
     loadSearchPaths();
+    
     LoadConfigFile();
+    
+    DataBaseHelper::getInstance()->initDB();
     
     
     // create a scene. it's an autorelease object

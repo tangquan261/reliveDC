@@ -11,12 +11,15 @@
 
 #include <string>
 
+using namespace cocos2d;
+
 struct config_msg
 {
     std::string strBaseUrl;
     std::string strSNSUrl;
     std::string strAppKey;
 };
+
 
 
 

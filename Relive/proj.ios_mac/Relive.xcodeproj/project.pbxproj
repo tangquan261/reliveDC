@@ -25,6 +25,14 @@
 		11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
 		11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
 		11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
+		117BC6171AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
+		117BC6181AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
+		117BC6F61AB1849900710C09 /* StringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* StringUtil.cpp */; };
+		117BC6F71AB1849900710C09 /* StringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* StringUtil.cpp */; };
+		117BC6FB1AB18F3000710C09 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */; };
+		117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
+		117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
+		117BC70D1AB1C18B00710C09 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */; };
 		11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
 		11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
 		11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
@@ -179,6 +187,88 @@
 		11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
 		11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cpp; sourceTree = "<group>"; };
 		11644DAF1AB0A1450059ECE2 /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
+		117BC6161AB17E9700710C09 /* db */ = {isa = PBXFileReference; lastKnownFileType = folder; path = db; sourceTree = "<group>"; };
+		117BC6191AB17EC300710C09 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		117BC6871AB17FAD00710C09 /* DataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseHelper.h; sourceTree = "<group>"; };
+		117BC6891AB17FAD00710C09 /* Action_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Action_info.hpp; sourceTree = "<group>"; };
+		117BC68A1AB17FAD00710C09 /* ActionTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActionTemp_info.hpp; sourceTree = "<group>"; };
+		117BC68B1AB17FAD00710C09 /* ActiveTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActiveTemp_info.hpp; sourceTree = "<group>"; };
+		117BC68C1AB17FAD00710C09 /* Appell_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Appell_info.hpp; sourceTree = "<group>"; };
+		117BC68D1AB17FAD00710C09 /* BuildingTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BuildingTemp_info.hpp; sourceTree = "<group>"; };
+		117BC68E1AB17FAD00710C09 /* Campaign_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Campaign_info.hpp; sourceTree = "<group>"; };
+		117BC68F1AB17FAD00710C09 /* CampaignAnimLayer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CampaignAnimLayer.hpp; sourceTree = "<group>"; };
+		117BC6901AB17FAD00710C09 /* CampaignBufferTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CampaignBufferTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6911AB17FAD00710C09 /* CampaignData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CampaignData.hpp; sourceTree = "<group>"; };
+		117BC6921AB17FAD00710C09 /* CampaignNodeSkeleton.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CampaignNodeSkeleton.hpp; sourceTree = "<group>"; };
+		117BC6931AB17FAD00710C09 /* ComposeTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ComposeTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6941AB17FAD00710C09 /* Config_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Config_info.hpp; sourceTree = "<group>"; };
+		117BC6951AB17FAD00710C09 /* ConsortiaLevel_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConsortiaLevel_info.hpp; sourceTree = "<group>"; };
+		117BC6961AB17FAD00710C09 /* DailyTaskActMgr_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DailyTaskActMgr_info.hpp; sourceTree = "<group>"; };
+		117BC6971AB17FAD00710C09 /* DistrictDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DistrictDrop_info.hpp; sourceTree = "<group>"; };
+		117BC6981AB17FAD00710C09 /* DropView_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DropView_info.hpp; sourceTree = "<group>"; };
+		117BC6991AB17FAD00710C09 /* EffectTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EffectTemp_info.hpp; sourceTree = "<group>"; };
+		117BC69A1AB17FAD00710C09 /* FirstChargeItem_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FirstChargeItem_info.hpp; sourceTree = "<group>"; };
+		117BC69B1AB17FAD00710C09 /* GameHeroTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameHeroTemp_info.hpp; sourceTree = "<group>"; };
+		117BC69C1AB17FAD00710C09 /* GradeDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GradeDrop_info.hpp; sourceTree = "<group>"; };
+		117BC69D1AB17FAD00710C09 /* GuideValueTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GuideValueTemp_info.hpp; sourceTree = "<group>"; };
+		117BC69E1AB17FAD00710C09 /* Hero_avatar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Hero_avatar.hpp; sourceTree = "<group>"; };
+		117BC69F1AB17FAD00710C09 /* HeroAi_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HeroAi_info.hpp; sourceTree = "<group>"; };
+		117BC6A01AB17FAD00710C09 /* InviteGift_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = InviteGift_info.hpp; sourceTree = "<group>"; };
+		117BC6A11AB17FAD00710C09 /* ItemTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ItemTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6A41AB17FAD00710C09 /* KingContract_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KingContract_info.hpp; sourceTree = "<group>"; };
+		117BC6A51AB17FAD00710C09 /* LeedTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LeedTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6A61AB17FAD00710C09 /* Map_Convey.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map_Convey.hpp; sourceTree = "<group>"; };
+		117BC6A71AB17FAD00710C09 /* Map_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map_info.hpp; sourceTree = "<group>"; };
+		117BC6A81AB17FAD00710C09 /* MapPhysicsTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MapPhysicsTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6A91AB17FAD00710C09 /* MarriageTree_Info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MarriageTree_Info.hpp; sourceTree = "<group>"; };
+		117BC6AA1AB17FAD00710C09 /* MarrySpecTempInfo_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MarrySpecTempInfo_info.hpp; sourceTree = "<group>"; };
+		117BC6AB1AB17FAD00710C09 /* MountTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MountTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6AC1AB17FAD00710C09 /* Novice.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Novice.hpp; sourceTree = "<group>"; };
+		117BC6AD1AB17FAD00710C09 /* NoviceDialogue_story.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NoviceDialogue_story.hpp; sourceTree = "<group>"; };
+		117BC6AE1AB17FAD00710C09 /* PawnTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PawnTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6AF1AB17FAD00710C09 /* PetTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PetTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6B01AB17FAD00710C09 /* QuestCondition_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuestCondition_info.hpp; sourceTree = "<group>"; };
+		117BC6B11AB17FAD00710C09 /* QuestGoods_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuestGoods_info.hpp; sourceTree = "<group>"; };
+		117BC6B21AB17FAD00710C09 /* QuestTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QuestTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6B31AB17FAD00710C09 /* RelationArea.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RelationArea.hpp; sourceTree = "<group>"; };
+		117BC6B41AB17FAD00710C09 /* RelationCity.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RelationCity.hpp; sourceTree = "<group>"; };
+		117BC6B51AB17FAD00710C09 /* RelationCountry.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RelationCountry.hpp; sourceTree = "<group>"; };
+		117BC6B61AB17FAD00710C09 /* RelationProvince.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RelationProvince.hpp; sourceTree = "<group>"; };
+		117BC6B71AB17FAD00710C09 /* RelationStar.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RelationStar.hpp; sourceTree = "<group>"; };
+		117BC6B81AB17FAD00710C09 /* ReloginDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ReloginDrop_info.hpp; sourceTree = "<group>"; };
+		117BC6B91AB17FAD00710C09 /* RewardCondition_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RewardCondition_info.hpp; sourceTree = "<group>"; };
+		117BC6BA1AB17FAD00710C09 /* RewardGoods_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RewardGoods_info.hpp; sourceTree = "<group>"; };
+		117BC6BB1AB17FAD00710C09 /* RewardTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RewardTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6BC1AB17FAD00710C09 /* RuneTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RuneTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6BD1AB17FAD00710C09 /* ServerdayLeadparam.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ServerdayLeadparam.hpp; sourceTree = "<group>"; };
+		117BC6BE1AB17FAD00710C09 /* SevendayReward_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SevendayReward_info.hpp; sourceTree = "<group>"; };
+		117BC6BF1AB17FAD00710C09 /* ShopTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ShopTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C01AB17FAD00710C09 /* SimpLetask.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimpLetask.hpp; sourceTree = "<group>"; };
+		117BC6C11AB17FAD00710C09 /* SkillBufferTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SkillBufferTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C21AB17FAD00710C09 /* SkillPropertyTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SkillPropertyTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C31AB17FAD00710C09 /* SkillTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SkillTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C41AB17FAD00710C09 /* SpecialTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SpecialTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C51AB17FAD00710C09 /* StarTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StarTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C61AB17FAD00710C09 /* SuiteTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SuiteTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6C71AB17FAD00710C09 /* t_s_dropcondition.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = t_s_dropcondition.hpp; sourceTree = "<group>"; };
+		117BC6C81AB17FAD00710C09 /* t_s_dropitem.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = t_s_dropitem.hpp; sourceTree = "<group>"; };
+		117BC6C91AB17FAD00710C09 /* t_s_fashionidentify.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = t_s_fashionidentify.hpp; sourceTree = "<group>"; };
+		117BC6CA1AB17FAD00710C09 /* t_s_pettemplate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = t_s_pettemplate.hpp; sourceTree = "<group>"; };
+		117BC6CB1AB17FAD00710C09 /* TalentEffectTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TalentEffectTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6CC1AB17FAD00710C09 /* TimeDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TimeDrop_info.hpp; sourceTree = "<group>"; };
+		117BC6CD1AB17FAD00710C09 /* Transform_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Transform_info.hpp; sourceTree = "<group>"; };
+		117BC6CE1AB17FAD00710C09 /* UpGradeTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UpGradeTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6CF1AB17FAD00710C09 /* VehicleBuffTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VehicleBuffTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6D01AB17FAD00710C09 /* VehicleObjectTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VehicleObjectTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6D11AB17FAD00710C09 /* VehicleSkillTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VehicleSkillTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6D21AB17FAD00710C09 /* VipDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VipDrop_info.hpp; sourceTree = "<group>"; };
+		117BC6D31AB17FAD00710C09 /* VipPrerogativeTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VipPrerogativeTemp_info.hpp; sourceTree = "<group>"; };
+		117BC6F41AB1849900710C09 /* StringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StringUtil.cpp; path = Common/StringUtil.cpp; sourceTree = "<group>"; };
+		117BC6F51AB1849900710C09 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtil.h; path = Common/StringUtil.h; sourceTree = "<group>"; };
+		117BC6F81AB18F1C00710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
+		117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataBaseHelper.cpp; sourceTree = "<group>"; };
+		117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
 		11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protoc.xcodeproj; path = "../protobuf-2.5.0/protoc/protoc.xcodeproj"; sourceTree = "<group>"; };
 		11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
 		11AF13001AB0205800EFCEAE /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
@@ -246,6 +336,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117BC70D1AB1C18B00710C09 /* libsqlite3.dylib in Frameworks */,
 				11AF13101AB0221B00EFCEAE /* libprotobuff-lite-ios.a in Frameworks */,
 				52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */,
 				1AC6FB30180E99EB004C840B /* libcocos2d iOS.a in Frameworks */,
@@ -266,6 +357,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117BC6FB1AB18F3000710C09 /* libsqlite3.0.dylib in Frameworks */,
 				11AF13111AB0222300EFCEAE /* libprotobuff-lite-mac.a in Frameworks */,
 				1AC6FB21180E996B004C840B /* libcocos2d Mac.a in Frameworks */,
 				5087E76717EB910900C73F5D /* libz.dylib in Frameworks */,
@@ -301,10 +393,13 @@
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				117BC6851AB17FAD00710C09 /* DataBase */,
 				11AF12F61AB0205800EFCEAE /* model */,
 				1139F96C1AA9A5BD00E7530C /* Safety */,
 				1139F9111AA98DD800E7530C /* CommonDefine.h */,
 				1139F9891AA9BBA400E7530C /* HLSingleton.h */,
+				117BC6F41AB1849900710C09 /* StringUtil.cpp */,
+				117BC6F51AB1849900710C09 /* StringUtil.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -349,6 +444,96 @@
 				1139F9771AA9A5BD00E7530C /* sha1.h */,
 			);
 			path = sha1;
+			sourceTree = "<group>";
+		};
+		117BC6851AB17FAD00710C09 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */,
+				117BC6871AB17FAD00710C09 /* DataBaseHelper.h */,
+				117BC6881AB17FAD00710C09 /* DBTable */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		117BC6881AB17FAD00710C09 /* DBTable */ = {
+			isa = PBXGroup;
+			children = (
+				117BC6891AB17FAD00710C09 /* Action_info.hpp */,
+				117BC68A1AB17FAD00710C09 /* ActionTemp_info.hpp */,
+				117BC68B1AB17FAD00710C09 /* ActiveTemp_info.hpp */,
+				117BC68C1AB17FAD00710C09 /* Appell_info.hpp */,
+				117BC68D1AB17FAD00710C09 /* BuildingTemp_info.hpp */,
+				117BC68E1AB17FAD00710C09 /* Campaign_info.hpp */,
+				117BC68F1AB17FAD00710C09 /* CampaignAnimLayer.hpp */,
+				117BC6901AB17FAD00710C09 /* CampaignBufferTemp_info.hpp */,
+				117BC6911AB17FAD00710C09 /* CampaignData.hpp */,
+				117BC6921AB17FAD00710C09 /* CampaignNodeSkeleton.hpp */,
+				117BC6931AB17FAD00710C09 /* ComposeTemp_info.hpp */,
+				117BC6941AB17FAD00710C09 /* Config_info.hpp */,
+				117BC6951AB17FAD00710C09 /* ConsortiaLevel_info.hpp */,
+				117BC6961AB17FAD00710C09 /* DailyTaskActMgr_info.hpp */,
+				117BC6971AB17FAD00710C09 /* DistrictDrop_info.hpp */,
+				117BC6981AB17FAD00710C09 /* DropView_info.hpp */,
+				117BC6991AB17FAD00710C09 /* EffectTemp_info.hpp */,
+				117BC69A1AB17FAD00710C09 /* FirstChargeItem_info.hpp */,
+				117BC69B1AB17FAD00710C09 /* GameHeroTemp_info.hpp */,
+				117BC69C1AB17FAD00710C09 /* GradeDrop_info.hpp */,
+				117BC69D1AB17FAD00710C09 /* GuideValueTemp_info.hpp */,
+				117BC69E1AB17FAD00710C09 /* Hero_avatar.hpp */,
+				117BC69F1AB17FAD00710C09 /* HeroAi_info.hpp */,
+				117BC6A01AB17FAD00710C09 /* InviteGift_info.hpp */,
+				117BC6A11AB17FAD00710C09 /* ItemTemp_info.hpp */,
+				117BC6A41AB17FAD00710C09 /* KingContract_info.hpp */,
+				117BC6A51AB17FAD00710C09 /* LeedTemp_info.hpp */,
+				117BC6A61AB17FAD00710C09 /* Map_Convey.hpp */,
+				117BC6A71AB17FAD00710C09 /* Map_info.hpp */,
+				117BC6A81AB17FAD00710C09 /* MapPhysicsTemp_info.hpp */,
+				117BC6A91AB17FAD00710C09 /* MarriageTree_Info.hpp */,
+				117BC6AA1AB17FAD00710C09 /* MarrySpecTempInfo_info.hpp */,
+				117BC6AB1AB17FAD00710C09 /* MountTemp_info.hpp */,
+				117BC6AC1AB17FAD00710C09 /* Novice.hpp */,
+				117BC6AD1AB17FAD00710C09 /* NoviceDialogue_story.hpp */,
+				117BC6AE1AB17FAD00710C09 /* PawnTemp_info.hpp */,
+				117BC6AF1AB17FAD00710C09 /* PetTemp_info.hpp */,
+				117BC6B01AB17FAD00710C09 /* QuestCondition_info.hpp */,
+				117BC6B11AB17FAD00710C09 /* QuestGoods_info.hpp */,
+				117BC6B21AB17FAD00710C09 /* QuestTemp_info.hpp */,
+				117BC6B31AB17FAD00710C09 /* RelationArea.hpp */,
+				117BC6B41AB17FAD00710C09 /* RelationCity.hpp */,
+				117BC6B51AB17FAD00710C09 /* RelationCountry.hpp */,
+				117BC6B61AB17FAD00710C09 /* RelationProvince.hpp */,
+				117BC6B71AB17FAD00710C09 /* RelationStar.hpp */,
+				117BC6B81AB17FAD00710C09 /* ReloginDrop_info.hpp */,
+				117BC6B91AB17FAD00710C09 /* RewardCondition_info.hpp */,
+				117BC6BA1AB17FAD00710C09 /* RewardGoods_info.hpp */,
+				117BC6BB1AB17FAD00710C09 /* RewardTemp_info.hpp */,
+				117BC6BC1AB17FAD00710C09 /* RuneTemp_info.hpp */,
+				117BC6BD1AB17FAD00710C09 /* ServerdayLeadparam.hpp */,
+				117BC6BE1AB17FAD00710C09 /* SevendayReward_info.hpp */,
+				117BC6BF1AB17FAD00710C09 /* ShopTemp_info.hpp */,
+				117BC6C01AB17FAD00710C09 /* SimpLetask.hpp */,
+				117BC6C11AB17FAD00710C09 /* SkillBufferTemp_info.hpp */,
+				117BC6C21AB17FAD00710C09 /* SkillPropertyTemp_info.hpp */,
+				117BC6C31AB17FAD00710C09 /* SkillTemp_info.hpp */,
+				117BC6C41AB17FAD00710C09 /* SpecialTemp_info.hpp */,
+				117BC6C51AB17FAD00710C09 /* StarTemp_info.hpp */,
+				117BC6C61AB17FAD00710C09 /* SuiteTemp_info.hpp */,
+				117BC6C71AB17FAD00710C09 /* t_s_dropcondition.hpp */,
+				117BC6C81AB17FAD00710C09 /* t_s_dropitem.hpp */,
+				117BC6C91AB17FAD00710C09 /* t_s_fashionidentify.hpp */,
+				117BC6CA1AB17FAD00710C09 /* t_s_pettemplate.hpp */,
+				117BC6CB1AB17FAD00710C09 /* TalentEffectTemp_info.hpp */,
+				117BC6CC1AB17FAD00710C09 /* TimeDrop_info.hpp */,
+				117BC6CD1AB17FAD00710C09 /* Transform_info.hpp */,
+				117BC6CE1AB17FAD00710C09 /* UpGradeTemp_info.hpp */,
+				117BC6CF1AB17FAD00710C09 /* VehicleBuffTemp_info.hpp */,
+				117BC6D01AB17FAD00710C09 /* VehicleObjectTemp_info.hpp */,
+				117BC6D11AB17FAD00710C09 /* VehicleSkillTemp_info.hpp */,
+				117BC6D21AB17FAD00710C09 /* VipDrop_info.hpp */,
+				117BC6D31AB17FAD00710C09 /* VipPrerogativeTemp_info.hpp */,
+			);
+			path = DBTable;
 			sourceTree = "<group>";
 		};
 		11AF12E71AB01FE100EFCEAE /* Products */ = {
@@ -439,6 +624,10 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */,
+				117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */,
+				117BC6F81AB18F1C00710C09 /* libsqlite3.0.dylib */,
+				117BC6191AB17EC300710C09 /* libsqlite3.dylib */,
 				52B47A461A53D09B004E4C60 /* Security.framework */,
 				D6B0611A1803AB670077942B /* CoreMotion.framework */,
 				503AE11A17EB9C5A00D1A890 /* IOKit.framework */,
@@ -462,6 +651,7 @@
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				117BC6161AB17E9700710C09 /* db */,
 				1139F90D1AA9876300E7530C /* config.plist */,
 				521A8EA819F11F5000D177D7 /* fonts */,
 				3EACC98E19EE6D4300EB3C5E /* res */,
@@ -671,6 +861,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117BC6171AB17E9700710C09 /* db in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -704,6 +895,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117BC6181AB17E9700710C09 /* db in Resources */,
 				1139F90F1AA9876300E7530C /* config.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */,
@@ -724,11 +916,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
+				117BC6F61AB1849900710C09 /* StringUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
+				117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
@@ -748,9 +942,11 @@
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
+				117BC6F71AB1849900710C09 /* StringUtil.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
+				117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
 				11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
 				11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
@@ -789,6 +985,7 @@
 					CC_TARGET_OS_IPHONE,
 					"COCOS2D_DEBUG=1",
 					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					SQLITE_HAS_CODEC,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (
@@ -826,6 +1023,7 @@
 					USE_FILE32API,
 					CC_TARGET_OS_IPHONE,
 					"CC_ENABLE_CHIPMUNK_INTEGRATION=1",
+					SQLITE_HAS_CODEC,
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				HEADER_SEARCH_PATHS = (

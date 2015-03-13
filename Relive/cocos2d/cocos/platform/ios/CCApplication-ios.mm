@@ -105,7 +105,12 @@ LanguageType Application::getCurrentLanguage()
     NSString * languageCode = [temp objectForKey:NSLocaleLanguageCode];
     
     LanguageType ret = LanguageType::ENGLISH;
-    if ([languageCode isEqualToString:@"zh"])
+    
+    if ([languageCode isEqualToString:@"zh-Hant"])
+    {
+        ret = LanguageType::TAIWAN;
+    }
+    else if ([languageCode isEqualToString:@"zh"])
     {
         ret = LanguageType::CHINESE;
     }
