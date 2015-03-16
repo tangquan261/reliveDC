@@ -64,18 +64,18 @@ bool LoginViewScene::init()
     auto rootNode = CSLoader::createNode("Layer.csb");
     rootNode->setScale(0.5);
     
-//    Button* pBtnEnter = static_cast<Button*>(rootNode->getChildByName("Btn_EnterGame"));
-//    pBtnEnter->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionEnterGame, this));
-//    
-//    Button* pBtnLogin = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_4")->getChildByName("Btn_Login"));
-//    
-//    pBtnLogin->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionLogin, this));
-//    
-//    
-//    Button* pBtnSelect = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_3")->getChildByName("Btn_Select"));
-//    
-//    pBtnSelect->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionSelectServer, this));
-//    
+    Button* pBtnEnter = static_cast<Button*>(rootNode->getChildByName("Btn_EnterGame"));
+    pBtnEnter->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionEnterGame, this));
+    
+    Button* pBtnLogin = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_4")->getChildByName("Btn_Login"));
+    
+    pBtnLogin->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionLogin, this));
+    
+    
+    Button* pBtnSelect = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_3")->getChildByName("Btn_Select"));
+    
+    pBtnSelect->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionSelectServer, this));
+    
     
     addChild(rootNode);
     

@@ -45,16 +45,16 @@ void LoginUtil::ApplyServerList()
 {
     std::string url;
     
-    std::string username = "xixihaha1";
+    m_userName = "xixihaha1";
     std::string password = "111111";
     
-    if (username.length() < 1)
+    if (m_userName.length() < 1)
     {
         // 去除游客登陆
         url = StringUtils::format("%s/v2/user/shengQuLoginPlatformByUdid?appKey=%s&udid=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","");
     }
     else {
-        url = StringUtils::format("%s/v2/user/shengQuLoginPlatform?email=%s&password=%s&appKey=%s&udid=%s&idfa=%s&platformType=%s",g_configMsg.strSNSUrl.c_str(),username.c_str(),CCSafety::ToMD5String((const char *)password.c_str()).c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","","");
+        url = StringUtils::format("%s/v2/user/shengQuLoginPlatform?email=%s&password=%s&appKey=%s&udid=%s&idfa=%s&platformType=%s",g_configMsg.strSNSUrl.c_str(),m_userName.c_str(),CCSafety::ToMD5String((const char *)password.c_str()).c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1","","");
     }
     
     
@@ -71,6 +71,8 @@ void LoginUtil::ApplyEnterGame()
 {
     std::string url;
     
+    m_stChoosedServer = m_vecServerNameList[0];
+    
     url = StringUtils::format("%s/v2/user/shengQuLoginServer?site=%s&appKey=%s&udid=%s&sessionId=%s&idfa=%s",g_configMsg.strSNSUrl.c_str(),m_vecServerNameList[0].serverId.c_str(),g_configMsg.strAppKey.c_str(),"anysssssdfsf1",m_strSessionID.c_str(),"");
     
     HttpRequest* request = new (std::nothrow) HttpRequest();
@@ -86,9 +88,9 @@ void LoginUtil::ApplySelectList()
 {
     
     uint32_t random = arc4random()%10000000;
-    std::string param = StringUtils::format("username=%s&site=%s&ran=%u&udid=%s&idfa=%s",m_userName.c_str(),m_stChoosedServer.serverId.c_str(),random,"anysssssdfsf1","");
+    std::string param = StringUtils::format("username=%s&site=%s&ran=%u&udid=%s&idfa=%s", m_userID.c_str(), m_stChoosedServer.serverId.c_str(),random,"anysssssdfsf1","");
     
-    std::string url = g_configMsg.strBaseUrl;
+    std::string url = m_stChoosedServer.ipAddress;
     
     url += "/loginselectlist?";
     url += param;
@@ -302,8 +304,9 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             }
             else
             {
-                //std::string strUserID = (jsonMap["user"].GetInt());
-                string key = jsonMap["key"].GetString();
+                
+                m_userID = StringUtils::format("%u", jsonMap["user"].GetInt());
+                m_Password = jsonMap["key"].GetString();
                 
                 if (nCode == 1000)
                 {
