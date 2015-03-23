@@ -12,6 +12,7 @@
 #include "extensions/cocos-ext.h"
 #include "cocostudio/CocoStudio.h"
 #include "CommonDefine.h"
+#include "HLStringUtil.h"
 
 #include "CCSafety.h"
 #include "URL.h"
@@ -108,32 +109,40 @@ void LoginUtil::ApplySelectList()
 
 void LoginUtil::LoadServerList(rapidjson::Value &jsonMap)
 {
-    int nCode = jsonMap["code"].GetInt();
-
+    int nCode = 0;
+    
+    if(!HLStringUtil::GetJsonInt(jsonMap, "code", nCode))
+    {
+        return;
+    }
+ 
     if (nCode != 1000)
     {
         return;
     }
     
-    if (jsonMap.HasMember("sessionId")
-        && !jsonMap["sessionId"].IsNull())
+    
+    if (!HLStringUtil::GetJsonString(jsonMap, "sessionId", m_strSessionID))
     {
-        m_strSessionID = jsonMap["sessionId"].GetString();
+        return;
     }
+
+    m_strSessionID = jsonMap["sessionId"].GetString();
+    
     
     if (jsonMap.HasMember("serverList"))
     {
         rapidjson::Value& array = jsonMap["serverList"];
         
         int nLen = array.Size();
-        for (int i = 0; i < nLen; i++) {
+        
+        for (int i = 0; i < nLen; i++)
+        {
             rapidjson::Value& item = array[i];
             ServerName serverName;
             updateOneServer(serverName,item);
             m_vecServerNameList.push_back(serverName);
         }
-
-        
     }
     
     if (jsonMap.HasMember("usedServerIdList"))
@@ -156,69 +165,19 @@ void LoginUtil::LoadServerList(rapidjson::Value &jsonMap)
 
 void LoginUtil::updateOneServer(ServerName &serverName,rapidjson::Value& doc)
 {
-    if (doc.HasMember("name"))
-    {
-        serverName.name  = doc["name"].GetString();
-    }
+    HLStringUtil::GetJsonInt(doc, "id", serverName.id_ );
+    HLStringUtil::GetJsonInt(doc, "isRecommend", serverName.isRecommend );
+    HLStringUtil::GetJsonInt(doc, "status", serverName.status);
+    HLStringUtil::GetJsonInt(doc, "appid", serverName.appid);
     
-    if (doc.HasMember("id"))
-    {
-        serverName.id_   = doc["id"].GetInt();
-    }
+    HLStringUtil::GetJsonString(doc, "name", serverName.name );
+    HLStringUtil::GetJsonString(doc, "description", serverName.description);
+    HLStringUtil::GetJsonString(doc, "ipAddress", serverName.ipAddress);
+    HLStringUtil::GetJsonString(doc, "serverId", serverName.serverId);
+    HLStringUtil::GetJsonString(doc, "purchaseDeliveryUrl", serverName.purchaseDeliveryUrl);
+    HLStringUtil::GetJsonString(doc, "userValidateUrl", serverName.userValidateUrl);
+    HLStringUtil::GetJsonString(doc, "vipRefreshNotifyUrl", serverName.vipRefreshNotifyUrl);
     
-    if (doc.HasMember("description")&& !doc["description"].IsNull())
-    {
-        serverName.description  = doc["description"].GetString();
-    }
-    
-    if (doc.HasMember("status"))
-    {
-        serverName.status       = doc["status"].GetInt();
-    }
-    
-    if (doc.HasMember("ipAddress"))
-    {
-        serverName.ipAddress    = doc["ipAddress"].GetString();
-    }
-    
-    if (doc.HasMember("serverId"))
-    {
-        serverName.serverId     = doc["serverId"].GetString();
-    }
-    
-    if (doc.HasMember("appId"))
-    {
-        serverName.appid        = doc["appId"].GetInt();
-    }
-    
-    if (doc.HasMember("purchaseDeliveryUrl")
-        && !doc["purchaseDeliveryUrl"].IsNull())
-    {
-        char pLen[21];
-        memset(pLen, 0, 21);
-        
-        snprintf(pLen, 20, "%u", doc["purchaseDeliveryUrl"].GetInt());
-        serverName.purchaseDeliveryUrl  = pLen;
-    }
-    
-    if (doc.HasMember("userValidateUrl")
-        && !doc["userValidateUrl"].IsNull())
-    {
-        serverName.userValidateUrl      = doc["userValidateUrl"].GetString();
-    }
-   
-    if (doc.HasMember("vipRefreshNotifyUrl")
-        && !doc["vipRefreshNotifyUrl"].IsNull())
-    {
-        serverName.vipRefreshNotifyUrl  = doc["vipRefreshNotifyUrl"].GetString();
-    }
-    
-    if (doc.HasMember("isRecommend")
-        &&!doc["vipRefreshNotifyUrl"].IsNull())
-    {
-        serverName.isRecommend          = doc["isRecommend"].GetInt();
-    }
-
 }
 
 ServerName* LoginUtil::GetServerByServerName(const std::string strName)
@@ -257,10 +216,15 @@ void LoginUtil::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, coc
     DoTaskRequest(atoi(response->getHttpRequest()->getTag()), response);
 }
 
+
 void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {
     std::string strMsg = response->getResponseDataString();
     rapidjson::Document doc;
+    
+    doc.Parse<rapidjson::kParseDefaultFlags>(strMsg.c_str());
+    
+    rapidjson::Value &jsonMap=doc;
     
     switch (nType)
     {
@@ -270,12 +234,14 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             {
                 return;
             }
+            int nCodeNum = 0;
             
-            doc.Parse<rapidjson::kParseDefaultFlags>(strMsg.c_str());
+            if(!HLStringUtil::GetJsonInt(jsonMap, "code", nCodeNum))
+            {
+                return;
+            }
             
-            rapidjson::Value &jsonMap=doc;
-            
-            if (1000 != jsonMap["code"].GetInt())
+            if (1000 != nCodeNum)
             {
                 CCLOG("error : %s", strMsg.c_str());
             }
@@ -286,17 +252,15 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
         }
         case 2:
         {
+            int nCode = 0;
+            std::string strMessage;
             
-            doc.Parse<rapidjson::kParseDefaultFlags>(strMsg.c_str());
-            
-            rapidjson::Value &jsonMap=doc;
-            
-            int nCode = jsonMap["code"].GetInt();
-            
+            HLStringUtil::GetJsonInt(jsonMap, "code", nCode);
+            HLStringUtil::GetJsonString(jsonMap, "message", strMessage);
             
             if (nCode > 2000 || nCode != 1000)
             {
-                CCLOG("error %s", jsonMap["message"].GetString());
+                CCLOG("error code id %u, message: %s",nCode, strMessage.c_str());
             }
             else if(!doc.HasMember("user"))
             {
@@ -304,22 +268,27 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             }
             else
             {
-                
-                m_userID = StringUtils::format("%u", jsonMap["user"].GetInt());
-                m_Password = jsonMap["key"].GetString();
+                HLStringUtil::GetJsonString(jsonMap, "user", m_userID);
+                HLStringUtil::GetJsonString(jsonMap, "key", m_Password);
                 
                 if (nCode == 1000)
                 {
                     ApplySelectList();
                 }
-                
             }
             break;
         }
         case 3:
         {
-            
-            
+            if(std::string::npos == strMsg.find("ID=\"")
+               && std::string::npos == strMsg.find("Result value=\"true\""))
+            {
+                CCLOG("登陆失败，从新进入登陆界面");
+            }
+            else if(std::string::npos == strMsg.find("ID=\""))
+            {
+                m_userID = "0";
+            }
             
             break;
         }

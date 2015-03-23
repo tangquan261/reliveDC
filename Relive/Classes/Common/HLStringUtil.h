@@ -15,9 +15,14 @@
 #include <stdlib.h>
 #include <stdarg.h>
 #include <ctype.h>
+#include "extensions/cocos-ext.h"
+#include "cocostudio/CocoStudio.h"
 
+using namespace cocos2d;
 
-namespace StringUtil
+static const int MAX_ERROR_NUM = -999999999;
+
+namespace HLStringUtil
 {
     inline void StringToUpper(std::string& str)
     {
@@ -159,7 +164,7 @@ namespace StringUtil
         while (1)
         {
             str.resize(size);
-            va_start(ap, fmt);
+            va_start(ap, fmt.c_str());
             int n = vsnprintf((char *)str.c_str(), size, fmt.c_str(), ap);
             va_end(ap);
             if (n > -1 && n < size)
@@ -195,6 +200,82 @@ namespace StringUtil
         return str;
     }
 
+    inline bool GetJsonInt(const rapidjson::Value &jsonValue, const std::string &pKey, int &nOutput)
+    {
+        bool bRet = true;
+        
+        nOutput = MAX_ERROR_NUM;
+        
+        if (!jsonValue.HasMember(pKey.c_str()))
+        {
+            CCLOG("error: has no member pkey:%s to int", pKey.c_str());
+            return false;
+        }
+        
+        if (jsonValue[pKey.c_str()].IsInt())
+        {
+            nOutput =jsonValue[pKey.c_str()].GetInt();
+        }
+        else if(jsonValue[pKey.c_str()].IsString())
+        {
+            CCLOG("pkey:%s is string get int", pKey.c_str());
+            
+            nOutput = atoi(jsonValue[pKey.c_str()].GetString());
+        }
+        else if(jsonValue[pKey.c_str()].IsDouble())
+        {
+            CCLOG("pkey:%s is double get int", pKey.c_str());
+            
+            nOutput = (int)jsonValue[pKey.c_str()].GetDouble();
+        }
+        else if(jsonValue[pKey.c_str()].IsNull())
+        {
+            CCLOG("pkey:%s is null get int warnning", pKey.c_str());
+            bRet = false;
+        }
+        else
+        {
+            CCLOG("pkey:%s is unkonwn type  get int error", pKey.c_str());
+            bRet = false;
+        }
+        
+        return bRet;
+    }
+    
+    inline bool GetJsonString(const rapidjson::Value &jsonValue, const std::string &pKey, std::string &strOutput)
+    {
+        bool bRet = true;
+        
+        strOutput.clear();
+        
+        if (!jsonValue.HasMember(pKey.c_str()))
+        {
+            CCLOG("error: has no member pkey:%s to string", pKey.c_str());
+            return false;
+        }
+        
+        if (jsonValue[pKey.c_str()].IsString())
+        {
+            CCLOG("pkey:%s is string get string", pKey.c_str());
+            strOutput = jsonValue[pKey.c_str()].GetString();
+        }
+        else if(jsonValue[pKey.c_str()].IsInt())
+        {
+            CCLOG("pkey:%s is int get string", pKey.c_str());
+            strOutput = Format("%d",jsonValue[pKey.c_str()].GetInt());
+        }
+        else if(jsonValue[pKey.c_str()].IsNull())
+        {
+            CCLOG("pkey:%s is null get string warnning", pKey.c_str());
+            bRet = false;
+        }
+        else
+        {
+            CCLOG("pkey:%s is unkonwn type get string error", pKey.c_str());
+            bRet = false;
+        }
+        return bRet;
+    }
 }
 
 #endif /* defined(__Relive__StringUtil__) */

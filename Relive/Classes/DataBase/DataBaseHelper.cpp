@@ -9,7 +9,7 @@
 #include "DataBaseHelper.h"
 
 #include <unistd.h>
-#include "StringUtil.h"
+#include "HLStringUtil.h"
 
 static int _sql_callback(void * notused, int argc, char ** argv, char ** szColName)
 {
@@ -304,7 +304,7 @@ const char* DataBaseHelper::getDBName()
 unsigned int DataBaseHelper::parseDBVersion(const char* verStr)
 {
     std::vector<int> vs;
-    StringUtil::SplitInt(vs, verStr, '.');
+    HLStringUtil::SplitInt(vs, verStr, '.');
     
     int version = 0;
     static const int shift[] = {24, 16, 0};
@@ -321,7 +321,7 @@ int DataBaseHelper::countForTable(const char * table)
     
     std::string strsql;
     
-    StringUtil::Format(strsql,"select count(*) from %s", table);
+    HLStringUtil::Format(strsql,"select count(*) from %s", table);
     
     sqlite3_stmt *statement;
     

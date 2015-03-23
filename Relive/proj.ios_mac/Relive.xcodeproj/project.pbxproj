@@ -27,8 +27,8 @@
 		11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
 		117BC6171AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
 		117BC6181AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
-		117BC6F61AB1849900710C09 /* StringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* StringUtil.cpp */; };
-		117BC6F71AB1849900710C09 /* StringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* StringUtil.cpp */; };
+		117BC6F61AB1849900710C09 /* HLStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* HLStringUtil.cpp */; };
+		117BC6F71AB1849900710C09 /* HLStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* HLStringUtil.cpp */; };
 		117BC6FB1AB18F3000710C09 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */; };
 		117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
 		117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
@@ -263,8 +263,8 @@
 		117BC6D11AB17FAD00710C09 /* VehicleSkillTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VehicleSkillTemp_info.hpp; sourceTree = "<group>"; };
 		117BC6D21AB17FAD00710C09 /* VipDrop_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VipDrop_info.hpp; sourceTree = "<group>"; };
 		117BC6D31AB17FAD00710C09 /* VipPrerogativeTemp_info.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VipPrerogativeTemp_info.hpp; sourceTree = "<group>"; };
-		117BC6F41AB1849900710C09 /* StringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = StringUtil.cpp; path = Common/StringUtil.cpp; sourceTree = "<group>"; };
-		117BC6F51AB1849900710C09 /* StringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StringUtil.h; path = Common/StringUtil.h; sourceTree = "<group>"; };
+		117BC6F41AB1849900710C09 /* HLStringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLStringUtil.cpp; path = Common/HLStringUtil.cpp; sourceTree = "<group>"; };
+		117BC6F51AB1849900710C09 /* HLStringUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLStringUtil.h; path = Common/HLStringUtil.h; sourceTree = "<group>"; };
 		117BC6F81AB18F1C00710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.0.dylib; sourceTree = DEVELOPER_DIR; };
 		117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataBaseHelper.cpp; sourceTree = "<group>"; };
@@ -398,8 +398,8 @@
 				1139F96C1AA9A5BD00E7530C /* Safety */,
 				1139F9111AA98DD800E7530C /* CommonDefine.h */,
 				1139F9891AA9BBA400E7530C /* HLSingleton.h */,
-				117BC6F41AB1849900710C09 /* StringUtil.cpp */,
-				117BC6F51AB1849900710C09 /* StringUtil.h */,
+				117BC6F41AB1849900710C09 /* HLStringUtil.cpp */,
+				117BC6F51AB1849900710C09 /* HLStringUtil.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -916,7 +916,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
-				117BC6F61AB1849900710C09 /* StringUtil.cpp in Sources */,
+				117BC6F61AB1849900710C09 /* HLStringUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
@@ -942,7 +942,7 @@
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
-				117BC6F71AB1849900710C09 /* StringUtil.cpp in Sources */,
+				117BC6F71AB1849900710C09 /* HLStringUtil.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,

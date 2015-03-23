@@ -63,6 +63,8 @@ public:
     //Apply
     void ApplySelectList();
     
+    void ApplyTureSelect();
+    
 private:
     std::vector<ServerName> m_vecServerNameList;
     std::vector<ServerName> m_vecUserServerNameList;
