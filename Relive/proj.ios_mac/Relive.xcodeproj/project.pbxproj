@@ -33,6 +33,10 @@
 		117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
 		117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
 		117BC70D1AB1C18B00710C09 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */; };
+		1199D98E1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */; };
+		1199D98F1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */; };
+		1199D9971AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */; };
+		1199D9981AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */; };
 		11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
 		11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
 		11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
@@ -269,6 +273,10 @@
 		117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataBaseHelper.cpp; sourceTree = "<group>"; };
 		117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNode.cpp; sourceTree = "<group>"; };
+		1199D98D1AC2D6620091EAA2 /* CustomRootNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRootNode.h; sourceTree = "<group>"; };
+		1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNodeReader.cpp; sourceTree = "<group>"; };
+		1199D9961AC2D6990091EAA2 /* CustomRootNodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRootNodeReader.h; sourceTree = "<group>"; };
 		11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protoc.xcodeproj; path = "../protobuf-2.5.0/protoc/protoc.xcodeproj"; sourceTree = "<group>"; };
 		11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
 		11AF13001AB0205800EFCEAE /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
@@ -580,6 +588,10 @@
 		11F78DDC1AA8430D008034E5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */,
+				1199D9961AC2D6990091EAA2 /* CustomRootNodeReader.h */,
+				1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */,
+				1199D98D1AC2D6620091EAA2 /* CustomRootNode.h */,
 				11F78DC71AA80F74008034E5 /* LoginViewScene.cpp */,
 				11F78DC81AA80F74008034E5 /* LoginViewScene.h */,
 				1139F9851AA9B91E00E7530C /* LoginUtil.cpp */,
@@ -923,12 +935,14 @@
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
 				117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
+				1199D98E1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				1199D9971AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
 				1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -937,10 +951,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1199D98F1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
+				1199D9981AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				117BC6F71AB1849900710C09 /* HLStringUtil.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,

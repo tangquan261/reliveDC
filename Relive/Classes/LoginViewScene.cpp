@@ -17,6 +17,9 @@
 
 #include "LoginUtil.h"
 
+#include "CustomRootNode.h"
+#include "CustomRootNodeReader.h"
+
 using namespace cocos2d;
 using namespace cocostudio;
 using namespace ui;
@@ -59,23 +62,29 @@ bool LoginViewScene::init()
         return false;
     }
     
+    CSLoader* instance = CSLoader::getInstance();
+    instance->registReaderObject("CustomRootNodeReader",
+                                 (ObjectFactory::Instance)CustomRootNodeReader::getInstance);
+    
+    auto rootNode = CSLoader::createNode("Layer.csb");
+    
     //Size visibleSize = Director::getInstance()->getVisibleSize();
     //Vec2 origin = Director::getInstance()->getVisibleOrigin();
-    auto rootNode = CSLoader::createNode("Layer.csb");
+    //auto rootNode = CSLoader::createNode("Layer.csb");
     rootNode->setScale(0.5);
     
-    Button* pBtnEnter = static_cast<Button*>(rootNode->getChildByName("Btn_EnterGame"));
-    pBtnEnter->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionEnterGame, this));
-    
-    Button* pBtnLogin = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_4")->getChildByName("Btn_Login"));
-    
-    pBtnLogin->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionLogin, this));
-    
-    
-    Button* pBtnSelect = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_3")->getChildByName("Btn_Select"));
-    
-    pBtnSelect->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionSelectServer, this));
-    
+//    Button* pBtnEnter = static_cast<Button*>(rootNode->getChildByName("Btn_EnterGame"));
+//    pBtnEnter->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionEnterGame, this));
+//    
+//    Button* pBtnLogin = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_4")->getChildByName("Btn_Login"));
+//    
+//    pBtnLogin->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionLogin, this));
+//    
+//    
+//    Button* pBtnSelect = static_cast<Button*>(rootNode->getChildByName("dengluzhuce_bg_di_3")->getChildByName("Btn_Select"));
+//    
+//    pBtnSelect->addClickEventListener(CC_CALLBACK_1(LoginViewScene::onActionSelectServer, this));
+//    
     
     addChild(rootNode);
     
@@ -84,21 +93,6 @@ bool LoginViewScene::init()
     return true;
 }
 
-cocos2d::ui::Widget::ccWidgetTouchCallback LoginViewScene::onLocateTouchCallback(const std::string &callBackName)
-{
-    CCLOG("onLocateTouchCallback %s", callBackName.c_str());
-}
-
-
-cocos2d::ui::Widget::ccWidgetClickCallback LoginViewScene::onLocateClickCallback(const std::string &callBackName)
-{
-    CCLOG("onLocateClickCallback %s", callBackName.c_str());
-}
-
-cocos2d::ui::Widget::ccWidgetEventCallback LoginViewScene::onLocateEventCallback(const std::string &callBackName)
-{
-    CCLOG("onLocateEventCallback %s", callBackName.c_str());
-}
 
 void LoginViewScene::onActionLogin(Ref *pSender)
 {
@@ -106,7 +100,6 @@ void LoginViewScene::onActionLogin(Ref *pSender)
     
     
 }
-
 
 void LoginViewScene::onActionEnterGame(Ref *pSender)
 {
