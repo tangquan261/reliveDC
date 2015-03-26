@@ -10,13 +10,11 @@ class CustomRootNodeReaderParent : public cocostudio::NodeReader
 {        
 public:
     CustomRootNodeReaderParent();
-    ~CustomRootNodeReaderParent();
-    
-    static CustomRootNodeReaderParent* getInstance();
-    
+    virtual ~CustomRootNodeReaderParent();
+      
     static void purge();
-        
-    virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions);
+    
+    virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions){return NULL;};
 
     static CustomRootNodeReaderParent * m_instance;
 };

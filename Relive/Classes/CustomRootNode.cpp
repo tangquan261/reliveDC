@@ -6,6 +6,9 @@ USING_NS_CC;
 using namespace std;
 using namespace cocos2d::ui;
 
+//CustomRootNodeReader * CustomRootNodeReader::m_instance = NULL;
+
+
 Widget::ccWidgetTouchCallback CustomRootNode::onLocateTouchCallback(const string &callBackName)
 {
     if (callBackName == "onActionLogin")

@@ -18,34 +18,26 @@ public:
     void onTouch(cocos2d::Ref* sender, cocos2d::ui::Widget::TouchEventType type);
     void onClick(cocos2d::Ref* sender);
     void onEvent(cocos2d::Ref* sender, int eventType);
-
-
 };
-
 
 class CustomRootNodeReader : public CustomRootNodeReaderParent
 {
 public:
-    
     static CustomRootNodeReader* getInstance()
     {
         m_instance = new CustomRootNodeReader();
-        
         return (CustomRootNodeReader*)m_instance;
     }
     
     virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions)
     {
         cocos2d::Node* pNode = NULL;
-     
-        pNode = CustomRootNode::create();
         
+        pNode = CustomRootNode::create();
         setPropsWithFlatBuffers(pNode, nodeOptions);
         
         return pNode;
     }
 };
-
-
 
 #endif /* defined(__TestCpp__CustomRootNode__) */
