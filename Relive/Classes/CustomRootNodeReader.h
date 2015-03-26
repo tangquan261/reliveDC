@@ -5,9 +5,29 @@
 #include "cocostudio/CocosStudioExport.h"
 #include "cocostudio/WidgetReader/NodeReader/NodeReader.h"
 
+#define CC_LoaderReader(NodeName) class NodeName##_Reader : public CustomRootNodeReaderParent\
+{\
+    public:\
+        static NodeName##_Reader* getInstance()\
+        {\
+            m_instance = new NodeName##_Reader();\
+            return (NodeName##_Reader*)m_instance;\
+        }\
+\
+        virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions)\
+        {\
+            cocos2d::Node* pNode = NULL;\
+            \
+            pNode = NodeName::create();\
+            setPropsWithFlatBuffers(pNode, nodeOptions);\
+            \
+            return pNode;\
+        }\
+};\
+
 
 class CustomRootNodeReaderParent : public cocostudio::NodeReader
-{        
+{
 public:
     CustomRootNodeReaderParent();
     virtual ~CustomRootNodeReaderParent();

@@ -5,9 +5,12 @@
 #include "cocostudio/WidgetCallBackHandlerProtocol.h"
 #include "CustomRootNodeReader.h"
 
+
+
 class CustomRootNode : public cocos2d::Node, public cocostudio::WidgetCallBackHandlerProtocol
 {
 public:
+
     CREATE_FUNC(CustomRootNode)
     CustomRootNode(){};
 
@@ -20,24 +23,26 @@ public:
     void onEvent(cocos2d::Ref* sender, int eventType);
 };
 
-class CustomRootNodeReader : public CustomRootNodeReaderParent
-{
-public:
-    static CustomRootNodeReader* getInstance()
-    {
-        m_instance = new CustomRootNodeReader();
-        return (CustomRootNodeReader*)m_instance;
-    }
-    
-    virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions)
-    {
-        cocos2d::Node* pNode = NULL;
-        
-        pNode = CustomRootNode::create();
-        setPropsWithFlatBuffers(pNode, nodeOptions);
-        
-        return pNode;
-    }
-};
+CC_LoaderReader(CustomRootNode)
 
+//class CustomRootNodeReader : public CustomRootNodeReaderParent
+//{
+//public:
+//    static CustomRootNodeReader* getInstance()
+//    {
+//        m_instance = new CustomRootNodeReader();
+//        return (CustomRootNodeReader*)m_instance;
+//    }
+//    
+//    virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions)
+//    {
+//        cocos2d::Node* pNode = NULL;
+//        
+//        pNode = CustomRootNode::create();
+//        setPropsWithFlatBuffers(pNode, nodeOptions);
+//        
+//        return pNode;
+//    }
+//};
+//
 #endif /* defined(__TestCpp__CustomRootNode__) */

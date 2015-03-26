@@ -63,7 +63,7 @@ bool LoginViewScene::init()
     
     CSLoader* instance = CSLoader::getInstance();
     instance->registReaderObject("CustomRootNodeReader",
-                                 (ObjectFactory::Instance)CustomRootNodeReader::getInstance);
+                                 (ObjectFactory::Instance)CustomRootNode_Reader::getInstance);
     
     auto rootNode = CSLoader::createNode("Layer.csb");
     
