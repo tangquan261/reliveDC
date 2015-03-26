@@ -18,7 +18,6 @@
 #include "LoginUtil.h"
 
 #include "CustomRootNode.h"
-#include "CustomRootNodeReader.h"
 
 using namespace cocos2d;
 using namespace cocostudio;
@@ -46,7 +45,7 @@ LoginViewScene::LoginViewScene()
 
 LoginViewScene::~LoginViewScene()
 {
-
+    CSLoader::destroyInstance();
 }
 
 void LoginViewScene::clear()
@@ -66,7 +65,7 @@ bool LoginViewScene::init()
     instance->registReaderObject("CustomRootNodeReader",
                                  (ObjectFactory::Instance)CustomRootNodeReader::getInstance);
     
-    auto rootNode = CSLoader::createNode("Layer.csb");
+    auto rootNode = CSLoader::createNode("Scene.csb");
     
     //Size visibleSize = Director::getInstance()->getVisibleSize();
     //Vec2 origin = Director::getInstance()->getVisibleOrigin();

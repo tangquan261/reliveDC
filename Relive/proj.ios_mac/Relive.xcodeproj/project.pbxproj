@@ -401,6 +401,7 @@
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				11D341941AC3B096001FC9AD /* Discard */,
 				117BC6851AB17FAD00710C09 /* DataBase */,
 				11AF12F61AB0205800EFCEAE /* model */,
 				1139F96C1AA9A5BD00E7530C /* Safety */,
@@ -583,6 +584,13 @@
 				11AF13001AB0205800EFCEAE /* HangupInfo.proto */,
 			);
 			path = box;
+			sourceTree = "<group>";
+		};
+		11D341941AC3B096001FC9AD /* Discard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Discard;
 			sourceTree = "<group>";
 		};
 		11F78DDC1AA8430D008034E5 /* Login */ = {

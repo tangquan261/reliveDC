@@ -6,16 +6,19 @@
 #include "cocostudio/WidgetReader/NodeReader/NodeReader.h"
 
 
-class CustomRootNodeReader : public cocostudio::NodeReader
+class CustomRootNodeReaderParent : public cocostudio::NodeReader
 {        
 public:
-    CustomRootNodeReader() {};
-    ~CustomRootNodeReader() {};    
-
-    static CustomRootNodeReader* getInstance();
+    CustomRootNodeReaderParent();
+    ~CustomRootNodeReaderParent();
+    
+    static CustomRootNodeReaderParent* getInstance();
+    
     static void purge();
         
-    cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions);
+    virtual cocos2d::Node* createNodeWithFlatBuffers(const flatbuffers::Table* nodeOptions);
+
+    static CustomRootNodeReaderParent * m_instance;
 };
 
 #endif /* defined(__cocos2d_libs__CustomRootNodeReader__) */

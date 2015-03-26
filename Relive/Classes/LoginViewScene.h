@@ -9,6 +9,7 @@
 #ifndef __RL_RELIVE_LOGINVIEW_SCENE_H__
 #define __RL_RELIVE_LOGINVIEW_SCENE_H__
 
+
 class LoginViewScene : public cocos2d::Layer
 {
 public:

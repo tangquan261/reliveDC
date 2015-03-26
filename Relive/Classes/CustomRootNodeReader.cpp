@@ -4,30 +4,38 @@
 
 USING_NS_CC;
 
+CustomRootNodeReaderParent * CustomRootNodeReaderParent::m_instance = nullptr;
+
+CustomRootNodeReaderParent::CustomRootNodeReaderParent()
+{
     
-
-static CustomRootNodeReader* _instanceCustomRootNodeReader = nullptr;
-
-CustomRootNodeReader* CustomRootNodeReader::getInstance()
-{
-    if (!_instanceCustomRootNodeReader)
-    {
-        _instanceCustomRootNodeReader = new CustomRootNodeReader();
-    }
-
-    return _instanceCustomRootNodeReader;
 }
 
-void CustomRootNodeReader::purge()
+CustomRootNodeReaderParent::~CustomRootNodeReaderParent()
 {
-    CC_SAFE_DELETE(_instanceCustomRootNodeReader);
+
 }
 
-Node* CustomRootNodeReader::createNodeWithFlatBuffers(const flatbuffers::Table *nodeOptions)
+CustomRootNodeReaderParent* CustomRootNodeReaderParent::getInstance()
 {
-    CustomRootNode* node = CustomRootNode::create();
+//    if (NULL == m_instance)
+//    {
+//        m_instance = new CustomRootNodeReaderParent();
+//    }
 
-    setPropsWithFlatBuffers(node, nodeOptions);
+    return m_instance;
+}
 
-    return node;
+void CustomRootNodeReaderParent::purge()
+{
+    CC_SAFE_DELETE(m_instance);
+}
+
+Node* CustomRootNodeReaderParent::createNodeWithFlatBuffers(const flatbuffers::Table *nodeOptions)
+{
+    //CustomRootNode* node = CustomRootNode::create();
+
+    //setPropsWithFlatBuffers(node, nodeOptions);
+
+    return NULL;
 }
