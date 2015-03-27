@@ -24,6 +24,7 @@ using namespace cocos2d;
 using namespace cocos2d::network;
 using namespace com::road::yishi::proto::box;
 
+
 extern config_msg g_configMsg;
 
 LoginUtil::LoginUtil()
@@ -216,6 +217,120 @@ void LoginUtil::onHttpRequestCompleted(cocos2d::network::HttpClient *sender, coc
     DoTaskRequest(atoi(response->getHttpRequest()->getTag()), response);
 }
 
+void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jsonMap)
+{
+    if (strMsg.find("value=\"true\"") == std::string::npos)
+    {
+        CCLOG("LoginResponse error");
+        return;
+    }
+    else if(strMsg.find("message=\"Login Succeed No Visualize\"") != std::string::npos)
+    {
+        //注册成功，创建角色
+        size_t pos1 = strMsg.find("userID=\"");
+        pos1+=8;
+        size_t pos2 = strMsg.find("\"", pos1);
+        m_userID = atoi(std::string(strMsg, pos1, pos2-pos1).c_str());
+        return;
+    }
+    
+    int loginType = cocos2d::UserDefault::getInstance()->getIntegerForKey("loginType");
+    
+    if (loginType != 100 && loginType != 101 && loginType != 153)
+    {
+        int defaultIndex = UserDefault::getInstance()->getIntegerForKey("accountIndex", 0);
+        
+        if (defaultIndex < 6)
+        {
+            int i = 0;
+            for (i = 0; i < defaultIndex; i++)
+            {
+                
+                std::string  accountName = UserDefault::getInstance()->getStringForKey(HLStringUtil::Format("account%d", i+1).c_str());
+                
+                if (!accountName.compare(m_userID))
+                {
+                    
+                    break;
+                }
+            }
+            
+            if (i == defaultIndex)
+            {
+                
+                defaultIndex++;
+                
+                UserDefault::getInstance()->setIntegerForKey("accountIndex", defaultIndex);
+                
+                UserDefault::getInstance()->setStringForKey(HLStringUtil::Format("account%d", defaultIndex).c_str(), m_userName);
+                
+            }
+        }
+        else
+        {
+            int i = 0;
+            
+            for (i = 0; i < defaultIndex; i++)
+            {
+                std::string  accountName = UserDefault::getInstance()->getStringForKey(HLStringUtil::Format("account%d", i+1).c_str());
+                
+                if (!accountName.compare(m_userName))
+                {
+                    break;
+                }
+            }
+            
+            if (i == defaultIndex)
+            {
+                UserDefault::getInstance()->setStringForKey("account1", m_userName);
+                
+                for(int i = 0; i < 5; i++)
+                {
+                    std::string accountName = UserDefault::getInstance()->getStringForKey(HLStringUtil::Format("account%u",i+1).c_str());
+                    
+                    UserDefault::getInstance()->setStringForKey(HLStringUtil::Format("account%u",i+2).c_str(), accountName);
+                }
+            }
+        }
+    }
+    
+    std::string server_address;
+    std::string server_port;
+    std::string res_server_url;
+    
+    size_t pos1 = strMsg.find("Address=\"");
+    pos1 += 9;
+    size_t pos2 = strMsg.find("\" ", pos1);
+    server_address = std::string(strMsg, pos1, pos2-pos1);
+    pos1 = strMsg.find("Port=\"", pos2);
+    pos1 += 6;
+    pos2 = strMsg.find("\"", pos1);
+    server_port = atoi(std::string(strMsg, pos1, pos2-pos1).c_str());
+    
+    pos1 = strMsg.find("Resources=\"");
+    pos1 += 11;
+    pos2 = strMsg.find("\"", pos1);
+    res_server_url = std::string(strMsg, pos1, pos2-pos1);
+    
+#ifdef COCOS2D_DEBUG
+    res_server_url = "http://192.168.1.13/ct/sq_resources/";
+#endif
+
+    if (*res_server_url.rbegin() != '/')
+    {
+        res_server_url += "/";
+    }
+    //暂不考虑资源更新问题。
+    
+    //进入主场景
+    
+    
+    
+}
+
+#include "ossl_typ.h"
+#include "bn.h"
+#include "rsa.h"
 
 void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {
@@ -280,17 +395,115 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
         }
         case 3:
         {
-            if(std::string::npos == strMsg.find("ID=\"")
-               && std::string::npos == strMsg.find("Result value=\"true\""))
+            size_t pos1 = strMsg.find("ID=\"");
+            size_t pos2 = strMsg.find("Result value=\"true\"");
+            
+            if(std::string::npos == pos1
+               && std::string::npos == pos2)
             {
                 CCLOG("登陆失败，从新进入登陆界面");
+                return;
             }
-            else if(std::string::npos == strMsg.find("ID=\""))
+            else if(std::string::npos == pos1)
             {
                 m_userID = "0";
             }
+            else
+            {
+                pos1 += 4;
+                pos2 = strMsg.find("\"", pos1);
+                
+                std::string itemid(strMsg, pos1, pos2-pos1);
+                m_userID = itemid;
+            }
             
+            uint32_t unRandom = arc4random()%10000000;
+            
+            m_tempPassword = HLStringUtil::Format("%u", unRandom * 10000000);
+            m_key = HLStringUtil::Format("%u", unRandom);
+            
+            std::string toencrypt = HLStringUtil::Format("%s|%s|%s|%s",m_userID.c_str(),m_Password.c_str(),m_key.c_str(),m_userID.c_str());
+            
+            std::vector<unsigned char> MODULUS;
+            std::vector<unsigned char> e;
+            
+            CCSafety::decodeBase64("AIu0+SZdBrZr2T5znwXJ0I/SpyntlETpuBrf//4WAMtz0hrYDa+6iD9XhLWcyccjPqs47UGwbDskaGFmS+tEmi7NRQgD3+A/suVfJgaAhWIpk0b2KthG1kTGtMUQF+L8i6AWBnGesAOYryEhVMOukKDlsENpHAzf4ln2SA4EQCKl", MODULUS);
+            
+            CCSafety::decodeBase64("AQAB",e);
+            
+            pos1 = strMsg.find("Grade=\"");
+            
+            if (pos1 != std::string::npos)
+            {
+                pos1 += 7;
+                pos2 = strMsg.find("\"", pos1);
+                std::string gradestr = strMsg.substr(pos1, pos2-pos1);
+                m_nUserGrade = atoi(gradestr.c_str());
+            }
+            else
+            {
+                m_nUserGrade = 0;
+            }
+            
+            RSA *r;
+            
+            BIGNUM *bne,*bnn;//,*bnd;
+            int ret, tlen;
+            
+            unsigned  char *encData;
+            
+            bne = BN_new();
+            
+            bnn = BN_new();
+            BN_bin2bn(&e[0], (int)e.size(), bne);
+            BN_bin2bn(&MODULUS[0], (int)MODULUS.size(), bnn);
+            
+            r = RSA_new();
+            r->e=bne;
+            r->n=bnn;
+            
+            tlen =  RSA_size(r);
+            encData =  (unsigned char *)malloc(tlen);
+            bzero(encData, tlen);
+            
+            ret =  RSA_public_encrypt((int)toencrypt.length(), (const unsigned char *)toencrypt.c_str(), encData, r,  RSA_PKCS1_PADDING);
+
+            if(ret < 0)
+            {
+                return;
+            }
+            
+            std::string encStr = CCSafety::encodeBase64(encData, ret);
+            
+            free(encData);
+            
+            RSA_free(r);
+            
+            std::string url = m_stChoosedServer.ipAddress;
+            std::string serverid = m_stChoosedServer.serverId;
+            
+            //DCServerDataCenter::serverName = m_stChoosedServer.name;
+            
+            if (serverid.length() < 1) {
+                serverid = "sqtest_0002";
+            }
+            
+            url += "/login?" + HLStringUtil::Format("p=%s&site=%s&client=1&udid=%s&idfa=%s", URL::UrlEncode(encStr).c_str(),serverid.c_str(),"anysssssdfsf1","");
+            
+            
+            HttpRequest* request = new (std::nothrow) HttpRequest();
+            request->setUrl(url.c_str());
+            request->setRequestType(HttpRequest::Type::GET);
+            request->setResponseCallback(CC_CALLBACK_2(LoginUtil::onHttpRequestCompleted, this));
+            HttpClient::getInstance()->sendImmediate(request);
+            request->setTag("4");
+            request->release();
+    
             break;
+        }
+        case 4:
+        {
+            onLoginResponse(strMsg, jsonMap);
         }
         default:
             break;
@@ -298,4 +511,9 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
     
     
 }
+
+
+
+
+
 

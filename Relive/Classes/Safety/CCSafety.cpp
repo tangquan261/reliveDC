@@ -38,6 +38,31 @@ int CCSafety::encodeBase64(const void* input, int inputLength,
     return cp;
 }
 
+std::string CCSafety::encodeBase64(const void* input, int inputLength)
+{
+    int bufferSize = 2 * inputLength;
+    char* buffer = (char*)malloc(bufferSize);
+    memset(buffer, 0, bufferSize);
+    
+    base64_encodestate state;
+    base64_init_encodestate(&state);
+    int r1 = base64_encode_block(static_cast<const char*>(input), inputLength, buffer, &state);
+    int r2 = base64_encode_blockend(buffer+ r1, &state);
+
+    int dataUsed = r1 + r2;
+    
+    std::string strRet;
+    
+    for (int i = 0; i < dataUsed; i++)
+    {
+        strRet.push_back(buffer[i]);
+    }
+    
+    free(buffer);
+    
+    return strRet;
+}
+
 /** @brief Decoding Base64 string to data, return decoded data length */
 int CCSafety::decodeBase64(const char* input,
                         void* output, int outputBufferLength)
@@ -54,6 +79,24 @@ int CCSafety::decodeBase64(const char* input,
     memcpy(output, buffer, cp);
     free(buffer);
     return cp;
+}
+
+void CCSafety::decodeBase64(const char *input, vector<unsigned char> &vecOutPut)
+{
+    int bufferSize = strlen(input) + 1;
+    char* buffer = (char*)malloc(bufferSize);
+    memset(buffer, 0, bufferSize);
+    
+    base64_decodestate state;
+    base64_init_decodestate(&state);
+    int r1 = base64_decode_block(input, bufferSize - 1, buffer, &state);
+    
+    for (int i = 0; i < r1; i++)
+    {
+        vecOutPut.push_back(buffer[i]);
+    }
+    
+    free(buffer);
 }
 
 /** @brief Calculate MD5, get MD5 code (not string) */

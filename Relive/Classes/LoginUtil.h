@@ -66,6 +66,9 @@ public:
     void ApplyTureSelect();
     
 private:
+    
+    void onLoginResponse(std::string &strMsg ,const rapidjson::Value& jsonMap);
+    
     std::vector<ServerName> m_vecServerNameList;
     std::vector<ServerName> m_vecUserServerNameList;
     std::string m_strSessionID;
@@ -77,6 +80,9 @@ private:
     ServerName m_stChoosedServer;
     
     
+    std::string m_tempPassword;
+    std::string m_key;
+    int  m_nUserGrade;
     
     void onHttpRequestCompleted(cocos2d::network::HttpClient *sender, cocos2d::network::HttpResponse *response);
     

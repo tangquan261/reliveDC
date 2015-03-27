@@ -26,13 +26,15 @@ using namespace cocos2d::network;
 
 extern config_msg g_configMsg;
 
+LoginViewScene * LoginViewScene::m_pInstance = NULL;
 
 Scene* LoginViewScene::createScene()
 {
     
     auto scene = Scene::create();
     
-    scene->addChild(LoginViewScene::create());
+    m_pInstance = LoginViewScene::create();
+    scene->addChild(m_pInstance);
     
     return scene;
 }
@@ -46,6 +48,7 @@ LoginViewScene::LoginViewScene()
 LoginViewScene::~LoginViewScene()
 {
     CSLoader::destroyInstance();
+    m_pInstance = NULL;
 }
 
 void LoginViewScene::clear()
@@ -75,39 +78,4 @@ bool LoginViewScene::init()
 
     return true;
 }
-
-
-void LoginViewScene::onActionLogin(Ref *pSender)
-{
-    CCLOG("onActionLogin");
-    
-    
-}
-
-void LoginViewScene::onActionEnterGame(Ref *pSender)
-{
-    CCLOG("onActionEnterGame");
-    
-    LoginUtil::getSingleton()->ApplyEnterGame();
-}
-
-
-
-void LoginViewScene::onActionSelectServer(Ref *pSender)
-{
-    CCLOG("onActionSelectServer");
-
-}
-
-void LoginViewScene::menuCloseCallback(Ref* pSender)
-{
-    SceneReader::getInstance()->destroyInstance();
-    Director::getInstance()->end();
-    
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
-}
-
-
 

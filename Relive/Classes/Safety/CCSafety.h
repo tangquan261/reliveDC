@@ -9,6 +9,7 @@
 #define __Relive__CCSafety__
 
 #include <iostream>
+#include <string>
 
 class CCSafety
 {
@@ -20,11 +21,13 @@ public:
     static int encodeBase64(const void* input, int inputLength,
                             char* output, int outputBufferLength);
     
+    static std::string encodeBase64(const void* input, int inputLength);
     
     /** @brief Decoding Base64 string to data, return decoded data length */
     static int decodeBase64(const char* input,
                             void* output, int outputBufferLength);
     
+    static void decodeBase64(const char *input, std::vector<unsigned char> &vecOutPut);
     /** @brief Calculate MD5, get MD5 code (not string) */
     static void MD5(void* input, int inputLength,
                     unsigned char* output);

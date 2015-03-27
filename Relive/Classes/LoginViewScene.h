@@ -15,6 +15,11 @@ class LoginViewScene : public cocos2d::Layer
 public:
     static cocos2d::Scene* createScene();
     
+    static LoginViewScene* GetInstance()
+    {
+        return m_pInstance;
+    }
+    
     LoginViewScene();
     ~LoginViewScene();
     
@@ -22,13 +27,9 @@ public:
 
     virtual bool init();
 
-    void onActionLogin(Ref *pSender);
-    void onActionEnterGame(Ref *pSender);
-    void onActionSelectServer(Ref *pSender);
-    
-    void menuCloseCallback(cocos2d::Ref* pSender);
-    
     CREATE_FUNC(LoginViewScene);
+    
+    static LoginViewScene * m_pInstance;
 };
 
 
