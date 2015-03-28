@@ -25,6 +25,14 @@
 		11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
 		11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
 		11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
+		117B7AB41AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
+		117B7AB51AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
+		117B7AB81AC54B9B00DC153D /* HLNetWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */; };
+		117B7AB91AC54B9B00DC153D /* HLNetWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */; };
+		117B7ABF1AC5643300DC153D /* WorkingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7ABE1AC5643300DC153D /* WorkingThread.cpp */; };
+		117B7AC01AC5643300DC153D /* WorkingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7ABE1AC5643300DC153D /* WorkingThread.cpp */; };
+		117B7AC31AC5840500DC153D /* NetWorkDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AC21AC5840500DC153D /* NetWorkDefine.cpp */; };
+		117B7AC41AC5840500DC153D /* NetWorkDefine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AC21AC5840500DC153D /* NetWorkDefine.cpp */; };
 		117BC6171AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
 		117BC6181AB17E9700710C09 /* db in Resources */ = {isa = PBXBuildFile; fileRef = 117BC6161AB17E9700710C09 /* db */; };
 		117BC6F61AB1849900710C09 /* HLStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6F41AB1849900710C09 /* HLStringUtil.cpp */; };
@@ -265,6 +273,13 @@
 		117B7AA11AC4FEEC00DC153D /* x509.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509.h; sourceTree = "<group>"; };
 		117B7AA21AC4FEEC00DC153D /* x509_vfy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509_vfy.h; sourceTree = "<group>"; };
 		117B7AA31AC4FEEC00DC153D /* x509v3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = x509v3.h; sourceTree = "<group>"; };
+		117B7AB21AC544BC00DC153D /* HLProtocalType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLProtocalType.h; sourceTree = "<group>"; };
+		117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLProtocalType.cpp; sourceTree = "<group>"; };
+		117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLNetWork.cpp; sourceTree = "<group>"; };
+		117B7AB71AC54B9B00DC153D /* HLNetWork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLNetWork.h; sourceTree = "<group>"; };
+		117B7ABE1AC5643300DC153D /* WorkingThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WorkingThread.cpp; sourceTree = "<group>"; };
+		117B7AC11AC57F6A00DC153D /* NetWorkDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkDefine.h; sourceTree = "<group>"; };
+		117B7AC21AC5840500DC153D /* NetWorkDefine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetWorkDefine.cpp; sourceTree = "<group>"; };
 		117BC6161AB17E9700710C09 /* db */ = {isa = PBXFileReference; lastKnownFileType = folder; path = db; sourceTree = "<group>"; };
 		117BC6191AB17EC300710C09 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		117BC6871AB17FAD00710C09 /* DataBaseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataBaseHelper.h; sourceTree = "<group>"; };
@@ -475,6 +490,7 @@
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				117B7AB11AC5449600DC153D /* NetWork */,
 				11D341A01AC3BC70001FC9AD /* EventCommon */,
 				11D341941AC3B096001FC9AD /* Discard */,
 				117BC6851AB17FAD00710C09 /* DataBase */,
@@ -611,6 +627,20 @@
 			);
 			name = openssl;
 			path = openssl/android/include/openssl;
+			sourceTree = "<group>";
+		};
+		117B7AB11AC5449600DC153D /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				117B7AB21AC544BC00DC153D /* HLProtocalType.h */,
+				117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */,
+				117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */,
+				117B7AB71AC54B9B00DC153D /* HLNetWork.h */,
+				117B7ABE1AC5643300DC153D /* WorkingThread.cpp */,
+				117B7AC11AC57F6A00DC153D /* NetWorkDefine.h */,
+				117B7AC21AC5840500DC153D /* NetWorkDefine.cpp */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		117BC6851AB17FAD00710C09 /* DataBase */ = {
@@ -1101,14 +1131,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
+				117B7AB41AC5452F00DC153D /* HLProtocalType.cpp in Sources */,
 				117BC6F61AB1849900710C09 /* HLStringUtil.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
+				117B7AB81AC54B9B00DC153D /* HLNetWork.cpp in Sources */,
 				117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
 				1199D98E1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
+				117B7AC31AC5840500DC153D /* NetWorkDefine.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
@@ -1117,6 +1150,7 @@
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1199D9971AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
 				1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				117B7ABF1AC5643300DC153D /* WorkingThread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1125,6 +1159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1199D98F1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
+				117B7AC01AC5643300DC153D /* WorkingThread.cpp in Sources */,
+				117B7AB91AC54B9B00DC153D /* HLNetWork.cpp in Sources */,
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
@@ -1137,6 +1173,8 @@
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
 				11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
+				117B7AC41AC5840500DC153D /* NetWorkDefine.cpp in Sources */,
+				117B7AB51AC5452F00DC153D /* HLProtocalType.cpp in Sources */,
 				1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
 				11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
 			);
