@@ -32,8 +32,8 @@ public:
     
     DCRequest(unsigned int nType, MessageLite *pMessage):m_nType(nType),m_pMessage(pMessage)
     {
-        m_nExtend = 0;
-        m_nLength = 0;
+        //m_nExtend = 0;
+        //m_nLength = 0;
     }
     
     ~DCRequest()
@@ -50,21 +50,20 @@ private:
     void clear()
     {
         m_pMessage = nullptr;
-        m_nExtend = 0;
-        m_nLength = 0;
+        //m_nExtend = 0;
+        //m_nLength = 0;
         m_nType = 0;
     }
     
-    std::vector<uint8_t> m_vecDatas;
+    //std::vector<uint8_t> m_vecDatas;
     
     unsigned int m_nType;
-    unsigned int m_nLength;
-    uint32_t m_nExtend;
+    //unsigned int m_nLength;
+    //uint32_t m_nExtend;
     
     MessageLite * m_pMessage;
 
 };
-
 
 class DCRequestQueue
 {
@@ -82,7 +81,29 @@ private:
     pthread_mutex_t m_Mutex;
 };
 
-class HLNetWork
+class DCResponseQueue
+{
+public:
+    DCResponseQueue();
+    ~DCResponseQueue();
+    
+    void insertRequest(struct ResponseData *pResponse);
+    struct ResponseData* removeRequest();
+    
+    void clearQueue();
+    
+    bool empty()
+    {
+        return m_ListRequest.empty();
+    }
+    
+private:
+    std::list<ResponseData*>m_ListRequest;
+    pthread_mutex_t m_Mutex;
+};
+
+
+class HLNetWork : cocos2d::Node
 {
 public:
     HLNetWork();
@@ -100,7 +121,11 @@ public:
     
     bool isConnected();
     
-    void notifyNetEvent(ResponseData* data);
+    //网络子线程写数据
+    void addResponseQueue(const Packageheader& header, MessageLite* pMessage);
+    //主线程update分派数据显示
+    virtual void update(float fDelta);
+    void notifyNetEvent(const Packageheader& header, MessageLite* pMessage);
     
 private:
     bool m_bShouldReConnect;
@@ -110,15 +135,10 @@ private:
     pthread_mutex_t m_Mutex;
     
     DCRequestQueue m_queue;
-    
+    DCResponseQueue m_ResponseQueue;
     static HLNetWork *m_instance;
     
 };
-
-
-
-
-
 
 
 #endif /* defined(__Relive__DCNetWork__) */

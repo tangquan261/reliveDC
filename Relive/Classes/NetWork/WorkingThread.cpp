@@ -231,31 +231,17 @@ void * ReadSocketThread(void*p)
             
             free(buffer);
             
-            ResponseData  *pData = new ResponseData();
-            pData->header = header;
-            pData->pMessage = message;
+            pNetWork->addResponseQueue(header, message);
             
-            pNetWork->notifyNetEvent(pData);
             
-            delete pData;
         }
         else
         {
             decrptBytes((uint8_t*)buffer, header.length, RECV_KEY);
             
-            ResponseData  *pData = new ResponseData();
-            pData->header = header;
-            pData->pMessage = nullptr;
-            
-            pNetWork->notifyNetEvent(pData);
-            
-            delete pData;
+            pNetWork->addResponseQueue(header, nullptr);
         }
-        
-        
     }
-    
-
 }
 
 

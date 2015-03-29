@@ -70,17 +70,78 @@ void DCRequestQueue::clearQueue()
     pthread_mutex_unlock(&m_Mutex);
 }
 
+DCResponseQueue::DCResponseQueue()
+{
+     pthread_mutex_init(&m_Mutex, NULL);
+}
+
+DCResponseQueue::~DCResponseQueue()
+{
+    pthread_mutex_destroy(&m_Mutex);
+}
+
+void DCResponseQueue::insertRequest(ResponseData *pResponse)
+{
+    pthread_mutex_lock(&m_Mutex);
+    
+    m_ListRequest.push_back(pResponse);
+    
+    pthread_mutex_unlock(&m_Mutex);
+}
+
+ResponseData* DCResponseQueue::removeRequest()
+{
+    pthread_mutex_lock(&m_Mutex);
+    
+    ResponseData* pResonse = nullptr;
+    
+    if (!m_ListRequest.empty())
+    {
+        pResonse = m_ListRequest.front();
+        m_ListRequest.pop_front();
+    }
+    
+    pthread_mutex_unlock(&m_Mutex);
+    
+    return pResonse;
+}
+
+void DCResponseQueue::clearQueue()
+{
+    pthread_mutex_lock(&m_Mutex);
+    
+    std::list<ResponseData*>::iterator iter = m_ListRequest.begin();
+    
+    for (; iter != m_ListRequest.end(); iter++)
+    {
+        delete (*iter);
+    }
+    
+    m_ListRequest.clear();
+    
+    pthread_mutex_unlock(&m_Mutex);
+}
+
+
+
 
 HLNetWork * HLNetWork::m_instance = NULL;
 
 HLNetWork::HLNetWork()
 {
+    this->onEnter();
+    this->onEnterTransitionDidFinish();
+    
+    this->scheduleUpdate();
+    
     m_bShouldReConnect = false;
     m_bShouldIsConnect = false;
 }
 
 HLNetWork::~HLNetWork()
 {
+    this->unscheduleUpdate();
+    
     m_bShouldReConnect = false;
     m_bShouldIsConnect = false;
 }
@@ -136,9 +197,47 @@ void HLNetWork::connect()
 
 }
 
-void HLNetWork::notifyNetEvent(ResponseData* data)
+void HLNetWork::addResponseQueue(const Packageheader& header, MessageLite* pMessage)
 {
+    //网络数据子线程创建，主线程释放。
+    ResponseData  *pData = new ResponseData();
+    pData->header = header;
+    pData->pMessage = pMessage;
+    
+    m_ResponseQueue.insertRequest(pData);
 
+}
+
+void HLNetWork::update(float fDelta)
+{
+    ResponseData* pResonse = nullptr;
+    
+    int i = 0;
+    
+    while (!m_ResponseQueue.empty() && i++ < 100)
+    {
+        pResonse =  m_ResponseQueue.removeRequest();
+        
+        if (nullptr != pResonse)
+        {
+            notifyNetEvent(pResonse->header, pResonse->pMessage);
+            
+            delete pResonse;
+            pResonse = nullptr;
+        }
+    }
+    
+}
+
+#include "HLServerDataManager.h"
+#include "UIServerManager.h"
+
+void HLNetWork::notifyNetEvent(const Packageheader& header, MessageLite* pMessage)
+{
+    HLServerDataManager::getSingleton()->parseResponse(header.code, pMessage);
+ 
+    //分发给有注册过的UI处理网络消息
+    UIServerManager::getSingleton()->notifyNetEvent(header, pMessage);
     
 }
 

@@ -325,12 +325,13 @@ void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jso
     //进入主场景
     
     
-    
 }
 
-#include "ossl_typ.h"
-#include "bn.h"
-#include "rsa.h"
+#include <openssl/crypto.h>
+#include <openssl/err.h>
+#include <openssl/rand.h>
+#include <openssl/bn.h>
+#include <openssl/rsa.h>
 
 void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {

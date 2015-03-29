@@ -32,6 +32,7 @@ void NativeToBigEndian(void*p)
 void decrptBytes(uint8_t* src, int length, uint8_t key[8])
 {
     uint8_t * result = (uint8_t*)malloc(length);
+    
     for (int i = 0; i < length; ++i)
     {
         if (i > 0)
@@ -44,6 +45,7 @@ void decrptBytes(uint8_t* src, int length, uint8_t key[8])
             result[0] = src[0] ^ key[0];
         }
     }
+    
     memcpy(src, result, length);
-    delete result;
+    free(result);
 }

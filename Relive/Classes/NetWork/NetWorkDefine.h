@@ -8,6 +8,7 @@
 
 #ifndef Relive_NetWorkDefine_h
 #define Relive_NetWorkDefine_h
+#include <google/protobuf/message_lite.h>
 
 typedef struct
 {
@@ -25,7 +26,7 @@ struct ResponseData
 {
     Packageheader header;
     google::protobuf::MessageLite *pMessage;
-    std::vector<uint8_t> datas;
+    //std::vector<uint8_t> datas;
 };
 
 //判断大小端
