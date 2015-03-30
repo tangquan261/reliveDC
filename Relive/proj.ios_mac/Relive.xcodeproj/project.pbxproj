@@ -21,6 +21,8 @@
 		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
+		1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
+		1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
 		11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
 		11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
 		11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
@@ -199,6 +201,8 @@
 		1139F9851AA9B91E00E7530C /* LoginUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginUtil.cpp; sourceTree = "<group>"; };
 		1139F9861AA9B91E00E7530C /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
+		1156DE421AC8F96300836687 /* HLVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLVersion.cpp; path = Common/HLVersion.cpp; sourceTree = "<group>"; };
+		1156DE431AC8F96300836687 /* HLVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLVersion.h; path = Common/HLVersion.h; sourceTree = "<group>"; };
 		11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cpp; sourceTree = "<group>"; };
 		11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
 		11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cpp; sourceTree = "<group>"; };
@@ -433,6 +437,8 @@
 				1139F9891AA9BBA400E7530C /* HLSingleton.h */,
 				117BC6F41AB1849900710C09 /* HLStringUtil.cpp */,
 				117BC6F51AB1849900710C09 /* HLStringUtil.h */,
+				1156DE421AC8F96300836687 /* HLVersion.cpp */,
+				1156DE431AC8F96300836687 /* HLVersion.h */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -993,6 +999,7 @@
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
+				1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
 				11D4315F1AC804F3004D730E /* HLServerDataManager.cpp in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
@@ -1015,6 +1022,7 @@
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				1199D9981AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
+				1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				117BC6F71AB1849900710C09 /* HLStringUtil.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,

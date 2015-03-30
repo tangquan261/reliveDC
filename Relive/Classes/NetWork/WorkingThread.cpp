@@ -20,6 +20,7 @@
 #include <semaphore.h>
 
 #include "NetWorkDefine.h"
+#include "LoginUtil.h"
 
 
 uint8_t KEY[8];
@@ -28,7 +29,7 @@ uint8_t KEY[8];
 const uint8_t TKEY[] = {0xae, 0xbf, 0x56, 0x78, 0xab, 0xcd, 0xef, 0xf1};
 uint8_t SEND_KEY[] = {0xae, 0xbf, 0x56, 0x78, 0xab, 0xcd, 0xef, 0xf1};
 uint8_t RECV_KEY[] = {0xae, 0xbf, 0x56, 0x78, 0xab, 0xcd, 0xef, 0xf1};
-string qqKey = "tgw_l7_forward\r\nHost:%s:%d\r\n\r\n";
+//string qqKey = "tgw_l7_forward\r\nHost:%s:%d\r\n\r\n";
 
 
 void resetKeys()
@@ -244,6 +245,7 @@ void * ReadSocketThread(void*p)
     }
 }
 
+#include "HLProtocalType.h"
 
 void * WorkingThread(void *p)
 {
@@ -280,8 +282,99 @@ void * WorkingThread(void *p)
     
     int nRet = pthread_create(&listenid, NULL, ReadSocketThread, p);
    
+    if (-1 == nRet)
+    {
+        return NULL;
+    }
+    
+    
+    while (true)
+    {
+        sem_wait(&avail);
+        
+        DCRequest *request = pNetWork->getRequest();
+        
+        if (nullptr == request)
+        {
+            break;
+        }
+        int nSize = 0;
+        uint8_t *buf = nullptr;
+        
+        if (request->m_nType == 0xffffffff)
+        {
+            
+        }
+        else
+        {
+            int headSize = sizeof(Packageheader);
+            nSize = headSize;
+            Packageheader header;
+            
+            if (nullptr != request->m_pMessage)
+            {
+                nSize = request->m_pMessage->ByteSize() + headSize;
+            }
+            
+            memset(&header, 0, headSize);
+            header.header   = PackageOutHeaderNo;
+            header.code     = request->m_nType;
+            header.toID     = LoginUtil::getSingleton()->GetUserID();
+            
+            extern uint32_t getVersionInt();
+            
+            header.extend1  = request->m_nextend1;
+            header.extend2  = getVersionInt();
+            
+            buf = (uint8_t*)malloc(nSize);
+            
+            header.length = nSize;
+            memcpy(buf, &header, headSize);
+            
+            if (nullptr != request->m_pMessage)
+            {
+                request->m_pMessage->SerializeToArray(buf + headSize, nSize - headSize);
+            }
+            
+            Packageheader * headbuf = (Packageheader*)buf;
+            extern uint16_t calculateCheckSum(uint8_t* data, int length);
+            headbuf->checksum = calculateCheckSum(buf, nSize);
+            
+            swapHeader(headbuf);
+            extern void encryptPacketOut(uint8_t *msg, int length);
+            encryptPacketOut(buf, nSize);
+            
+            if (request->m_nType == U_G_LOGIN_GATEWAY__C)
+            {
+                memcpy(SEND_KEY, KEY, 8);
+                memcpy(RECV_KEY, KEY, 8);
+            }
+        }
+        
+        while (true)
+        {
+            ssize_t res = send(sockfd, buf, nSize, 0);
+            
+            if (res < 0)
+            {
+                CCLOG("error send");
+                pNetWork->disconnect();
+            }
+            else if(res != nSize)
+            {
+                nSize -= res;
+                buf+=res;
+            }
+            else
+            {
+                break;
+            }
+        }
+        
+        free(buf);
+        delete request;
+        request = nullptr;
+    }
 
-    
-    
-    
+    return 0;
 }

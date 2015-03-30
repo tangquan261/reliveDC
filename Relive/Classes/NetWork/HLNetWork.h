@@ -32,8 +32,6 @@ public:
     
     DCRequest(unsigned int nType, MessageLite *pMessage):m_nType(nType),m_pMessage(pMessage)
     {
-        //m_nExtend = 0;
-        //m_nLength = 0;
     }
     
     ~DCRequest()
@@ -46,23 +44,19 @@ public:
         clear();
     }
     
+    unsigned int m_nType;
+    MessageLite * m_pMessage;
+    int32_t m_nextend1;
+    
 private:
     void clear()
     {
         m_pMessage = nullptr;
-        //m_nExtend = 0;
-        //m_nLength = 0;
         m_nType = 0;
+        m_nextend1 = 0;
     }
     
-    //std::vector<uint8_t> m_vecDatas;
     
-    unsigned int m_nType;
-    //unsigned int m_nLength;
-    //uint32_t m_nExtend;
-    
-    MessageLite * m_pMessage;
-
 };
 
 class DCRequestQueue

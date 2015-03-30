@@ -14,6 +14,7 @@
 google::protobuf::MessageLite * parseMessage(int protocalType, void *buffer, int length);
 
 
+static const int U_G_LOGIN_GATEWAY__C   = 0x4E21;           //socket登陆命令
 
 static const int U_C_GOLD_IMPOSERESULT  = 0x1092;           //征收结果
 static const int U_C_RATE_INFO          = 0x1097;           //验收结果

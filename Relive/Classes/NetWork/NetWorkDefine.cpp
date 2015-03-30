@@ -49,3 +49,36 @@ void decrptBytes(uint8_t* src, int length, uint8_t key[8])
     memcpy(src, result, length);
     free(result);
 }
+
+extern uint8_t SEND_KEY[];
+
+void encryptPacketOut(uint8_t *msg, int length)
+{
+    for (int i = 0; i < length; i++)
+    {
+        if (i > 0)
+        {
+            SEND_KEY[i%8] = (SEND_KEY[i%8] + msg[i-1]^i);
+            msg[i] = (msg[i] ^ SEND_KEY[i%8]) + msg[i-1];
+        }
+        else
+        {
+            msg[0] = msg[0]^SEND_KEY[0];
+        }
+    }
+}
+
+
+uint16_t calculateCheckSum(uint8_t* data, int length)
+{
+    uint32_t nRes = 0x77;
+    
+    int i = 6;
+    
+    while(i < length)
+    {
+        nRes += data[i++];
+    }
+    return (uint16_t)(nRes&0x7F7F);
+}
+

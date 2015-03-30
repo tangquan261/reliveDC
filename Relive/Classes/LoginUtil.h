@@ -65,6 +65,10 @@ public:
     
     void ApplyTureSelect();
     
+    int GetUserID()
+    {
+        return atoi(m_userID.c_str());
+    }
 private:
     
     void onLoginResponse(std::string &strMsg ,const rapidjson::Value& jsonMap);

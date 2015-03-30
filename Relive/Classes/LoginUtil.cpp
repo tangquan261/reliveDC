@@ -332,6 +332,7 @@ void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jso
 #include <openssl/rand.h>
 #include <openssl/bn.h>
 #include <openssl/rsa.h>
+#include "NetWork/HLNetWork.h"
 
 void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {
@@ -505,6 +506,8 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
         case 4:
         {
             onLoginResponse(strMsg, jsonMap);
+            
+            HLNetWork::getInstance()->connect();
         }
         default:
             break;
