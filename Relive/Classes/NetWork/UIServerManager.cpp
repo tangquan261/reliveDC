@@ -8,13 +8,14 @@
 
 #include "UIServerManager.h"
 
-static int g_nRegisterID = 0;
+extern int64_t GetGUID();
 
 UIServerInterface::UIServerInterface()
 {
-    m_nRegisterID = ++g_nRegisterID;
+    m_nRegisterID = GetGUID();
     
     UIServerManager::getSingleton()->RegisterUI(this);
+    
 }
 
 UIServerInterface::~UIServerInterface()
@@ -52,7 +53,7 @@ void UIServerManager::RegisterUI(UIServerInterface *p)
 
 void UIServerManager::UnregisterUI(UIServerInterface *p)
 {
-    map<int, UI_SERVER_ITER>::iterator iter =  m_mapUIServers.find(p->getRegisterID());
+    map<int64_t, UI_SERVER_ITER>::iterator iter =  m_mapUIServers.find(p->getRegisterID());
     
     if( m_mapUIServers.end() != iter)
     {

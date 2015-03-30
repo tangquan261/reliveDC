@@ -208,9 +208,13 @@ void HLNetWork::addResponseQueue(const Packageheader& header, MessageLite* pMess
 
 }
 
+extern int32_t g_SysTime;
+
 void HLNetWork::update(float fDelta)
 {
     ResponseData* pResonse = nullptr;
+    
+    g_SysTime = time(NULL);
     
     int i = 0;
     

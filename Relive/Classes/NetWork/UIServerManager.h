@@ -10,14 +10,14 @@
 #define __Relive__UIServerManager__
 
 #include <stdio.h>
-#include "NetWorkDefine.h"
-#include <google/protobuf/message_lite.h>
 #include <list>
+
+#include <google/protobuf/message_lite.h>
+
+#include "NetWorkDefine.h"
 #include "HLSingleton.h"
 
 using namespace google::protobuf;
-
-class UIServerManager;
 
 class UIServerInterface
 {
@@ -33,9 +33,13 @@ public:
     }
     
 private:
-    int m_nRegisterID;
-    
+    int64_t m_nRegisterID;
 };
+
+
+//typedef int (*pFun)(const Packageheader& header, MessageLite* pMessage);
+//
+//typedef int (UIServerInterface::*pClassFun)(const Packageheader& header, MessageLite* pMessage);
 
 
 class UIServerManager : public HLSingleton<UIServerManager>
@@ -51,12 +55,13 @@ public:
     void UnregisterUI(UIServerInterface *p);
     
     void notifyNetEvent(const Packageheader& header, MessageLite* pMessage);
+
 private:
 
     list<UIServerInterface*> m_listUIServers;
     
     typedef list<UIServerInterface*>::iterator UI_SERVER_ITER;
-    map<int, UI_SERVER_ITER> m_mapUIServers;
+    map<int64_t, UI_SERVER_ITER> m_mapUIServers;
     
 };
 
