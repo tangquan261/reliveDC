@@ -1,0 +1,13 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerPropertyMsgProto";
+
+message PlayerProperty{
+	repeated Entity properties = 1 ;
+}
+
+message Entity{
+	optional int32 key = 1;
+	optional int32 intValue = 2;
+	optional string strValue = 3;
+}

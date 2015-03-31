@@ -1,0 +1,11 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "KingContractMsgProto";
+message KingContractMsg {
+	repeated KingContractInfoMsg kingContractInfos=1;
+}
+
+message KingContractInfoMsg{
+    optional int32 contractId = 1;
+    optional string endData = 2; 	
+}

@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PropertyUpdatedMsgProto";
+// 领主加成 U_C_PLAYER_EFFECT = 0x006E 
+message PropertyUpdatedMsg {
+	optional int32 property_type = 1;		// 属性类型
+	optional int32 value = 2;				// 值
+}

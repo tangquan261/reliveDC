@@ -1,0 +1,7 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "CheckSendProto";
+
+message CheckSend {
+	optional int32 can_send = 1;     // 是否填写过手机号码(0 未填写 1 已经填写)
+}

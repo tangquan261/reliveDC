@@ -334,6 +334,9 @@ void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jso
 #include <openssl/rsa.h>
 #include "NetWork/HLNetWork.h"
 
+#include "LoginReq.pb.h"
+#include "HLNetWork.h"
+
 void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *response)
 {
     std::string strMsg = response->getResponseDataString();
@@ -510,6 +513,27 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             onLoginResponse(strMsg, jsonMap);
             
             HLNetWork::getInstance()->connect();
+            
+            
+            using namespace com::road::yishi::proto::player;
+            LoginReqMsg *pLoginReq = new LoginReqMsg();
+            
+            std::string md5 = CCSafety::ToMD5String(m_key.c_str());
+            
+            pLoginReq->set_key(md5);
+            
+            extern uint8_t KEY[];
+            
+            for(int i = 0; i < 8; i++)
+            {
+                KEY[i] = arc4random()%256-1;
+                pLoginReq->add_ekeys(KEY[i]);
+            }
+            
+            DCRequest *request = new DCRequest(U_G_LOGIN_GATEWAY__C, pLoginReq);
+            
+            HLNetWork::getInstance()->addRequest(request);
+            
         }
         default:
             break;

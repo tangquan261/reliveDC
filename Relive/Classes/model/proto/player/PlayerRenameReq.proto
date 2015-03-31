@@ -1,0 +1,6 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerRenameRspMsgProto";
+message PlayerRenameRspMsg {	
+	optional bool result = 1;	// 改名结果
+}

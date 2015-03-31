@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "LoginReqMsgProto";
+// 玩家登陆
+message LoginReqMsg {
+	optional int32 player_id = 1;	// 玩家ID
+	optional string key = 2;		// 玩家KEY
+	repeated int32 ekeys = 3;
+}
+

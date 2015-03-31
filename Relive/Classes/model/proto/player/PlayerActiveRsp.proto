@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerActiveRspMsgProto";
+
+message PlayerActiveRspMsg {
+	optional int32 result = 1;	// 执行结果
+	optional string activeid = 2;	// 
+}

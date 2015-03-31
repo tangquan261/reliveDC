@@ -1,0 +1,11 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerMoveCameraMsgProto";
+// 移动镜头 U_C_CAMERA_MOVE = 0x008E
+message PlayerMoveCameraMsg {
+	optional string scene = 1;			// 场景
+	optional int32 target_x = 2;		// 目标X
+	optional int32 target_y = 3;		// 目标y
+	optional int32 delay = 4;			// 延迟
+}
+

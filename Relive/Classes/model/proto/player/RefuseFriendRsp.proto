@@ -1,0 +1,6 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "RefuseFriendRspMsgProto";
+message RefuseFriendRspMsg {
+	optional bool result = 1;		// 状态结果
+}

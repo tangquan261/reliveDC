@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "LoginStateMsgProto";
+// 玩家登录状态
+message LoginStateMsg {
+	optional int32 player_id = 1;	// 玩家状态
+	optional int32 state = 2;		// 登录状态
+}
+

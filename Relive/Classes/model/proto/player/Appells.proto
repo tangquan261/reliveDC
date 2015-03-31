@@ -1,0 +1,13 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "AppellsMsgProto";
+
+message AppellsMsg{
+	repeated AppellInfoMsg appells = 1 ;
+}
+
+message AppellInfoMsg{
+	optional int32 appellId = 1;
+    optional bool isGet = 2; 
+	optional string value = 3; 	
+}

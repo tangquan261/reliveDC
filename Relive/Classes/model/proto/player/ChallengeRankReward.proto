@@ -1,0 +1,11 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "ChallengeRankRewardMsgProto";
+// 挑战赛奖励
+message ChallengeRankRewardMsg {
+	optional bool is_take = 1;	// 是否可以领取
+	optional int32 param1 = 2;
+	optional int32 param2 = 3;
+	optional int32 param3 = 4;
+	optional int32 param4 = 5;
+}

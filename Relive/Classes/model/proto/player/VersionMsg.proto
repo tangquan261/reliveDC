@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "VersionMsgProto";
+// 玩家登录状态
+message VersionMsg {
+	optional bool open_version = 1;
+	optional int32 version_id = 2;
+}
+

@@ -1,0 +1,20 @@
+package com.road.yishi.proto.watch;
+option java_package = "com.road.yishi.pb.watch";
+option java_outer_classname = "GuardMsgProto";
+
+message GuardMsg {
+	optional int32 fireResi = 1;
+	optional int32 waterResi = 2;
+	optional int32 electResi = 3;
+	optional int32 windResi = 4;
+	optional int32 darkResi = 5;
+	optional int32 lightResi = 6;
+	optional int32 reduce_resi = 7;
+	//宠物抗性
+	optional int32 pet_fireResi = 8;
+	optional int32 pet_waterResi = 9;
+	optional int32 pet_electResi = 10;
+	optional int32 pet_windResi = 11;
+	optional int32 pet_darkResi = 12;
+	optional int32 pet_lightResi = 13;
+}

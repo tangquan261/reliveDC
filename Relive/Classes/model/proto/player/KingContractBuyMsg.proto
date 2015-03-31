@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "KingContractBuyMsgProto";
+message KingContractBuyMsg {
+	repeated int32 ids=1;//契约ID
+	optional bool use=2;//领取专属BUFF	
+	optional int32 friendId=3;//好友ID
+	optional string friendname=4;//好友昵称
+}

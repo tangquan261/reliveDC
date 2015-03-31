@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerCheckMsgProto";
+// 玩家无效  U_C_USER_VALIDATE = 0x00A6
+message PlayerCheckMsg {
+	optional int32 player_id = 1;	// 玩家ID
+	optional string key = 2;		// 键
+	optional bool result = 3;		// 结果
+}

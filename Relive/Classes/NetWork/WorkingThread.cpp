@@ -153,7 +153,7 @@ void swapHeader(Packageheader* header)
     
 }
 
-extern sem_t SendSem;
+extern sem_t *SendSem;
 extern sem_t ListenSem;
 
 extern void decrptBytes(uint8_t* src, int length, uint8_t key[8]);
@@ -161,6 +161,8 @@ extern google::protobuf::MessageLite * parseMessage(int protocalType, void *buff
 
 void * ReadSocketThread(void*p)
 {
+    CCLOG("hello world%u ",sockfd);
+    
     HLNetWork *pNetWork = (HLNetWork*)p;
     
     while (true)
@@ -296,32 +298,18 @@ ReStart:
     
     while (true)
     {
-        sem_wait(&SendSem);
-        
-//        
-//        if (pNetWork->m_bShouldIsConnect)
-//        {
-//            listenid = 0;
-//            break;
-//        }
-//        
-//        if (pNetWork->m_bShouldReConnect)
-//        {
-//            close(sockfd);
-//            sockfd = 0;
-//            
-//            break;
-//        }
-        
         DCRequest *request = pNetWork->getRequest();
         
-        if (nullptr == request)
+        while (NULL == request)
         {
-            sem_wait(&SendSem);
-           
-            return NULL;
-           // request = pNetWork->getRequest();
+            int nValue = 0;
+           // sem_getvalue(SendSem, &nValue);
+            
+            sem_wait(SendSem);
+            
+            request = pNetWork->getRequest();
         }
+        
         int nSize = 0;
         uint8_t *buf = nullptr;
         

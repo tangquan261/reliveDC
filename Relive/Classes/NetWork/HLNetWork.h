@@ -15,6 +15,7 @@
 
 #include <google/protobuf/message_lite.h>
 #include "NetWorkDefine.h"
+#include "HLProtocalType.h"
 
 const uint16_t PackageOutHeaderNo = 0x71ab;
 
@@ -72,9 +73,14 @@ public:
     
     bool empty()
     {
+        bool bRet = false;
+        
         pthread_mutex_lock(&m_Mutex);
-        return m_ListRequest.empty();
+        bRet =m_ListRequest.empty();
         pthread_mutex_unlock(&m_Mutex);
+
+
+        return bRet;
     }
 
 private:
@@ -95,9 +101,13 @@ public:
     
     bool empty()
     {
+        bool bRet = false;
+        
         pthread_mutex_lock(&m_Mutex);
-        return m_ListRequest.empty();
+        bRet =m_ListRequest.empty();
         pthread_mutex_unlock(&m_Mutex);
+
+        return bRet;
     }
     
 private:

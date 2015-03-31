@@ -1,0 +1,19 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "DataResetMsgProto";
+// 数据重置信息
+message DataResetMsg {
+	optional int32 weary = 1;			// 体力值
+	optional int32 hangup_count = 2;	// 挂机次数
+	optional int32 trans_energy = 3;	// 传送阵能量
+	optional int32 attack_count = 4;	// 城堡攻击次数
+	optional int32 challenge_count = 5;	// 挑战次数
+	optional int32 left_hangupWeary = 6;// 剩余挂机体力
+	optional int32 tower1_enterCount = 7;// 地下迷宫进入次数
+	optional int32 tower2_enterCount = 8;// 深渊迷宫进入次数 
+	optional int32 blessing_count = 9;	 //祝福轮盘启用次数 
+	optional int32 blessing_buff = 10;	 // 祝福轮盘buff 
+	optional int32 buy_count = 11;		 // 重置神秘商店购买次数
+	optional bool king_Buff = 12;		 // 重置专属BUFF领取状态
+	optional string server_name = 13;	//服务器名称
+}

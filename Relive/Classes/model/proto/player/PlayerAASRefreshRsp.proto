@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerAASRefreshReqMsgProto";
+
+message PlayerAASRefreshMsg {	
+	optional int32 aasOnlineTime = 1;	// 执行结果
+	optional bool isCloseAAS = 2;	    // 防沉迷是否打开 true :不打开 false : 打开
+	optional bool sysSwitch = 3;		// 防沉迷系统开关 true :开 false:关
+}

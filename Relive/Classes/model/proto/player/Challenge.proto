@@ -1,0 +1,12 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "ChallengeMsgProto";
+// 挑战其他玩家信息
+message ChallengeMsg {
+	optional int32 tar_userId = 1;
+	optional int32 tar_armyId = 2;
+	optional int32 pay_type = 3;// 支付类型1为钻石,否则为其他货币支付
+	optional int32 type = 4;
+	optional string tar_serverName = 5;//服务器Name
+	optional string tar_site = 6;//服务器site
+}

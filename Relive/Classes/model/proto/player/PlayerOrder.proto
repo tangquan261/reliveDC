@@ -1,0 +1,13 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerOrderProto";
+// 玩家基本信息
+message PlayerOrderMsg {
+
+	optional int32 player_id = 1;	      	  // 玩家ID
+	optional int32 fight_capacity_order = 2;  //战斗力排名
+	optional int32 geste_Order=3;
+	optional int32 charm_Order=4;
+	optional int32 soul_score_Order=5; 			  //兽魂积分排名
+}
+

@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "CheckNickMsgProto";
+// Req C_CHECK_NICK = 0x201F
+// Rsp U_C_CHECK_NICK = 0x201F
+message CheckNickMsg {
+	optional int32 player_id = 1;	// 玩家ID
+	optional string nick_name = 2;	// 玩家昵称
+	
+}

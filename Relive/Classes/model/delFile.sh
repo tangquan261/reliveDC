@@ -14,6 +14,11 @@ else
 if [ "${file##*.}" == 'cpp' ]; then
 echo $file	
 rm $file
+else
+if [ "${file##*.}" == 'cc' ]; then
+echo $file	
+rm $file
+fi
 fi
 fi
 fi

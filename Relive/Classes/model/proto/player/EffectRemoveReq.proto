@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "EffectRemoveReqMsgProto";
+
+message EffectRemoveReqMsg {
+	optional int32 templateId = 1;	// 模板ID
+	optional int32 ownType = 2;	//Buffer类型
+}
+

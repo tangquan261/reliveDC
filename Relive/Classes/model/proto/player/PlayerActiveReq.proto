@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerActiveReqMsgProto";
+
+message PlayerActiveReqMsg {
+	optional string key=1;  //返回结果
+	optional string activeId=2;	//活动id
+}

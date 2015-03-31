@@ -23,10 +23,6 @@
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
 		1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
-		11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
-		11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */; };
-		11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
-		11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */; };
 		117B7AB41AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
 		117B7AB51AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
 		117B7AB81AC54B9B00DC153D /* HLNetWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */; };
@@ -43,14 +39,206 @@
 		117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
 		117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */; };
 		117BC70D1AB1C18B00710C09 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */; };
+		11815CEF1ACAB1D00029E9FB /* AppellExchange.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C5B1ACAB1CF0029E9FB /* AppellExchange.pb.cpp */; };
+		11815CF01ACAB1D00029E9FB /* AppellExchange.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C5B1ACAB1CF0029E9FB /* AppellExchange.pb.cpp */; };
+		11815CF11ACAB1D00029E9FB /* AppellExchange.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C5D1ACAB1CF0029E9FB /* AppellExchange.proto */; };
+		11815CF21ACAB1D00029E9FB /* AppellExchange.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C5D1ACAB1CF0029E9FB /* AppellExchange.proto */; };
+		11815CF31ACAB1D00029E9FB /* Appells.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C5E1ACAB1CF0029E9FB /* Appells.pb.cpp */; };
+		11815CF41ACAB1D00029E9FB /* Appells.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C5E1ACAB1CF0029E9FB /* Appells.pb.cpp */; };
+		11815CF51ACAB1D00029E9FB /* Appells.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C601ACAB1CF0029E9FB /* Appells.proto */; };
+		11815CF61ACAB1D00029E9FB /* Appells.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C601ACAB1CF0029E9FB /* Appells.proto */; };
+		11815CF71ACAB1D00029E9FB /* BlessingMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C611ACAB1CF0029E9FB /* BlessingMsg.pb.cpp */; };
+		11815CF81ACAB1D00029E9FB /* BlessingMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C611ACAB1CF0029E9FB /* BlessingMsg.pb.cpp */; };
+		11815CF91ACAB1D00029E9FB /* BlessingMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C631ACAB1CF0029E9FB /* BlessingMsg.proto */; };
+		11815CFA1ACAB1D00029E9FB /* BlessingMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C631ACAB1CF0029E9FB /* BlessingMsg.proto */; };
+		11815CFB1ACAB1D00029E9FB /* Challenge.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C641ACAB1CF0029E9FB /* Challenge.pb.cpp */; };
+		11815CFC1ACAB1D00029E9FB /* Challenge.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C641ACAB1CF0029E9FB /* Challenge.pb.cpp */; };
+		11815CFD1ACAB1D00029E9FB /* Challenge.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C661ACAB1CF0029E9FB /* Challenge.proto */; };
+		11815CFE1ACAB1D00029E9FB /* Challenge.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C661ACAB1CF0029E9FB /* Challenge.proto */; };
+		11815CFF1ACAB1D00029E9FB /* ChallengeCoolTime.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C671ACAB1CF0029E9FB /* ChallengeCoolTime.pb.cpp */; };
+		11815D001ACAB1D00029E9FB /* ChallengeCoolTime.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C671ACAB1CF0029E9FB /* ChallengeCoolTime.pb.cpp */; };
+		11815D011ACAB1D00029E9FB /* ChallengeCoolTime.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C691ACAB1CF0029E9FB /* ChallengeCoolTime.proto */; };
+		11815D021ACAB1D00029E9FB /* ChallengeCoolTime.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C691ACAB1CF0029E9FB /* ChallengeCoolTime.proto */; };
+		11815D031ACAB1D00029E9FB /* ChallengeRankReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C6A1ACAB1CF0029E9FB /* ChallengeRankReward.pb.cpp */; };
+		11815D041ACAB1D00029E9FB /* ChallengeRankReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C6A1ACAB1CF0029E9FB /* ChallengeRankReward.pb.cpp */; };
+		11815D051ACAB1D00029E9FB /* ChallengeRankReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C6C1ACAB1CF0029E9FB /* ChallengeRankReward.proto */; };
+		11815D061ACAB1D00029E9FB /* ChallengeRankReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C6C1ACAB1CF0029E9FB /* ChallengeRankReward.proto */; };
+		11815D071ACAB1D00029E9FB /* CheckNick.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C6D1ACAB1CF0029E9FB /* CheckNick.pb.cpp */; };
+		11815D081ACAB1D00029E9FB /* CheckNick.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C6D1ACAB1CF0029E9FB /* CheckNick.pb.cpp */; };
+		11815D091ACAB1D00029E9FB /* CheckNick.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C6F1ACAB1CF0029E9FB /* CheckNick.proto */; };
+		11815D0A1ACAB1D00029E9FB /* CheckNick.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C6F1ACAB1CF0029E9FB /* CheckNick.proto */; };
+		11815D0B1ACAB1D00029E9FB /* CheckSend.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C701ACAB1CF0029E9FB /* CheckSend.pb.cpp */; };
+		11815D0C1ACAB1D00029E9FB /* CheckSend.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C701ACAB1CF0029E9FB /* CheckSend.pb.cpp */; };
+		11815D0D1ACAB1D00029E9FB /* CheckSend.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C721ACAB1CF0029E9FB /* CheckSend.proto */; };
+		11815D0E1ACAB1D00029E9FB /* CheckSend.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C721ACAB1CF0029E9FB /* CheckSend.proto */; };
+		11815D0F1ACAB1D00029E9FB /* DataReset.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C731ACAB1CF0029E9FB /* DataReset.pb.cpp */; };
+		11815D101ACAB1D00029E9FB /* DataReset.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C731ACAB1CF0029E9FB /* DataReset.pb.cpp */; };
+		11815D111ACAB1D00029E9FB /* DataReset.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C751ACAB1CF0029E9FB /* DataReset.proto */; };
+		11815D121ACAB1D00029E9FB /* DataReset.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C751ACAB1CF0029E9FB /* DataReset.proto */; };
+		11815D131ACAB1D00029E9FB /* EffectRemoveReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C761ACAB1CF0029E9FB /* EffectRemoveReq.pb.cpp */; };
+		11815D141ACAB1D00029E9FB /* EffectRemoveReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C761ACAB1CF0029E9FB /* EffectRemoveReq.pb.cpp */; };
+		11815D151ACAB1D00029E9FB /* EffectRemoveReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C781ACAB1CF0029E9FB /* EffectRemoveReq.proto */; };
+		11815D161ACAB1D00029E9FB /* EffectRemoveReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C781ACAB1CF0029E9FB /* EffectRemoveReq.proto */; };
+		11815D171ACAB1D00029E9FB /* EffectRemoveRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C791ACAB1CF0029E9FB /* EffectRemoveRsp.pb.cpp */; };
+		11815D181ACAB1D00029E9FB /* EffectRemoveRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C791ACAB1CF0029E9FB /* EffectRemoveRsp.pb.cpp */; };
+		11815D191ACAB1D00029E9FB /* EffectRemoveRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C7B1ACAB1CF0029E9FB /* EffectRemoveRsp.proto */; };
+		11815D1A1ACAB1D00029E9FB /* EffectRemoveRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C7B1ACAB1CF0029E9FB /* EffectRemoveRsp.proto */; };
+		11815D1B1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C7C1ACAB1CF0029E9FB /* GuardMsg.pb.cpp */; };
+		11815D1C1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C7C1ACAB1CF0029E9FB /* GuardMsg.pb.cpp */; };
+		11815D1D1ACAB1D00029E9FB /* GuardMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C7E1ACAB1CF0029E9FB /* GuardMsg.proto */; };
+		11815D1E1ACAB1D00029E9FB /* GuardMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C7E1ACAB1CF0029E9FB /* GuardMsg.proto */; };
+		11815D1F1ACAB1D00029E9FB /* KingContractBuyMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C7F1ACAB1CF0029E9FB /* KingContractBuyMsg.pb.cpp */; };
+		11815D201ACAB1D00029E9FB /* KingContractBuyMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C7F1ACAB1CF0029E9FB /* KingContractBuyMsg.pb.cpp */; };
+		11815D211ACAB1D00029E9FB /* KingContractBuyMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C811ACAB1CF0029E9FB /* KingContractBuyMsg.proto */; };
+		11815D221ACAB1D00029E9FB /* KingContractBuyMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C811ACAB1CF0029E9FB /* KingContractBuyMsg.proto */; };
+		11815D231ACAB1D00029E9FB /* KingContractMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C821ACAB1CF0029E9FB /* KingContractMsg.pb.cpp */; };
+		11815D241ACAB1D00029E9FB /* KingContractMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C821ACAB1CF0029E9FB /* KingContractMsg.pb.cpp */; };
+		11815D251ACAB1D00029E9FB /* KingContractMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C841ACAB1CF0029E9FB /* KingContractMsg.proto */; };
+		11815D261ACAB1D00029E9FB /* KingContractMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C841ACAB1CF0029E9FB /* KingContractMsg.proto */; };
+		11815D271ACAB1D00029E9FB /* LoginReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C851ACAB1CF0029E9FB /* LoginReq.pb.cpp */; };
+		11815D281ACAB1D00029E9FB /* LoginReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C851ACAB1CF0029E9FB /* LoginReq.pb.cpp */; };
+		11815D291ACAB1D00029E9FB /* LoginReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C871ACAB1CF0029E9FB /* LoginReq.proto */; };
+		11815D2A1ACAB1D00029E9FB /* LoginReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C871ACAB1CF0029E9FB /* LoginReq.proto */; };
+		11815D2B1ACAB1D00029E9FB /* LoginState.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C881ACAB1CF0029E9FB /* LoginState.pb.cpp */; };
+		11815D2C1ACAB1D00029E9FB /* LoginState.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C881ACAB1CF0029E9FB /* LoginState.pb.cpp */; };
+		11815D2D1ACAB1D00029E9FB /* LoginState.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C8A1ACAB1CF0029E9FB /* LoginState.proto */; };
+		11815D2E1ACAB1D00029E9FB /* LoginState.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C8A1ACAB1CF0029E9FB /* LoginState.proto */; };
+		11815D2F1ACAB1D00029E9FB /* MultiCampaignEnterCount.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C8B1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.cpp */; };
+		11815D301ACAB1D00029E9FB /* MultiCampaignEnterCount.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C8B1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.cpp */; };
+		11815D311ACAB1D00029E9FB /* MultiCampaignEnterCount.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C8D1ACAB1CF0029E9FB /* MultiCampaignEnterCount.proto */; };
+		11815D321ACAB1D00029E9FB /* MultiCampaignEnterCount.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C8D1ACAB1CF0029E9FB /* MultiCampaignEnterCount.proto */; };
+		11815D331ACAB1D00029E9FB /* OfflineReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C8E1ACAB1CF0029E9FB /* OfflineReward.pb.cpp */; };
+		11815D341ACAB1D00029E9FB /* OfflineReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C8E1ACAB1CF0029E9FB /* OfflineReward.pb.cpp */; };
+		11815D351ACAB1D00029E9FB /* OfflineReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C901ACAB1CF0029E9FB /* OfflineReward.proto */; };
+		11815D361ACAB1D00029E9FB /* OfflineReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C901ACAB1CF0029E9FB /* OfflineReward.proto */; };
+		11815D371ACAB1D00029E9FB /* PayType.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C911ACAB1CF0029E9FB /* PayType.pb.cpp */; };
+		11815D381ACAB1D00029E9FB /* PayType.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C911ACAB1CF0029E9FB /* PayType.pb.cpp */; };
+		11815D391ACAB1D00029E9FB /* PayType.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C931ACAB1CF0029E9FB /* PayType.proto */; };
+		11815D3A1ACAB1D00029E9FB /* PayType.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C931ACAB1CF0029E9FB /* PayType.proto */; };
+		11815D3B1ACAB1D00029E9FB /* Player.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C941ACAB1CF0029E9FB /* Player.pb.cpp */; };
+		11815D3C1ACAB1D00029E9FB /* Player.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C941ACAB1CF0029E9FB /* Player.pb.cpp */; };
+		11815D3D1ACAB1D00029E9FB /* Player.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C961ACAB1CF0029E9FB /* Player.proto */; };
+		11815D3E1ACAB1D00029E9FB /* Player.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C961ACAB1CF0029E9FB /* Player.proto */; };
+		11815D3F1ACAB1D00029E9FB /* PlayerAASRefreshRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C971ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.cpp */; };
+		11815D401ACAB1D00029E9FB /* PlayerAASRefreshRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C971ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.cpp */; };
+		11815D411ACAB1D00029E9FB /* PlayerAASRefreshRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C991ACAB1CF0029E9FB /* PlayerAASRefreshRsp.proto */; };
+		11815D421ACAB1D00029E9FB /* PlayerAASRefreshRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C991ACAB1CF0029E9FB /* PlayerAASRefreshRsp.proto */; };
+		11815D431ACAB1D00029E9FB /* PlayerAASReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C9A1ACAB1CF0029E9FB /* PlayerAASReq.pb.cpp */; };
+		11815D441ACAB1D00029E9FB /* PlayerAASReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C9A1ACAB1CF0029E9FB /* PlayerAASReq.pb.cpp */; };
+		11815D451ACAB1D00029E9FB /* PlayerAASReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C9C1ACAB1CF0029E9FB /* PlayerAASReq.proto */; };
+		11815D461ACAB1D00029E9FB /* PlayerAASReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C9C1ACAB1CF0029E9FB /* PlayerAASReq.proto */; };
+		11815D471ACAB1D00029E9FB /* PlayerAASRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C9D1ACAB1CF0029E9FB /* PlayerAASRsp.pb.cpp */; };
+		11815D481ACAB1D00029E9FB /* PlayerAASRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815C9D1ACAB1CF0029E9FB /* PlayerAASRsp.pb.cpp */; };
+		11815D491ACAB1D00029E9FB /* PlayerAASRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C9F1ACAB1CF0029E9FB /* PlayerAASRsp.proto */; };
+		11815D4A1ACAB1D00029E9FB /* PlayerAASRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815C9F1ACAB1CF0029E9FB /* PlayerAASRsp.proto */; };
+		11815D4B1ACAB1D00029E9FB /* PlayerActiveReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA01ACAB1CF0029E9FB /* PlayerActiveReq.pb.cpp */; };
+		11815D4C1ACAB1D00029E9FB /* PlayerActiveReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA01ACAB1CF0029E9FB /* PlayerActiveReq.pb.cpp */; };
+		11815D4D1ACAB1D00029E9FB /* PlayerActiveReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA21ACAB1CF0029E9FB /* PlayerActiveReq.proto */; };
+		11815D4E1ACAB1D00029E9FB /* PlayerActiveReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA21ACAB1CF0029E9FB /* PlayerActiveReq.proto */; };
+		11815D4F1ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA31ACAB1CF0029E9FB /* PlayerActiveRsp.pb.cpp */; };
+		11815D501ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA31ACAB1CF0029E9FB /* PlayerActiveRsp.pb.cpp */; };
+		11815D511ACAB1D00029E9FB /* PlayerActiveRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA51ACAB1CF0029E9FB /* PlayerActiveRsp.proto */; };
+		11815D521ACAB1D00029E9FB /* PlayerActiveRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA51ACAB1CF0029E9FB /* PlayerActiveRsp.proto */; };
+		11815D531ACAB1D00029E9FB /* PlayerCheck.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA61ACAB1CF0029E9FB /* PlayerCheck.pb.cpp */; };
+		11815D541ACAB1D00029E9FB /* PlayerCheck.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA61ACAB1CF0029E9FB /* PlayerCheck.pb.cpp */; };
+		11815D551ACAB1D00029E9FB /* PlayerCheck.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA81ACAB1CF0029E9FB /* PlayerCheck.proto */; };
+		11815D561ACAB1D00029E9FB /* PlayerCheck.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CA81ACAB1CF0029E9FB /* PlayerCheck.proto */; };
+		11815D571ACAB1D00029E9FB /* PlayerData.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA91ACAB1CF0029E9FB /* PlayerData.pb.cpp */; };
+		11815D581ACAB1D00029E9FB /* PlayerData.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CA91ACAB1CF0029E9FB /* PlayerData.pb.cpp */; };
+		11815D591ACAB1D00029E9FB /* PlayerData.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CAB1ACAB1CF0029E9FB /* PlayerData.proto */; };
+		11815D5A1ACAB1D00029E9FB /* PlayerData.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CAB1ACAB1CF0029E9FB /* PlayerData.proto */; };
+		11815D5B1ACAB1D00029E9FB /* PlayerMoveCamera.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CAC1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.cpp */; };
+		11815D5C1ACAB1D00029E9FB /* PlayerMoveCamera.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CAC1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.cpp */; };
+		11815D5D1ACAB1D00029E9FB /* PlayerMoveCamera.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CAE1ACAB1CF0029E9FB /* PlayerMoveCamera.proto */; };
+		11815D5E1ACAB1D00029E9FB /* PlayerMoveCamera.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CAE1ACAB1CF0029E9FB /* PlayerMoveCamera.proto */; };
+		11815D5F1ACAB1D00029E9FB /* PlayerMovie.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CAF1ACAB1CF0029E9FB /* PlayerMovie.pb.cpp */; };
+		11815D601ACAB1D00029E9FB /* PlayerMovie.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CAF1ACAB1CF0029E9FB /* PlayerMovie.pb.cpp */; };
+		11815D611ACAB1D00029E9FB /* PlayerMovie.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB11ACAB1CF0029E9FB /* PlayerMovie.proto */; };
+		11815D621ACAB1D00029E9FB /* PlayerMovie.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB11ACAB1CF0029E9FB /* PlayerMovie.proto */; };
+		11815D631ACAB1D00029E9FB /* PlayerOrder.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB21ACAB1CF0029E9FB /* PlayerOrder.pb.cpp */; };
+		11815D641ACAB1D00029E9FB /* PlayerOrder.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB21ACAB1CF0029E9FB /* PlayerOrder.pb.cpp */; };
+		11815D651ACAB1D00029E9FB /* PlayerOrder.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB41ACAB1CF0029E9FB /* PlayerOrder.proto */; };
+		11815D661ACAB1D00029E9FB /* PlayerOrder.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB41ACAB1CF0029E9FB /* PlayerOrder.proto */; };
+		11815D671ACAB1D00029E9FB /* PlayerPlugInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB51ACAB1CF0029E9FB /* PlayerPlugInfo.pb.cpp */; };
+		11815D681ACAB1D00029E9FB /* PlayerPlugInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB51ACAB1CF0029E9FB /* PlayerPlugInfo.pb.cpp */; };
+		11815D691ACAB1D00029E9FB /* PlayerPlugInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB71ACAB1CF0029E9FB /* PlayerPlugInfo.proto */; };
+		11815D6A1ACAB1D00029E9FB /* PlayerPlugInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CB71ACAB1CF0029E9FB /* PlayerPlugInfo.proto */; };
+		11815D6B1ACAB1D00029E9FB /* PlayerProperty.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB81ACAB1CF0029E9FB /* PlayerProperty.pb.cpp */; };
+		11815D6C1ACAB1D00029E9FB /* PlayerProperty.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CB81ACAB1CF0029E9FB /* PlayerProperty.pb.cpp */; };
+		11815D6D1ACAB1D00029E9FB /* PlayerProperty.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CBA1ACAB1CF0029E9FB /* PlayerProperty.proto */; };
+		11815D6E1ACAB1D00029E9FB /* PlayerProperty.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CBA1ACAB1CF0029E9FB /* PlayerProperty.proto */; };
+		11815D6F1ACAB1D00029E9FB /* PlayerRenameReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CBB1ACAB1CF0029E9FB /* PlayerRenameReq.pb.cpp */; };
+		11815D701ACAB1D00029E9FB /* PlayerRenameReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CBB1ACAB1CF0029E9FB /* PlayerRenameReq.pb.cpp */; };
+		11815D711ACAB1D00029E9FB /* PlayerRenameReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CBD1ACAB1CF0029E9FB /* PlayerRenameReq.proto */; };
+		11815D721ACAB1D00029E9FB /* PlayerRenameReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CBD1ACAB1CF0029E9FB /* PlayerRenameReq.proto */; };
+		11815D731ACAB1D00029E9FB /* PlayerRenameRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CBE1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.cpp */; };
+		11815D741ACAB1D00029E9FB /* PlayerRenameRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CBE1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.cpp */; };
+		11815D751ACAB1D00029E9FB /* PlayerRenameRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC01ACAB1CF0029E9FB /* PlayerRenameRsp.proto */; };
+		11815D761ACAB1D00029E9FB /* PlayerRenameRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC01ACAB1CF0029E9FB /* PlayerRenameRsp.proto */; };
+		11815D771ACAB1D00029E9FB /* PlayerSignReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC11ACAB1CF0029E9FB /* PlayerSignReq.pb.cpp */; };
+		11815D781ACAB1D00029E9FB /* PlayerSignReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC11ACAB1CF0029E9FB /* PlayerSignReq.pb.cpp */; };
+		11815D791ACAB1D00029E9FB /* PlayerSignReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC31ACAB1CF0029E9FB /* PlayerSignReq.proto */; };
+		11815D7A1ACAB1D00029E9FB /* PlayerSignReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC31ACAB1CF0029E9FB /* PlayerSignReq.proto */; };
+		11815D7B1ACAB1D00029E9FB /* PlayerSignRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC41ACAB1CF0029E9FB /* PlayerSignRsp.pb.cpp */; };
+		11815D7C1ACAB1D00029E9FB /* PlayerSignRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC41ACAB1CF0029E9FB /* PlayerSignRsp.pb.cpp */; };
+		11815D7D1ACAB1D00029E9FB /* PlayerSignRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC61ACAB1CF0029E9FB /* PlayerSignRsp.proto */; };
+		11815D7E1ACAB1D00029E9FB /* PlayerSignRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC61ACAB1CF0029E9FB /* PlayerSignRsp.proto */; };
+		11815D7F1ACAB1D00029E9FB /* PropertyUpdated.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC71ACAB1CF0029E9FB /* PropertyUpdated.pb.cpp */; };
+		11815D801ACAB1D00029E9FB /* PropertyUpdated.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CC71ACAB1CF0029E9FB /* PropertyUpdated.pb.cpp */; };
+		11815D811ACAB1D00029E9FB /* PropertyUpdated.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC91ACAB1CF0029E9FB /* PropertyUpdated.proto */; };
+		11815D821ACAB1D00029E9FB /* PropertyUpdated.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CC91ACAB1CF0029E9FB /* PropertyUpdated.proto */; };
+		11815D831ACAB1D00029E9FB /* RateUpdateReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CCA1ACAB1CF0029E9FB /* RateUpdateReq.pb.cpp */; };
+		11815D841ACAB1D00029E9FB /* RateUpdateReq.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CCA1ACAB1CF0029E9FB /* RateUpdateReq.pb.cpp */; };
+		11815D851ACAB1D00029E9FB /* RateUpdateReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CCC1ACAB1CF0029E9FB /* RateUpdateReq.proto */; };
+		11815D861ACAB1D00029E9FB /* RateUpdateReq.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CCC1ACAB1CF0029E9FB /* RateUpdateReq.proto */; };
+		11815D871ACAB1D00029E9FB /* RefuseFriendRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CCD1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.cpp */; };
+		11815D881ACAB1D00029E9FB /* RefuseFriendRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CCD1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.cpp */; };
+		11815D891ACAB1D00029E9FB /* RefuseFriendRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CCF1ACAB1CF0029E9FB /* RefuseFriendRsp.proto */; };
+		11815D8A1ACAB1D00029E9FB /* RefuseFriendRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CCF1ACAB1CF0029E9FB /* RefuseFriendRsp.proto */; };
+		11815D8B1ACAB1D00029E9FB /* RewardCountUpdateRep.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD01ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.cpp */; };
+		11815D8C1ACAB1D00029E9FB /* RewardCountUpdateRep.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD01ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.cpp */; };
+		11815D8D1ACAB1D00029E9FB /* RewardCountUpdateRep.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD21ACAB1CF0029E9FB /* RewardCountUpdateRep.proto */; };
+		11815D8E1ACAB1D00029E9FB /* RewardCountUpdateRep.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD21ACAB1CF0029E9FB /* RewardCountUpdateRep.proto */; };
+		11815D8F1ACAB1D00029E9FB /* RewardCountUpdateRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD31ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.cpp */; };
+		11815D901ACAB1D00029E9FB /* RewardCountUpdateRsp.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD31ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.cpp */; };
+		11815D911ACAB1D00029E9FB /* RewardCountUpdateRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD51ACAB1CF0029E9FB /* RewardCountUpdateRsp.proto */; };
+		11815D921ACAB1D00029E9FB /* RewardCountUpdateRsp.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD51ACAB1CF0029E9FB /* RewardCountUpdateRsp.proto */; };
+		11815D931ACAB1D00029E9FB /* SnsData.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD61ACAB1CF0029E9FB /* SnsData.pb.cpp */; };
+		11815D941ACAB1D00029E9FB /* SnsData.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD61ACAB1CF0029E9FB /* SnsData.pb.cpp */; };
+		11815D951ACAB1D00029E9FB /* SnsData.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD81ACAB1CF0029E9FB /* SnsData.proto */; };
+		11815D961ACAB1D00029E9FB /* SnsData.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CD81ACAB1CF0029E9FB /* SnsData.proto */; };
+		11815D971ACAB1D00029E9FB /* SynchronizedTimeMsgProto.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD91ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.cpp */; };
+		11815D981ACAB1D00029E9FB /* SynchronizedTimeMsgProto.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CD91ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.cpp */; };
+		11815D991ACAB1D00029E9FB /* SynchronizedTimeMsgProto.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CDB1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.proto */; };
+		11815D9A1ACAB1D00029E9FB /* SynchronizedTimeMsgProto.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CDB1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.proto */; };
+		11815D9B1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CDC1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.cpp */; };
+		11815D9C1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CDC1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.cpp */; };
+		11815D9D1ACAB1D00029E9FB /* SystemPropertyMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CDE1ACAB1CF0029E9FB /* SystemPropertyMsg.proto */; };
+		11815D9E1ACAB1D00029E9FB /* SystemPropertyMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CDE1ACAB1CF0029E9FB /* SystemPropertyMsg.proto */; };
+		11815D9F1ACAB1D00029E9FB /* TakeLoginReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CDF1ACAB1CF0029E9FB /* TakeLoginReward.pb.cpp */; };
+		11815DA01ACAB1D00029E9FB /* TakeLoginReward.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CDF1ACAB1CF0029E9FB /* TakeLoginReward.pb.cpp */; };
+		11815DA11ACAB1D00029E9FB /* TakeLoginReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE11ACAB1CF0029E9FB /* TakeLoginReward.proto */; };
+		11815DA21ACAB1D00029E9FB /* TakeLoginReward.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE11ACAB1CF0029E9FB /* TakeLoginReward.proto */; };
+		11815DA31ACAB1D00029E9FB /* UserPin.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE21ACAB1CF0029E9FB /* UserPin.pb.cpp */; };
+		11815DA41ACAB1D00029E9FB /* UserPin.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE21ACAB1CF0029E9FB /* UserPin.pb.cpp */; };
+		11815DA51ACAB1D00029E9FB /* UserPin.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE41ACAB1CF0029E9FB /* UserPin.proto */; };
+		11815DA61ACAB1D00029E9FB /* UserPin.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE41ACAB1CF0029E9FB /* UserPin.proto */; };
+		11815DA71ACAB1D00029E9FB /* VersionMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE51ACAB1CF0029E9FB /* VersionMsg.pb.cpp */; };
+		11815DA81ACAB1D00029E9FB /* VersionMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE51ACAB1CF0029E9FB /* VersionMsg.pb.cpp */; };
+		11815DA91ACAB1D00029E9FB /* VersionMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE71ACAB1CF0029E9FB /* VersionMsg.proto */; };
+		11815DAA1ACAB1D00029E9FB /* VersionMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CE71ACAB1CF0029E9FB /* VersionMsg.proto */; };
+		11815DAB1ACAB1D00029E9FB /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE91ACAB1D00029E9FB /* BoxMsg.pb.cpp */; };
+		11815DAC1ACAB1D00029E9FB /* BoxMsg.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CE91ACAB1D00029E9FB /* BoxMsg.pb.cpp */; };
+		11815DAD1ACAB1D00029E9FB /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CEC1ACAB1D00029E9FB /* BoxMsg.proto */; };
+		11815DAE1ACAB1D00029E9FB /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CEC1ACAB1D00029E9FB /* BoxMsg.proto */; };
+		11815DAF1ACAB1D00029E9FB /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CED1ACAB1D00029E9FB /* HangupInfo.pb.cpp */; };
+		11815DB01ACAB1D00029E9FB /* HangupInfo.pb.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11815CED1ACAB1D00029E9FB /* HangupInfo.pb.cpp */; };
+		11815DB11ACAB1D00029E9FB /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CEE1ACAB1D00029E9FB /* HangupInfo.proto */; };
+		11815DB21ACAB1D00029E9FB /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11815CEE1ACAB1D00029E9FB /* HangupInfo.proto */; };
 		1199D98E1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */; };
 		1199D98F1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */; };
 		1199D9971AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */; };
 		1199D9981AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */; };
-		11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
-		11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */; };
-		11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
-		11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */ = {isa = PBXBuildFile; fileRef = 11AF13001AB0205800EFCEAE /* HangupInfo.proto */; };
 		11AF13101AB0221B00EFCEAE /* libprotobuff-lite-ios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF12F21AB01FE200EFCEAE /* libprotobuff-lite-ios.a */; };
 		11AF13111AB0222300EFCEAE /* libprotobuff-lite-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AF12F41AB01FE200EFCEAE /* libprotobuff-lite-mac.a */; };
 		11D4315F1AC804F3004D730E /* HLServerDataManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 11D4315D1AC804F3004D730E /* HLServerDataManager.cpp */; };
@@ -203,10 +391,6 @@
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
 		1156DE421AC8F96300836687 /* HLVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLVersion.cpp; path = Common/HLVersion.cpp; sourceTree = "<group>"; };
 		1156DE431AC8F96300836687 /* HLVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLVersion.h; path = Common/HLVersion.h; sourceTree = "<group>"; };
-		11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cpp; sourceTree = "<group>"; };
-		11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
-		11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cpp; sourceTree = "<group>"; };
-		11644DAF1AB0A1450059ECE2 /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
 		117B7AB21AC544BC00DC153D /* HLProtocalType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLProtocalType.h; sourceTree = "<group>"; };
 		117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLProtocalType.cpp; sourceTree = "<group>"; };
 		117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLNetWork.cpp; sourceTree = "<group>"; };
@@ -296,13 +480,158 @@
 		117BC6FA1AB18F3000710C09 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		117BC6FC1AB18F9100710C09 /* DataBaseHelper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataBaseHelper.cpp; sourceTree = "<group>"; };
 		117BC70C1AB1C18B00710C09 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		11815C5B1ACAB1CF0029E9FB /* AppellExchange.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppellExchange.pb.cpp; sourceTree = "<group>"; };
+		11815C5C1ACAB1CF0029E9FB /* AppellExchange.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppellExchange.pb.h; sourceTree = "<group>"; };
+		11815C5D1ACAB1CF0029E9FB /* AppellExchange.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AppellExchange.proto; sourceTree = "<group>"; };
+		11815C5E1ACAB1CF0029E9FB /* Appells.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Appells.pb.cpp; sourceTree = "<group>"; };
+		11815C5F1ACAB1CF0029E9FB /* Appells.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Appells.pb.h; sourceTree = "<group>"; };
+		11815C601ACAB1CF0029E9FB /* Appells.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Appells.proto; sourceTree = "<group>"; };
+		11815C611ACAB1CF0029E9FB /* BlessingMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BlessingMsg.pb.cpp; sourceTree = "<group>"; };
+		11815C621ACAB1CF0029E9FB /* BlessingMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlessingMsg.pb.h; sourceTree = "<group>"; };
+		11815C631ACAB1CF0029E9FB /* BlessingMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BlessingMsg.proto; sourceTree = "<group>"; };
+		11815C641ACAB1CF0029E9FB /* Challenge.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Challenge.pb.cpp; sourceTree = "<group>"; };
+		11815C651ACAB1CF0029E9FB /* Challenge.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.pb.h; sourceTree = "<group>"; };
+		11815C661ACAB1CF0029E9FB /* Challenge.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Challenge.proto; sourceTree = "<group>"; };
+		11815C671ACAB1CF0029E9FB /* ChallengeCoolTime.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChallengeCoolTime.pb.cpp; sourceTree = "<group>"; };
+		11815C681ACAB1CF0029E9FB /* ChallengeCoolTime.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeCoolTime.pb.h; sourceTree = "<group>"; };
+		11815C691ACAB1CF0029E9FB /* ChallengeCoolTime.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChallengeCoolTime.proto; sourceTree = "<group>"; };
+		11815C6A1ACAB1CF0029E9FB /* ChallengeRankReward.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChallengeRankReward.pb.cpp; sourceTree = "<group>"; };
+		11815C6B1ACAB1CF0029E9FB /* ChallengeRankReward.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeRankReward.pb.h; sourceTree = "<group>"; };
+		11815C6C1ACAB1CF0029E9FB /* ChallengeRankReward.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChallengeRankReward.proto; sourceTree = "<group>"; };
+		11815C6D1ACAB1CF0029E9FB /* CheckNick.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CheckNick.pb.cpp; sourceTree = "<group>"; };
+		11815C6E1ACAB1CF0029E9FB /* CheckNick.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckNick.pb.h; sourceTree = "<group>"; };
+		11815C6F1ACAB1CF0029E9FB /* CheckNick.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CheckNick.proto; sourceTree = "<group>"; };
+		11815C701ACAB1CF0029E9FB /* CheckSend.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CheckSend.pb.cpp; sourceTree = "<group>"; };
+		11815C711ACAB1CF0029E9FB /* CheckSend.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckSend.pb.h; sourceTree = "<group>"; };
+		11815C721ACAB1CF0029E9FB /* CheckSend.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CheckSend.proto; sourceTree = "<group>"; };
+		11815C731ACAB1CF0029E9FB /* DataReset.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataReset.pb.cpp; sourceTree = "<group>"; };
+		11815C741ACAB1CF0029E9FB /* DataReset.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataReset.pb.h; sourceTree = "<group>"; };
+		11815C751ACAB1CF0029E9FB /* DataReset.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DataReset.proto; sourceTree = "<group>"; };
+		11815C761ACAB1CF0029E9FB /* EffectRemoveReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectRemoveReq.pb.cpp; sourceTree = "<group>"; };
+		11815C771ACAB1CF0029E9FB /* EffectRemoveReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectRemoveReq.pb.h; sourceTree = "<group>"; };
+		11815C781ACAB1CF0029E9FB /* EffectRemoveReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EffectRemoveReq.proto; sourceTree = "<group>"; };
+		11815C791ACAB1CF0029E9FB /* EffectRemoveRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EffectRemoveRsp.pb.cpp; sourceTree = "<group>"; };
+		11815C7A1ACAB1CF0029E9FB /* EffectRemoveRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectRemoveRsp.pb.h; sourceTree = "<group>"; };
+		11815C7B1ACAB1CF0029E9FB /* EffectRemoveRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EffectRemoveRsp.proto; sourceTree = "<group>"; };
+		11815C7C1ACAB1CF0029E9FB /* GuardMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuardMsg.pb.cpp; sourceTree = "<group>"; };
+		11815C7D1ACAB1CF0029E9FB /* GuardMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuardMsg.pb.h; sourceTree = "<group>"; };
+		11815C7E1ACAB1CF0029E9FB /* GuardMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = GuardMsg.proto; sourceTree = "<group>"; };
+		11815C7F1ACAB1CF0029E9FB /* KingContractBuyMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingContractBuyMsg.pb.cpp; sourceTree = "<group>"; };
+		11815C801ACAB1CF0029E9FB /* KingContractBuyMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingContractBuyMsg.pb.h; sourceTree = "<group>"; };
+		11815C811ACAB1CF0029E9FB /* KingContractBuyMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KingContractBuyMsg.proto; sourceTree = "<group>"; };
+		11815C821ACAB1CF0029E9FB /* KingContractMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KingContractMsg.pb.cpp; sourceTree = "<group>"; };
+		11815C831ACAB1CF0029E9FB /* KingContractMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KingContractMsg.pb.h; sourceTree = "<group>"; };
+		11815C841ACAB1CF0029E9FB /* KingContractMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = KingContractMsg.proto; sourceTree = "<group>"; };
+		11815C851ACAB1CF0029E9FB /* LoginReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginReq.pb.cpp; sourceTree = "<group>"; };
+		11815C861ACAB1CF0029E9FB /* LoginReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginReq.pb.h; sourceTree = "<group>"; };
+		11815C871ACAB1CF0029E9FB /* LoginReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoginReq.proto; sourceTree = "<group>"; };
+		11815C881ACAB1CF0029E9FB /* LoginState.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginState.pb.cpp; sourceTree = "<group>"; };
+		11815C891ACAB1CF0029E9FB /* LoginState.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginState.pb.h; sourceTree = "<group>"; };
+		11815C8A1ACAB1CF0029E9FB /* LoginState.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LoginState.proto; sourceTree = "<group>"; };
+		11815C8B1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiCampaignEnterCount.pb.cpp; sourceTree = "<group>"; };
+		11815C8C1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiCampaignEnterCount.pb.h; sourceTree = "<group>"; };
+		11815C8D1ACAB1CF0029E9FB /* MultiCampaignEnterCount.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MultiCampaignEnterCount.proto; sourceTree = "<group>"; };
+		11815C8E1ACAB1CF0029E9FB /* OfflineReward.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OfflineReward.pb.cpp; sourceTree = "<group>"; };
+		11815C8F1ACAB1CF0029E9FB /* OfflineReward.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfflineReward.pb.h; sourceTree = "<group>"; };
+		11815C901ACAB1CF0029E9FB /* OfflineReward.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OfflineReward.proto; sourceTree = "<group>"; };
+		11815C911ACAB1CF0029E9FB /* PayType.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PayType.pb.cpp; sourceTree = "<group>"; };
+		11815C921ACAB1CF0029E9FB /* PayType.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayType.pb.h; sourceTree = "<group>"; };
+		11815C931ACAB1CF0029E9FB /* PayType.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PayType.proto; sourceTree = "<group>"; };
+		11815C941ACAB1CF0029E9FB /* Player.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.pb.cpp; sourceTree = "<group>"; };
+		11815C951ACAB1CF0029E9FB /* Player.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.pb.h; sourceTree = "<group>"; };
+		11815C961ACAB1CF0029E9FB /* Player.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Player.proto; sourceTree = "<group>"; };
+		11815C971ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerAASRefreshRsp.pb.cpp; sourceTree = "<group>"; };
+		11815C981ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAASRefreshRsp.pb.h; sourceTree = "<group>"; };
+		11815C991ACAB1CF0029E9FB /* PlayerAASRefreshRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerAASRefreshRsp.proto; sourceTree = "<group>"; };
+		11815C9A1ACAB1CF0029E9FB /* PlayerAASReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerAASReq.pb.cpp; sourceTree = "<group>"; };
+		11815C9B1ACAB1CF0029E9FB /* PlayerAASReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAASReq.pb.h; sourceTree = "<group>"; };
+		11815C9C1ACAB1CF0029E9FB /* PlayerAASReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerAASReq.proto; sourceTree = "<group>"; };
+		11815C9D1ACAB1CF0029E9FB /* PlayerAASRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerAASRsp.pb.cpp; sourceTree = "<group>"; };
+		11815C9E1ACAB1CF0029E9FB /* PlayerAASRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerAASRsp.pb.h; sourceTree = "<group>"; };
+		11815C9F1ACAB1CF0029E9FB /* PlayerAASRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerAASRsp.proto; sourceTree = "<group>"; };
+		11815CA01ACAB1CF0029E9FB /* PlayerActiveReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerActiveReq.pb.cpp; sourceTree = "<group>"; };
+		11815CA11ACAB1CF0029E9FB /* PlayerActiveReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerActiveReq.pb.h; sourceTree = "<group>"; };
+		11815CA21ACAB1CF0029E9FB /* PlayerActiveReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerActiveReq.proto; sourceTree = "<group>"; };
+		11815CA31ACAB1CF0029E9FB /* PlayerActiveRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerActiveRsp.pb.cpp; sourceTree = "<group>"; };
+		11815CA41ACAB1CF0029E9FB /* PlayerActiveRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerActiveRsp.pb.h; sourceTree = "<group>"; };
+		11815CA51ACAB1CF0029E9FB /* PlayerActiveRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerActiveRsp.proto; sourceTree = "<group>"; };
+		11815CA61ACAB1CF0029E9FB /* PlayerCheck.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerCheck.pb.cpp; sourceTree = "<group>"; };
+		11815CA71ACAB1CF0029E9FB /* PlayerCheck.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerCheck.pb.h; sourceTree = "<group>"; };
+		11815CA81ACAB1CF0029E9FB /* PlayerCheck.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerCheck.proto; sourceTree = "<group>"; };
+		11815CA91ACAB1CF0029E9FB /* PlayerData.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerData.pb.cpp; sourceTree = "<group>"; };
+		11815CAA1ACAB1CF0029E9FB /* PlayerData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerData.pb.h; sourceTree = "<group>"; };
+		11815CAB1ACAB1CF0029E9FB /* PlayerData.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerData.proto; sourceTree = "<group>"; };
+		11815CAC1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMoveCamera.pb.cpp; sourceTree = "<group>"; };
+		11815CAD1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMoveCamera.pb.h; sourceTree = "<group>"; };
+		11815CAE1ACAB1CF0029E9FB /* PlayerMoveCamera.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerMoveCamera.proto; sourceTree = "<group>"; };
+		11815CAF1ACAB1CF0029E9FB /* PlayerMovie.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMovie.pb.cpp; sourceTree = "<group>"; };
+		11815CB01ACAB1CF0029E9FB /* PlayerMovie.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerMovie.pb.h; sourceTree = "<group>"; };
+		11815CB11ACAB1CF0029E9FB /* PlayerMovie.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerMovie.proto; sourceTree = "<group>"; };
+		11815CB21ACAB1CF0029E9FB /* PlayerOrder.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerOrder.pb.cpp; sourceTree = "<group>"; };
+		11815CB31ACAB1CF0029E9FB /* PlayerOrder.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerOrder.pb.h; sourceTree = "<group>"; };
+		11815CB41ACAB1CF0029E9FB /* PlayerOrder.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerOrder.proto; sourceTree = "<group>"; };
+		11815CB51ACAB1CF0029E9FB /* PlayerPlugInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerPlugInfo.pb.cpp; sourceTree = "<group>"; };
+		11815CB61ACAB1CF0029E9FB /* PlayerPlugInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerPlugInfo.pb.h; sourceTree = "<group>"; };
+		11815CB71ACAB1CF0029E9FB /* PlayerPlugInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerPlugInfo.proto; sourceTree = "<group>"; };
+		11815CB81ACAB1CF0029E9FB /* PlayerProperty.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerProperty.pb.cpp; sourceTree = "<group>"; };
+		11815CB91ACAB1CF0029E9FB /* PlayerProperty.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerProperty.pb.h; sourceTree = "<group>"; };
+		11815CBA1ACAB1CF0029E9FB /* PlayerProperty.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerProperty.proto; sourceTree = "<group>"; };
+		11815CBB1ACAB1CF0029E9FB /* PlayerRenameReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerRenameReq.pb.cpp; sourceTree = "<group>"; };
+		11815CBC1ACAB1CF0029E9FB /* PlayerRenameReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerRenameReq.pb.h; sourceTree = "<group>"; };
+		11815CBD1ACAB1CF0029E9FB /* PlayerRenameReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerRenameReq.proto; sourceTree = "<group>"; };
+		11815CBE1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerRenameRsp.pb.cpp; sourceTree = "<group>"; };
+		11815CBF1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerRenameRsp.pb.h; sourceTree = "<group>"; };
+		11815CC01ACAB1CF0029E9FB /* PlayerRenameRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerRenameRsp.proto; sourceTree = "<group>"; };
+		11815CC11ACAB1CF0029E9FB /* PlayerSignReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSignReq.pb.cpp; sourceTree = "<group>"; };
+		11815CC21ACAB1CF0029E9FB /* PlayerSignReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSignReq.pb.h; sourceTree = "<group>"; };
+		11815CC31ACAB1CF0029E9FB /* PlayerSignReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerSignReq.proto; sourceTree = "<group>"; };
+		11815CC41ACAB1CF0029E9FB /* PlayerSignRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerSignRsp.pb.cpp; sourceTree = "<group>"; };
+		11815CC51ACAB1CF0029E9FB /* PlayerSignRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerSignRsp.pb.h; sourceTree = "<group>"; };
+		11815CC61ACAB1CF0029E9FB /* PlayerSignRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PlayerSignRsp.proto; sourceTree = "<group>"; };
+		11815CC71ACAB1CF0029E9FB /* PropertyUpdated.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyUpdated.pb.cpp; sourceTree = "<group>"; };
+		11815CC81ACAB1CF0029E9FB /* PropertyUpdated.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyUpdated.pb.h; sourceTree = "<group>"; };
+		11815CC91ACAB1CF0029E9FB /* PropertyUpdated.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PropertyUpdated.proto; sourceTree = "<group>"; };
+		11815CCA1ACAB1CF0029E9FB /* RateUpdateReq.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RateUpdateReq.pb.cpp; sourceTree = "<group>"; };
+		11815CCB1ACAB1CF0029E9FB /* RateUpdateReq.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateUpdateReq.pb.h; sourceTree = "<group>"; };
+		11815CCC1ACAB1CF0029E9FB /* RateUpdateReq.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RateUpdateReq.proto; sourceTree = "<group>"; };
+		11815CCD1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RefuseFriendRsp.pb.cpp; sourceTree = "<group>"; };
+		11815CCE1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RefuseFriendRsp.pb.h; sourceTree = "<group>"; };
+		11815CCF1ACAB1CF0029E9FB /* RefuseFriendRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RefuseFriendRsp.proto; sourceTree = "<group>"; };
+		11815CD01ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RewardCountUpdateRep.pb.cpp; sourceTree = "<group>"; };
+		11815CD11ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCountUpdateRep.pb.h; sourceTree = "<group>"; };
+		11815CD21ACAB1CF0029E9FB /* RewardCountUpdateRep.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RewardCountUpdateRep.proto; sourceTree = "<group>"; };
+		11815CD31ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RewardCountUpdateRsp.pb.cpp; sourceTree = "<group>"; };
+		11815CD41ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardCountUpdateRsp.pb.h; sourceTree = "<group>"; };
+		11815CD51ACAB1CF0029E9FB /* RewardCountUpdateRsp.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RewardCountUpdateRsp.proto; sourceTree = "<group>"; };
+		11815CD61ACAB1CF0029E9FB /* SnsData.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SnsData.pb.cpp; sourceTree = "<group>"; };
+		11815CD71ACAB1CF0029E9FB /* SnsData.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SnsData.pb.h; sourceTree = "<group>"; };
+		11815CD81ACAB1CF0029E9FB /* SnsData.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SnsData.proto; sourceTree = "<group>"; };
+		11815CD91ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SynchronizedTimeMsgProto.pb.cpp; sourceTree = "<group>"; };
+		11815CDA1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynchronizedTimeMsgProto.pb.h; sourceTree = "<group>"; };
+		11815CDB1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SynchronizedTimeMsgProto.proto; sourceTree = "<group>"; };
+		11815CDC1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SystemPropertyMsg.pb.cpp; sourceTree = "<group>"; };
+		11815CDD1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemPropertyMsg.pb.h; sourceTree = "<group>"; };
+		11815CDE1ACAB1CF0029E9FB /* SystemPropertyMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SystemPropertyMsg.proto; sourceTree = "<group>"; };
+		11815CDF1ACAB1CF0029E9FB /* TakeLoginReward.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TakeLoginReward.pb.cpp; sourceTree = "<group>"; };
+		11815CE01ACAB1CF0029E9FB /* TakeLoginReward.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakeLoginReward.pb.h; sourceTree = "<group>"; };
+		11815CE11ACAB1CF0029E9FB /* TakeLoginReward.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TakeLoginReward.proto; sourceTree = "<group>"; };
+		11815CE21ACAB1CF0029E9FB /* UserPin.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UserPin.pb.cpp; sourceTree = "<group>"; };
+		11815CE31ACAB1CF0029E9FB /* UserPin.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserPin.pb.h; sourceTree = "<group>"; };
+		11815CE41ACAB1CF0029E9FB /* UserPin.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserPin.proto; sourceTree = "<group>"; };
+		11815CE51ACAB1CF0029E9FB /* VersionMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VersionMsg.pb.cpp; sourceTree = "<group>"; };
+		11815CE61ACAB1CF0029E9FB /* VersionMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VersionMsg.pb.h; sourceTree = "<group>"; };
+		11815CE71ACAB1CF0029E9FB /* VersionMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VersionMsg.proto; sourceTree = "<group>"; };
+		11815CE91ACAB1D00029E9FB /* BoxMsg.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxMsg.pb.cpp; sourceTree = "<group>"; };
+		11815CEA1ACAB1D00029E9FB /* BoxMsg.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxMsg.pb.h; sourceTree = "<group>"; };
+		11815CEB1ACAB1D00029E9FB /* HangupInfo.pb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HangupInfo.pb.h; sourceTree = "<group>"; };
+		11815CEC1ACAB1D00029E9FB /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
+		11815CED1ACAB1D00029E9FB /* HangupInfo.pb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HangupInfo.pb.cpp; sourceTree = "<group>"; };
+		11815CEE1ACAB1D00029E9FB /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
 		1199D98C1AC2D6620091EAA2 /* CustomRootNode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNode.cpp; sourceTree = "<group>"; };
 		1199D98D1AC2D6620091EAA2 /* CustomRootNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRootNode.h; sourceTree = "<group>"; };
 		1199D9951AC2D6990091EAA2 /* CustomRootNodeReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomRootNodeReader.cpp; sourceTree = "<group>"; };
 		1199D9961AC2D6990091EAA2 /* CustomRootNodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomRootNodeReader.h; sourceTree = "<group>"; };
 		11AF12E61AB01FE100EFCEAE /* protoc.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = protoc.xcodeproj; path = "../protobuf-2.5.0/protoc/protoc.xcodeproj"; sourceTree = "<group>"; };
-		11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoxMsg.proto; sourceTree = "<group>"; };
-		11AF13001AB0205800EFCEAE /* HangupInfo.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HangupInfo.proto; sourceTree = "<group>"; };
 		11D4315D1AC804F3004D730E /* HLServerDataManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLServerDataManager.cpp; sourceTree = "<group>"; };
 		11D4315E1AC804F3004D730E /* HLServerDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLServerDataManager.h; sourceTree = "<group>"; };
 		11D4317A1AC80986004D730E /* UIServerManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UIServerManager.cpp; sourceTree = "<group>"; };
@@ -593,6 +922,176 @@
 			path = DBTable;
 			sourceTree = "<group>";
 		};
+		11815C591ACAB1CF0029E9FB /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				11815C5A1ACAB1CF0029E9FB /* player */,
+				11815CE81ACAB1CF0029E9FB /* box */,
+			);
+			path = proto;
+			sourceTree = "<group>";
+		};
+		11815C5A1ACAB1CF0029E9FB /* player */ = {
+			isa = PBXGroup;
+			children = (
+				11815C5B1ACAB1CF0029E9FB /* AppellExchange.pb.cpp */,
+				11815C5C1ACAB1CF0029E9FB /* AppellExchange.pb.h */,
+				11815C5D1ACAB1CF0029E9FB /* AppellExchange.proto */,
+				11815C5E1ACAB1CF0029E9FB /* Appells.pb.cpp */,
+				11815C5F1ACAB1CF0029E9FB /* Appells.pb.h */,
+				11815C601ACAB1CF0029E9FB /* Appells.proto */,
+				11815C611ACAB1CF0029E9FB /* BlessingMsg.pb.cpp */,
+				11815C621ACAB1CF0029E9FB /* BlessingMsg.pb.h */,
+				11815C631ACAB1CF0029E9FB /* BlessingMsg.proto */,
+				11815C641ACAB1CF0029E9FB /* Challenge.pb.cpp */,
+				11815C651ACAB1CF0029E9FB /* Challenge.pb.h */,
+				11815C661ACAB1CF0029E9FB /* Challenge.proto */,
+				11815C671ACAB1CF0029E9FB /* ChallengeCoolTime.pb.cpp */,
+				11815C681ACAB1CF0029E9FB /* ChallengeCoolTime.pb.h */,
+				11815C691ACAB1CF0029E9FB /* ChallengeCoolTime.proto */,
+				11815C6A1ACAB1CF0029E9FB /* ChallengeRankReward.pb.cpp */,
+				11815C6B1ACAB1CF0029E9FB /* ChallengeRankReward.pb.h */,
+				11815C6C1ACAB1CF0029E9FB /* ChallengeRankReward.proto */,
+				11815C6D1ACAB1CF0029E9FB /* CheckNick.pb.cpp */,
+				11815C6E1ACAB1CF0029E9FB /* CheckNick.pb.h */,
+				11815C6F1ACAB1CF0029E9FB /* CheckNick.proto */,
+				11815C701ACAB1CF0029E9FB /* CheckSend.pb.cpp */,
+				11815C711ACAB1CF0029E9FB /* CheckSend.pb.h */,
+				11815C721ACAB1CF0029E9FB /* CheckSend.proto */,
+				11815C731ACAB1CF0029E9FB /* DataReset.pb.cpp */,
+				11815C741ACAB1CF0029E9FB /* DataReset.pb.h */,
+				11815C751ACAB1CF0029E9FB /* DataReset.proto */,
+				11815C761ACAB1CF0029E9FB /* EffectRemoveReq.pb.cpp */,
+				11815C771ACAB1CF0029E9FB /* EffectRemoveReq.pb.h */,
+				11815C781ACAB1CF0029E9FB /* EffectRemoveReq.proto */,
+				11815C791ACAB1CF0029E9FB /* EffectRemoveRsp.pb.cpp */,
+				11815C7A1ACAB1CF0029E9FB /* EffectRemoveRsp.pb.h */,
+				11815C7B1ACAB1CF0029E9FB /* EffectRemoveRsp.proto */,
+				11815C7C1ACAB1CF0029E9FB /* GuardMsg.pb.cpp */,
+				11815C7D1ACAB1CF0029E9FB /* GuardMsg.pb.h */,
+				11815C7E1ACAB1CF0029E9FB /* GuardMsg.proto */,
+				11815C7F1ACAB1CF0029E9FB /* KingContractBuyMsg.pb.cpp */,
+				11815C801ACAB1CF0029E9FB /* KingContractBuyMsg.pb.h */,
+				11815C811ACAB1CF0029E9FB /* KingContractBuyMsg.proto */,
+				11815C821ACAB1CF0029E9FB /* KingContractMsg.pb.cpp */,
+				11815C831ACAB1CF0029E9FB /* KingContractMsg.pb.h */,
+				11815C841ACAB1CF0029E9FB /* KingContractMsg.proto */,
+				11815C851ACAB1CF0029E9FB /* LoginReq.pb.cpp */,
+				11815C861ACAB1CF0029E9FB /* LoginReq.pb.h */,
+				11815C871ACAB1CF0029E9FB /* LoginReq.proto */,
+				11815C881ACAB1CF0029E9FB /* LoginState.pb.cpp */,
+				11815C891ACAB1CF0029E9FB /* LoginState.pb.h */,
+				11815C8A1ACAB1CF0029E9FB /* LoginState.proto */,
+				11815C8B1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.cpp */,
+				11815C8C1ACAB1CF0029E9FB /* MultiCampaignEnterCount.pb.h */,
+				11815C8D1ACAB1CF0029E9FB /* MultiCampaignEnterCount.proto */,
+				11815C8E1ACAB1CF0029E9FB /* OfflineReward.pb.cpp */,
+				11815C8F1ACAB1CF0029E9FB /* OfflineReward.pb.h */,
+				11815C901ACAB1CF0029E9FB /* OfflineReward.proto */,
+				11815C911ACAB1CF0029E9FB /* PayType.pb.cpp */,
+				11815C921ACAB1CF0029E9FB /* PayType.pb.h */,
+				11815C931ACAB1CF0029E9FB /* PayType.proto */,
+				11815C941ACAB1CF0029E9FB /* Player.pb.cpp */,
+				11815C951ACAB1CF0029E9FB /* Player.pb.h */,
+				11815C961ACAB1CF0029E9FB /* Player.proto */,
+				11815C971ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.cpp */,
+				11815C981ACAB1CF0029E9FB /* PlayerAASRefreshRsp.pb.h */,
+				11815C991ACAB1CF0029E9FB /* PlayerAASRefreshRsp.proto */,
+				11815C9A1ACAB1CF0029E9FB /* PlayerAASReq.pb.cpp */,
+				11815C9B1ACAB1CF0029E9FB /* PlayerAASReq.pb.h */,
+				11815C9C1ACAB1CF0029E9FB /* PlayerAASReq.proto */,
+				11815C9D1ACAB1CF0029E9FB /* PlayerAASRsp.pb.cpp */,
+				11815C9E1ACAB1CF0029E9FB /* PlayerAASRsp.pb.h */,
+				11815C9F1ACAB1CF0029E9FB /* PlayerAASRsp.proto */,
+				11815CA01ACAB1CF0029E9FB /* PlayerActiveReq.pb.cpp */,
+				11815CA11ACAB1CF0029E9FB /* PlayerActiveReq.pb.h */,
+				11815CA21ACAB1CF0029E9FB /* PlayerActiveReq.proto */,
+				11815CA31ACAB1CF0029E9FB /* PlayerActiveRsp.pb.cpp */,
+				11815CA41ACAB1CF0029E9FB /* PlayerActiveRsp.pb.h */,
+				11815CA51ACAB1CF0029E9FB /* PlayerActiveRsp.proto */,
+				11815CA61ACAB1CF0029E9FB /* PlayerCheck.pb.cpp */,
+				11815CA71ACAB1CF0029E9FB /* PlayerCheck.pb.h */,
+				11815CA81ACAB1CF0029E9FB /* PlayerCheck.proto */,
+				11815CA91ACAB1CF0029E9FB /* PlayerData.pb.cpp */,
+				11815CAA1ACAB1CF0029E9FB /* PlayerData.pb.h */,
+				11815CAB1ACAB1CF0029E9FB /* PlayerData.proto */,
+				11815CAC1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.cpp */,
+				11815CAD1ACAB1CF0029E9FB /* PlayerMoveCamera.pb.h */,
+				11815CAE1ACAB1CF0029E9FB /* PlayerMoveCamera.proto */,
+				11815CAF1ACAB1CF0029E9FB /* PlayerMovie.pb.cpp */,
+				11815CB01ACAB1CF0029E9FB /* PlayerMovie.pb.h */,
+				11815CB11ACAB1CF0029E9FB /* PlayerMovie.proto */,
+				11815CB21ACAB1CF0029E9FB /* PlayerOrder.pb.cpp */,
+				11815CB31ACAB1CF0029E9FB /* PlayerOrder.pb.h */,
+				11815CB41ACAB1CF0029E9FB /* PlayerOrder.proto */,
+				11815CB51ACAB1CF0029E9FB /* PlayerPlugInfo.pb.cpp */,
+				11815CB61ACAB1CF0029E9FB /* PlayerPlugInfo.pb.h */,
+				11815CB71ACAB1CF0029E9FB /* PlayerPlugInfo.proto */,
+				11815CB81ACAB1CF0029E9FB /* PlayerProperty.pb.cpp */,
+				11815CB91ACAB1CF0029E9FB /* PlayerProperty.pb.h */,
+				11815CBA1ACAB1CF0029E9FB /* PlayerProperty.proto */,
+				11815CBB1ACAB1CF0029E9FB /* PlayerRenameReq.pb.cpp */,
+				11815CBC1ACAB1CF0029E9FB /* PlayerRenameReq.pb.h */,
+				11815CBD1ACAB1CF0029E9FB /* PlayerRenameReq.proto */,
+				11815CBE1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.cpp */,
+				11815CBF1ACAB1CF0029E9FB /* PlayerRenameRsp.pb.h */,
+				11815CC01ACAB1CF0029E9FB /* PlayerRenameRsp.proto */,
+				11815CC11ACAB1CF0029E9FB /* PlayerSignReq.pb.cpp */,
+				11815CC21ACAB1CF0029E9FB /* PlayerSignReq.pb.h */,
+				11815CC31ACAB1CF0029E9FB /* PlayerSignReq.proto */,
+				11815CC41ACAB1CF0029E9FB /* PlayerSignRsp.pb.cpp */,
+				11815CC51ACAB1CF0029E9FB /* PlayerSignRsp.pb.h */,
+				11815CC61ACAB1CF0029E9FB /* PlayerSignRsp.proto */,
+				11815CC71ACAB1CF0029E9FB /* PropertyUpdated.pb.cpp */,
+				11815CC81ACAB1CF0029E9FB /* PropertyUpdated.pb.h */,
+				11815CC91ACAB1CF0029E9FB /* PropertyUpdated.proto */,
+				11815CCA1ACAB1CF0029E9FB /* RateUpdateReq.pb.cpp */,
+				11815CCB1ACAB1CF0029E9FB /* RateUpdateReq.pb.h */,
+				11815CCC1ACAB1CF0029E9FB /* RateUpdateReq.proto */,
+				11815CCD1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.cpp */,
+				11815CCE1ACAB1CF0029E9FB /* RefuseFriendRsp.pb.h */,
+				11815CCF1ACAB1CF0029E9FB /* RefuseFriendRsp.proto */,
+				11815CD01ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.cpp */,
+				11815CD11ACAB1CF0029E9FB /* RewardCountUpdateRep.pb.h */,
+				11815CD21ACAB1CF0029E9FB /* RewardCountUpdateRep.proto */,
+				11815CD31ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.cpp */,
+				11815CD41ACAB1CF0029E9FB /* RewardCountUpdateRsp.pb.h */,
+				11815CD51ACAB1CF0029E9FB /* RewardCountUpdateRsp.proto */,
+				11815CD61ACAB1CF0029E9FB /* SnsData.pb.cpp */,
+				11815CD71ACAB1CF0029E9FB /* SnsData.pb.h */,
+				11815CD81ACAB1CF0029E9FB /* SnsData.proto */,
+				11815CD91ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.cpp */,
+				11815CDA1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.pb.h */,
+				11815CDB1ACAB1CF0029E9FB /* SynchronizedTimeMsgProto.proto */,
+				11815CDC1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.cpp */,
+				11815CDD1ACAB1CF0029E9FB /* SystemPropertyMsg.pb.h */,
+				11815CDE1ACAB1CF0029E9FB /* SystemPropertyMsg.proto */,
+				11815CDF1ACAB1CF0029E9FB /* TakeLoginReward.pb.cpp */,
+				11815CE01ACAB1CF0029E9FB /* TakeLoginReward.pb.h */,
+				11815CE11ACAB1CF0029E9FB /* TakeLoginReward.proto */,
+				11815CE21ACAB1CF0029E9FB /* UserPin.pb.cpp */,
+				11815CE31ACAB1CF0029E9FB /* UserPin.pb.h */,
+				11815CE41ACAB1CF0029E9FB /* UserPin.proto */,
+				11815CE51ACAB1CF0029E9FB /* VersionMsg.pb.cpp */,
+				11815CE61ACAB1CF0029E9FB /* VersionMsg.pb.h */,
+				11815CE71ACAB1CF0029E9FB /* VersionMsg.proto */,
+			);
+			path = player;
+			sourceTree = "<group>";
+		};
+		11815CE81ACAB1CF0029E9FB /* box */ = {
+			isa = PBXGroup;
+			children = (
+				11815CE91ACAB1D00029E9FB /* BoxMsg.pb.cpp */,
+				11815CEA1ACAB1D00029E9FB /* BoxMsg.pb.h */,
+				11815CEB1ACAB1D00029E9FB /* HangupInfo.pb.h */,
+				11815CEC1ACAB1D00029E9FB /* BoxMsg.proto */,
+				11815CED1ACAB1D00029E9FB /* HangupInfo.pb.cpp */,
+				11815CEE1ACAB1D00029E9FB /* HangupInfo.proto */,
+			);
+			path = box;
+			sourceTree = "<group>";
+		};
 		11AF12E71AB01FE100EFCEAE /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -608,30 +1107,9 @@
 		11AF12F61AB0205800EFCEAE /* model */ = {
 			isa = PBXGroup;
 			children = (
-				11AF12F91AB0205800EFCEAE /* proto */,
+				11815C591ACAB1CF0029E9FB /* proto */,
 			);
 			path = model;
-			sourceTree = "<group>";
-		};
-		11AF12F91AB0205800EFCEAE /* proto */ = {
-			isa = PBXGroup;
-			children = (
-				11AF12FA1AB0205800EFCEAE /* box */,
-			);
-			path = proto;
-			sourceTree = "<group>";
-		};
-		11AF12FA1AB0205800EFCEAE /* box */ = {
-			isa = PBXGroup;
-			children = (
-				11644DAC1AB0A1450059ECE2 /* BoxMsg.pb.cpp */,
-				11644DAD1AB0A1450059ECE2 /* BoxMsg.pb.h */,
-				11644DAE1AB0A1450059ECE2 /* HangupInfo.pb.cpp */,
-				11644DAF1AB0A1450059ECE2 /* HangupInfo.pb.h */,
-				11AF12FD1AB0205800EFCEAE /* BoxMsg.proto */,
-				11AF13001AB0205800EFCEAE /* HangupInfo.proto */,
-			);
-			path = box;
 			sourceTree = "<group>";
 		};
 		11D341A01AC3BC70001FC9AD /* EventCommon */ = {
@@ -929,33 +1407,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11815D011ACAB1D00029E9FB /* ChallengeCoolTime.proto in Resources */,
 				117BC6171AB17E9700710C09 /* db in Resources */,
+				11815CF91ACAB1D00029E9FB /* BlessingMsg.proto in Resources */,
+				11815D8D1ACAB1D00029E9FB /* RewardCountUpdateRep.proto in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
+				11815D6D1ACAB1D00029E9FB /* PlayerProperty.proto in Resources */,
+				11815D111ACAB1D00029E9FB /* DataReset.proto in Resources */,
+				11815CFD1ACAB1D00029E9FB /* Challenge.proto in Resources */,
+				11815D811ACAB1D00029E9FB /* PropertyUpdated.proto in Resources */,
+				11815D451ACAB1D00029E9FB /* PlayerAASReq.proto in Resources */,
+				11815D211ACAB1D00029E9FB /* KingContractBuyMsg.proto in Resources */,
+				11815D7D1ACAB1D00029E9FB /* PlayerSignRsp.proto in Resources */,
+				11815D9D1ACAB1D00029E9FB /* SystemPropertyMsg.proto in Resources */,
+				11815D611ACAB1D00029E9FB /* PlayerMovie.proto in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
-				11AF13081AB0205800EFCEAE /* BoxMsg.proto in Resources */,
+				11815D291ACAB1D00029E9FB /* LoginReq.proto in Resources */,
 				50EF629917ECD46A001EB2F8 /* Icon-100.png in Resources */,
+				11815D391ACAB1D00029E9FB /* PayType.proto in Resources */,
+				11815D651ACAB1D00029E9FB /* PlayerOrder.proto in Resources */,
+				11815CF11ACAB1D00029E9FB /* AppellExchange.proto in Resources */,
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
+				11815D5D1ACAB1D00029E9FB /* PlayerMoveCamera.proto in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
+				11815D4D1ACAB1D00029E9FB /* PlayerActiveReq.proto in Resources */,
+				11815D051ACAB1D00029E9FB /* ChallengeRankReward.proto in Resources */,
+				11815CF51ACAB1D00029E9FB /* Appells.proto in Resources */,
+				11815D751ACAB1D00029E9FB /* PlayerRenameRsp.proto in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				11815D551ACAB1D00029E9FB /* PlayerCheck.proto in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				11815DA11ACAB1D00029E9FB /* TakeLoginReward.proto in Resources */,
+				11815D851ACAB1D00029E9FB /* RateUpdateReq.proto in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
+				11815D091ACAB1D00029E9FB /* CheckNick.proto in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				11815D1D1ACAB1D00029E9FB /* GuardMsg.proto in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				11815DAD1ACAB1D00029E9FB /* BoxMsg.proto in Resources */,
+				11815D151ACAB1D00029E9FB /* EffectRemoveReq.proto in Resources */,
+				11815D591ACAB1D00029E9FB /* PlayerData.proto in Resources */,
+				11815D711ACAB1D00029E9FB /* PlayerRenameReq.proto in Resources */,
+				11815D311ACAB1D00029E9FB /* MultiCampaignEnterCount.proto in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
+				11815DA51ACAB1D00029E9FB /* UserPin.proto in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				11815D891ACAB1D00029E9FB /* RefuseFriendRsp.proto in Resources */,
+				11815D2D1ACAB1D00029E9FB /* LoginState.proto in Resources */,
+				11815D951ACAB1D00029E9FB /* SnsData.proto in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
 				1139F90E1AA9876300E7530C /* config.plist in Resources */,
+				11815D0D1ACAB1D00029E9FB /* CheckSend.proto in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
-				11AF130C1AB0205800EFCEAE /* HangupInfo.proto in Resources */,
+				11815D911ACAB1D00029E9FB /* RewardCountUpdateRsp.proto in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				11815D691ACAB1D00029E9FB /* PlayerPlugInfo.proto in Resources */,
+				11815D351ACAB1D00029E9FB /* OfflineReward.proto in Resources */,
+				11815D411ACAB1D00029E9FB /* PlayerAASRefreshRsp.proto in Resources */,
+				11815D491ACAB1D00029E9FB /* PlayerAASRsp.proto in Resources */,
+				11815DB11ACAB1D00029E9FB /* HangupInfo.proto in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
+				11815D991ACAB1D00029E9FB /* SynchronizedTimeMsgProto.proto in Resources */,
+				11815D791ACAB1D00029E9FB /* PlayerSignReq.proto in Resources */,
+				11815D3D1ACAB1D00029E9FB /* Player.proto in Resources */,
+				11815D511ACAB1D00029E9FB /* PlayerActiveRsp.proto in Resources */,
+				11815D251ACAB1D00029E9FB /* KingContractMsg.proto in Resources */,
+				11815D191ACAB1D00029E9FB /* EffectRemoveRsp.proto in Resources */,
+				11815DA91ACAB1D00029E9FB /* VersionMsg.proto in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -963,15 +1488,62 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11815D5A1ACAB1D00029E9FB /* PlayerData.proto in Resources */,
+				11815DA61ACAB1D00029E9FB /* UserPin.proto in Resources */,
+				11815DAA1ACAB1D00029E9FB /* VersionMsg.proto in Resources */,
+				11815D5E1ACAB1D00029E9FB /* PlayerMoveCamera.proto in Resources */,
 				117BC6181AB17E9700710C09 /* db in Resources */,
+				11815D821ACAB1D00029E9FB /* PropertyUpdated.proto in Resources */,
+				11815D3A1ACAB1D00029E9FB /* PayType.proto in Resources */,
+				11815D521ACAB1D00029E9FB /* PlayerActiveRsp.proto in Resources */,
 				1139F90F1AA9876300E7530C /* config.plist in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
-				11AF130D1AB0205800EFCEAE /* HangupInfo.proto in Resources */,
-				11AF13091AB0205800EFCEAE /* BoxMsg.proto in Resources */,
+				11815D7A1ACAB1D00029E9FB /* PlayerSignReq.proto in Resources */,
+				11815D061ACAB1D00029E9FB /* ChallengeRankReward.proto in Resources */,
+				11815D921ACAB1D00029E9FB /* RewardCountUpdateRsp.proto in Resources */,
+				11815D9A1ACAB1D00029E9FB /* SynchronizedTimeMsgProto.proto in Resources */,
+				11815D121ACAB1D00029E9FB /* DataReset.proto in Resources */,
+				11815D0A1ACAB1D00029E9FB /* CheckNick.proto in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				11815D4E1ACAB1D00029E9FB /* PlayerActiveReq.proto in Resources */,
+				11815D4A1ACAB1D00029E9FB /* PlayerAASRsp.proto in Resources */,
+				11815D361ACAB1D00029E9FB /* OfflineReward.proto in Resources */,
+				11815D421ACAB1D00029E9FB /* PlayerAASRefreshRsp.proto in Resources */,
+				11815CFE1ACAB1D00029E9FB /* Challenge.proto in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
+				11815D461ACAB1D00029E9FB /* PlayerAASReq.proto in Resources */,
+				11815D9E1ACAB1D00029E9FB /* SystemPropertyMsg.proto in Resources */,
+				11815D6A1ACAB1D00029E9FB /* PlayerPlugInfo.proto in Resources */,
+				11815D2A1ACAB1D00029E9FB /* LoginReq.proto in Resources */,
+				11815CF21ACAB1D00029E9FB /* AppellExchange.proto in Resources */,
+				11815D661ACAB1D00029E9FB /* PlayerOrder.proto in Resources */,
+				11815D621ACAB1D00029E9FB /* PlayerMovie.proto in Resources */,
+				11815D0E1ACAB1D00029E9FB /* CheckSend.proto in Resources */,
+				11815D6E1ACAB1D00029E9FB /* PlayerProperty.proto in Resources */,
+				11815D2E1ACAB1D00029E9FB /* LoginState.proto in Resources */,
+				11815D961ACAB1D00029E9FB /* SnsData.proto in Resources */,
+				11815D3E1ACAB1D00029E9FB /* Player.proto in Resources */,
+				11815D761ACAB1D00029E9FB /* PlayerRenameRsp.proto in Resources */,
+				11815D721ACAB1D00029E9FB /* PlayerRenameReq.proto in Resources */,
+				11815D321ACAB1D00029E9FB /* MultiCampaignEnterCount.proto in Resources */,
+				11815D8A1ACAB1D00029E9FB /* RefuseFriendRsp.proto in Resources */,
+				11815DB21ACAB1D00029E9FB /* HangupInfo.proto in Resources */,
+				11815D561ACAB1D00029E9FB /* PlayerCheck.proto in Resources */,
+				11815D7E1ACAB1D00029E9FB /* PlayerSignRsp.proto in Resources */,
+				11815D221ACAB1D00029E9FB /* KingContractBuyMsg.proto in Resources */,
+				11815D8E1ACAB1D00029E9FB /* RewardCountUpdateRep.proto in Resources */,
+				11815D021ACAB1D00029E9FB /* ChallengeCoolTime.proto in Resources */,
+				11815D261ACAB1D00029E9FB /* KingContractMsg.proto in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
+				11815DAE1ACAB1D00029E9FB /* BoxMsg.proto in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				11815D1A1ACAB1D00029E9FB /* EffectRemoveRsp.proto in Resources */,
+				11815CFA1ACAB1D00029E9FB /* BlessingMsg.proto in Resources */,
+				11815DA21ACAB1D00029E9FB /* TakeLoginReward.proto in Resources */,
+				11815CF61ACAB1D00029E9FB /* Appells.proto in Resources */,
+				11815D161ACAB1D00029E9FB /* EffectRemoveReq.proto in Resources */,
+				11815D1E1ACAB1D00029E9FB /* GuardMsg.proto in Resources */,
+				11815D861ACAB1D00029E9FB /* RateUpdateReq.proto in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -984,28 +1556,75 @@
 			buildActionMask = 2147483647;
 			files = (
 				1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
+				11815D231ACAB1D00029E9FB /* KingContractMsg.pb.cpp in Sources */,
 				117B7AB41AC5452F00DC153D /* HLProtocalType.cpp in Sources */,
+				11815D171ACAB1D00029E9FB /* EffectRemoveRsp.pb.cpp in Sources */,
 				117BC6F61AB1849900710C09 /* HLStringUtil.cpp in Sources */,
+				11815DA71ACAB1D00029E9FB /* VersionMsg.pb.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				11F78DC91AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
+				11815CFF1ACAB1D00029E9FB /* ChallengeCoolTime.pb.cpp in Sources */,
+				11815D6B1ACAB1D00029E9FB /* PlayerProperty.pb.cpp in Sources */,
+				11815D631ACAB1D00029E9FB /* PlayerOrder.pb.cpp in Sources */,
 				1139F97E1AA9A5BD00E7530C /* sha1.cpp in Sources */,
+				11815D3B1ACAB1D00029E9FB /* Player.pb.cpp in Sources */,
+				11815D0B1ACAB1D00029E9FB /* CheckSend.pb.cpp in Sources */,
+				11815D031ACAB1D00029E9FB /* ChallengeRankReward.pb.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
-				11644DB21AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
+				11815D131ACAB1D00029E9FB /* EffectRemoveReq.pb.cpp in Sources */,
+				11815D1B1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */,
+				11815D571ACAB1D00029E9FB /* PlayerData.pb.cpp in Sources */,
 				117B7AB81AC54B9B00DC153D /* HLNetWork.cpp in Sources */,
+				11815D471ACAB1D00029E9FB /* PlayerAASRsp.pb.cpp in Sources */,
+				11815D3F1ACAB1D00029E9FB /* PlayerAASRefreshRsp.pb.cpp in Sources */,
+				11815DA31ACAB1D00029E9FB /* UserPin.pb.cpp in Sources */,
+				11815D5F1ACAB1D00029E9FB /* PlayerMovie.pb.cpp in Sources */,
+				11815D871ACAB1D00029E9FB /* RefuseFriendRsp.pb.cpp in Sources */,
+				11815D9F1ACAB1D00029E9FB /* TakeLoginReward.pb.cpp in Sources */,
+				11815D8F1ACAB1D00029E9FB /* RewardCountUpdateRsp.pb.cpp in Sources */,
+				11815D5B1ACAB1D00029E9FB /* PlayerMoveCamera.pb.cpp in Sources */,
+				11815CF31ACAB1D00029E9FB /* Appells.pb.cpp in Sources */,
 				117BC6FD1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
+				11815D971ACAB1D00029E9FB /* SynchronizedTimeMsgProto.pb.cpp in Sources */,
+				11815D8B1ACAB1D00029E9FB /* RewardCountUpdateRep.pb.cpp in Sources */,
+				11815CFB1ACAB1D00029E9FB /* Challenge.pb.cpp in Sources */,
 				1199D98E1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
 				117B7AC31AC5840500DC153D /* NetWorkDefine.cpp in Sources */,
 				11D4317C1AC80986004D730E /* UIServerManager.cpp in Sources */,
+				11815D071ACAB1D00029E9FB /* CheckNick.pb.cpp in Sources */,
+				11815D6F1ACAB1D00029E9FB /* PlayerRenameReq.pb.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
-				11644DB01AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
+				11815D371ACAB1D00029E9FB /* PayType.pb.cpp in Sources */,
+				11815D731ACAB1D00029E9FB /* PlayerRenameRsp.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
+				11815D2B1ACAB1D00029E9FB /* LoginState.pb.cpp in Sources */,
+				11815D271ACAB1D00029E9FB /* LoginReq.pb.cpp in Sources */,
+				11815D771ACAB1D00029E9FB /* PlayerSignReq.pb.cpp in Sources */,
+				11815D531ACAB1D00029E9FB /* PlayerCheck.pb.cpp in Sources */,
 				1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */,
+				11815D831ACAB1D00029E9FB /* RateUpdateReq.pb.cpp in Sources */,
 				1139F9781AA9A5BD00E7530C /* libb64.c in Sources */,
+				11815D931ACAB1D00029E9FB /* SnsData.pb.cpp in Sources */,
+				11815D4B1ACAB1D00029E9FB /* PlayerActiveReq.pb.cpp in Sources */,
+				11815CF71ACAB1D00029E9FB /* BlessingMsg.pb.cpp in Sources */,
 				11D4315F1AC804F3004D730E /* HLServerDataManager.cpp in Sources */,
+				11815CEF1ACAB1D00029E9FB /* AppellExchange.pb.cpp in Sources */,
+				11815D431ACAB1D00029E9FB /* PlayerAASReq.pb.cpp in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
+				11815D9B1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */,
+				11815D4F1ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */,
+				11815D671ACAB1D00029E9FB /* PlayerPlugInfo.pb.cpp in Sources */,
+				11815D7B1ACAB1D00029E9FB /* PlayerSignRsp.pb.cpp in Sources */,
+				11815DAF1ACAB1D00029E9FB /* HangupInfo.pb.cpp in Sources */,
+				11815D1F1ACAB1D00029E9FB /* KingContractBuyMsg.pb.cpp in Sources */,
 				1199D9971AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
+				11815D7F1ACAB1D00029E9FB /* PropertyUpdated.pb.cpp in Sources */,
+				11815D2F1ACAB1D00029E9FB /* MultiCampaignEnterCount.pb.cpp in Sources */,
+				11815D0F1ACAB1D00029E9FB /* DataReset.pb.cpp in Sources */,
+				11815D331ACAB1D00029E9FB /* OfflineReward.pb.cpp in Sources */,
 				1139F97A1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				11815DAB1ACAB1D00029E9FB /* BoxMsg.pb.cpp in Sources */,
 				117B7ABF1AC5643300DC153D /* WorkingThread.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1014,28 +1633,75 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11815D381ACAB1D00029E9FB /* PayType.pb.cpp in Sources */,
+				11815D781ACAB1D00029E9FB /* PlayerSignReq.pb.cpp in Sources */,
+				11815D141ACAB1D00029E9FB /* EffectRemoveReq.pb.cpp in Sources */,
+				11815CF41ACAB1D00029E9FB /* Appells.pb.cpp in Sources */,
+				11815DA01ACAB1D00029E9FB /* TakeLoginReward.pb.cpp in Sources */,
+				11815D0C1ACAB1D00029E9FB /* CheckSend.pb.cpp in Sources */,
+				11815D541ACAB1D00029E9FB /* PlayerCheck.pb.cpp in Sources */,
+				11815DA81ACAB1D00029E9FB /* VersionMsg.pb.cpp in Sources */,
+				11815D281ACAB1D00029E9FB /* LoginReq.pb.cpp in Sources */,
+				11815D481ACAB1D00029E9FB /* PlayerAASRsp.pb.cpp in Sources */,
+				11815D7C1ACAB1D00029E9FB /* PlayerSignRsp.pb.cpp in Sources */,
+				11815D881ACAB1D00029E9FB /* RefuseFriendRsp.pb.cpp in Sources */,
+				11815D2C1ACAB1D00029E9FB /* LoginState.pb.cpp in Sources */,
+				11815D241ACAB1D00029E9FB /* KingContractMsg.pb.cpp in Sources */,
+				11815CF01ACAB1D00029E9FB /* AppellExchange.pb.cpp in Sources */,
 				1199D98F1AC2D6620091EAA2 /* CustomRootNode.cpp in Sources */,
+				11815D101ACAB1D00029E9FB /* DataReset.pb.cpp in Sources */,
+				11815D701ACAB1D00029E9FB /* PlayerRenameReq.pb.cpp in Sources */,
+				11815D741ACAB1D00029E9FB /* PlayerRenameRsp.pb.cpp in Sources */,
+				11815D041ACAB1D00029E9FB /* ChallengeRankReward.pb.cpp in Sources */,
 				117B7AC01AC5643300DC153D /* WorkingThread.cpp in Sources */,
+				11815D401ACAB1D00029E9FB /* PlayerAASRefreshRsp.pb.cpp in Sources */,
+				11815CFC1ACAB1D00029E9FB /* Challenge.pb.cpp in Sources */,
 				117B7AB91AC54B9B00DC153D /* HLNetWork.cpp in Sources */,
 				1139F97D1AA9A5BD00E7530C /* md5.cpp in Sources */,
 				1139F9791AA9A5BD00E7530C /* libb64.c in Sources */,
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
+				11815D841ACAB1D00029E9FB /* RateUpdateReq.pb.cpp in Sources */,
+				11815D9C1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
+				11815D5C1ACAB1D00029E9FB /* PlayerMoveCamera.pb.cpp in Sources */,
+				11815D601ACAB1D00029E9FB /* PlayerMovie.pb.cpp in Sources */,
 				1199D9981AC2D6990091EAA2 /* CustomRootNodeReader.cpp in Sources */,
+				11815D441ACAB1D00029E9FB /* PlayerAASReq.pb.cpp in Sources */,
+				11815D3C1ACAB1D00029E9FB /* Player.pb.cpp in Sources */,
 				1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */,
+				11815D901ACAB1D00029E9FB /* RewardCountUpdateRsp.pb.cpp in Sources */,
 				1139F97F1AA9A5BD00E7530C /* sha1.cpp in Sources */,
 				117BC6F71AB1849900710C09 /* HLStringUtil.cpp in Sources */,
+				11815D581ACAB1D00029E9FB /* PlayerData.pb.cpp in Sources */,
+				11815D341ACAB1D00029E9FB /* OfflineReward.pb.cpp in Sources */,
+				11815DB01ACAB1D00029E9FB /* HangupInfo.pb.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				11815DA41ACAB1D00029E9FB /* UserPin.pb.cpp in Sources */,
+				11815D181ACAB1D00029E9FB /* EffectRemoveRsp.pb.cpp in Sources */,
 				11D4317D1AC80986004D730E /* UIServerManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11D431601AC804F3004D730E /* HLServerDataManager.cpp in Sources */,
+				11815D4C1ACAB1D00029E9FB /* PlayerActiveReq.pb.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
+				11815D501ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */,
 				117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
-				11644DB11AB0A1450059ECE2 /* BoxMsg.pb.cpp in Sources */,
 				117B7AC41AC5840500DC153D /* NetWorkDefine.cpp in Sources */,
+				11815D1C1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */,
+				11815D8C1ACAB1D00029E9FB /* RewardCountUpdateRep.pb.cpp in Sources */,
+				11815D081ACAB1D00029E9FB /* CheckNick.pb.cpp in Sources */,
+				11815D001ACAB1D00029E9FB /* ChallengeCoolTime.pb.cpp in Sources */,
+				11815D6C1ACAB1D00029E9FB /* PlayerProperty.pb.cpp in Sources */,
+				11815D981ACAB1D00029E9FB /* SynchronizedTimeMsgProto.pb.cpp in Sources */,
+				11815CF81ACAB1D00029E9FB /* BlessingMsg.pb.cpp in Sources */,
+				11815D201ACAB1D00029E9FB /* KingContractBuyMsg.pb.cpp in Sources */,
+				11815D641ACAB1D00029E9FB /* PlayerOrder.pb.cpp in Sources */,
+				11815D801ACAB1D00029E9FB /* PropertyUpdated.pb.cpp in Sources */,
+				11815DAC1ACAB1D00029E9FB /* BoxMsg.pb.cpp in Sources */,
+				11815D941ACAB1D00029E9FB /* SnsData.pb.cpp in Sources */,
 				117B7AB51AC5452F00DC153D /* HLProtocalType.cpp in Sources */,
+				11815D301ACAB1D00029E9FB /* MultiCampaignEnterCount.pb.cpp in Sources */,
+				11815D681ACAB1D00029E9FB /* PlayerPlugInfo.pb.cpp in Sources */,
 				1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */,
-				11644DB31AB0A1450059ECE2 /* HangupInfo.pb.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

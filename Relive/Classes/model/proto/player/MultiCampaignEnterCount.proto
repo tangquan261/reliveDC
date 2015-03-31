@@ -1,0 +1,7 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "MultiCampaignEnterCount";
+// 挑战其他玩家信息
+message MultiCampaignEnterCountMsg {
+	optional int32 campaign_count = 1;//多人副本进入次数
+}

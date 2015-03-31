@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerSignReqMsgProto";
+
+message PlayerSignReqMsg {
+
+	optional bool optType = 1;		//操作类型
+	optional int32 prizeSite = 2;	//领奖位置下标
+	
+}

@@ -1,0 +1,12 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerMovieMsgProto";
+// 动画播放 U_C_PLAY_MOVIE = 0x008F
+message PlayerMovieMsg {
+	optional int32 movie_target_type = 1;		// 类型
+	optional int32 target_id = 2;				// 目标ID
+	optional string movie_type = 3;				// 动画类型
+	optional int32 delay = 4;					// 延迟
+	optional int32 map_id = 5;					// 所在地图
+}
+

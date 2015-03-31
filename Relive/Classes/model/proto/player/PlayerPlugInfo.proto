@@ -1,0 +1,13 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerPlugInfoMsgProto";
+
+message PlayerPlugInfoMsg {
+	optional string ip=1;  			//玩家ip
+	optional int32 user_id=2;  		//玩家id
+	optional string user_name=3;  	//玩家昵称
+	optional string send_time=4;  	//发送时间
+	optional string ext=5;  		//扩展字段
+	optional string sign=6;  		//密钥
+	
+}

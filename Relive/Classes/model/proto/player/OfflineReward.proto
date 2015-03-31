@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "OfflineRewardMsgProto";
+// 玩家离线奖励
+message OfflineRewardMsg {
+	optional int32 offline_time = 1;	// 离线时间
+	optional int32 gp_count = 2;		// 奖励经验
+	optional int32 rate_count = 3;		// 领取倍率
+}
+

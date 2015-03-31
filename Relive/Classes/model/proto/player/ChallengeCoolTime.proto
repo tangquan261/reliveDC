@@ -1,0 +1,11 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "ChallengeCoolTimeMsgProto";
+
+message ChallengeCoolTimeMsg {
+	optional int32 left_time = 1;// 剩余时间 单位 毫秒
+	optional int32 challenge_count = 2;// 当前攻击次数
+	optional int32 total_count = 3;// 可攻击的总次数
+	optional int32 type = 4;			// 冷却类型
+	optional int32 total_buyCount = 5;	// 总的可购买最大次数
+}

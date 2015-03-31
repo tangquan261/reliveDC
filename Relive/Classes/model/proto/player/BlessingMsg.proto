@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "BlessingMsgProto";
+message BlessingMsg {
+	optional int32 increase = 1;
+	optional int32 used_count = 2; 
+	optional int32 max_count = 3;
+}

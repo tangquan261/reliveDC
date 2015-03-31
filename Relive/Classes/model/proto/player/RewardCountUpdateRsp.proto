@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "RewardCountUpdateRspMsgProto";
+
+message RewardCountUpdateRspMsg {
+	optional int32 reward_count = 1;	// 悬赏次数
+}
+

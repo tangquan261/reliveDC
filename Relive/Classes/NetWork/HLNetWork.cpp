@@ -15,7 +15,7 @@ std::string server_address;
 std::string ResourceServer_address;
 
 
-sem_t SendSem;
+sem_t* SendSem;
 sem_t ListenSem;
 
 DCRequestQueue::DCRequestQueue()
@@ -171,7 +171,7 @@ void HLNetWork::addRequest(DCRequest *request)
         
         if (bNeedSem)
         {
-            sem_post(&SendSem);
+            sem_post(SendSem);
         }
     }
 }
@@ -185,7 +185,7 @@ void HLNetWork::reconnect()
 {
     m_bShouldReConnect = true;
     
-    sem_post(&SendSem);
+    sem_post(SendSem);
 }
 
 void HLNetWork::connect()
@@ -193,21 +193,19 @@ void HLNetWork::connect()
     extern void resetKeys();
     resetKeys();
     
-    m_queue.clearQueue();
+    //m_queue.clearQueue();
    
     if (m_bShouldIsConnect)
     {
-        sem_close(&SendSem);
+        sem_close(SendSem);
         sem_close(&ListenSem);
     }
     
-    //SendSem = sem_open("HLSendSem", O_CREAT, 0666, 0);
+    SendSem = sem_open("HLSendSem", O_CREAT, 0644, 0);
     
-    //ListenSem = sem_open("HLLintenSem", O_CREAT, 0666, 0);
-
-    sem_init(&SendSem, 0, 0);
+    //ListenSem = sem_open("HLLintenSem", O_CREAT, 0644, 0);
     
-    sem_init(&ListenSem, 0, 0);
+    //sem_init(&ListenSem, 0, 0);
     
     extern void * WorkingThread(void *p);
     
@@ -281,7 +279,7 @@ void HLNetWork::disconnect(bool berror)
        
        sockfd = 0;
        
-       sem_post(&SendSem);
+       sem_post(SendSem);
    }
 }
 

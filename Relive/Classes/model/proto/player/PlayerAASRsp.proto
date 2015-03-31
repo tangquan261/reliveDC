@@ -1,0 +1,9 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerAASRspMsgProto";
+
+message PlayerAASRspMsg {
+	optional bool result = 1;	// 执行结果
+	optional int32 age = 2;// 年龄
+	optional string card_id = 3;    //玩家身份id
+}

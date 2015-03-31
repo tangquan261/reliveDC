@@ -1,0 +1,105 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerProto";
+import "PlayerOrder.proto";
+
+// 玩家基本信息
+message PlayerMsg {
+	optional int32 player_id = 1;		// 玩家ID
+	optional string nick_name = 2;		// 玩家昵称
+	optional int32 sex = 3;				// 性别
+	optional int32 pic = 4;				// 头像ID
+	optional int32 camp = 5;			// 联盟ID
+	optional int32 point = 6;			// 点券
+  	optional int32 gift_token = 7;		//
+  	optional int32 state = 8;			// 状态
+  	optional string last_award = 9;		// 最近一次领取	
+  	optional int32 quest_site_len = 10;	// 任务长度 	
+  	optional bytes quest_site = 11;		// 任务标志位
+  	optional int32 consortia_id = 12;	// 公会ID
+  	optional string consortia_name = 13;// 公会名称  	
+  	optional int32 claim_id = 14;		// 阵营ID
+	optional string claim_name = 15;	// 阵营名称  	
+	optional int32 grades = 16;			// 玩家等级
+	optional int32 gp = 17;				// 当前经验
+	optional int32 repute = 18;			// 声望
+	optional int32 consortia_offer = 19;// 公会贡献
+	optional int32 strategy = 20;		// 战魂
+	optional int32 weary = 21;			// 疲劳值
+	optional int32 attack_left_count = 22;
+	optional int32 novice_process = 23;	// 新手进度
+	optional int32 consortia_attack = 24;	// 公会攻击技能
+	optional int32 consortia_defence = 25;	// 公会防御技能
+	optional int32 consortia_agility = 26;	// 公会敏捷技能
+	optional int32 consortia_ability = 27;	// 公会精神技能
+	optional int32 consortia_captain = 28;	// 公会统帅技能	
+	optional int32 gp_order = 29;			// 排名			
+	optional int32 fighting_capacity = 30;	// 战斗力
+	optional string grade_process = 31;		// 新手等级宝箱
+	optional int32 time_process = 32;		// 新手时间宝箱
+	optional bool time_get = 33;			// 新手时间宝箱是否领取
+	optional string campaign_site = 34;		// ?
+	optional int32 bag_count = 35;			// 背包大小
+	optional int32 match_win = 36;			// 竞技胜利数
+	optional int32 match_failed = 37;		// 竞技失败数
+	optional int32 consortia_gold = 38;	// 公会金币技能	
+	optional int32 consortia_physique = 39;	// 公会体质技能
+	optional int32 right = 40;			// 权限	
+	optional int32 job=41;              //英雄职业
+	optional int32 leed_process=42;     //每日引导 
+	optional int32 star_count=43;        //星格
+	optional string signDate = 44;	// 签到时间
+	optional int32 signTimes = 45;   // 签到次数	
+	optional int32 signSite = 46;	// 签到记录
+	optional PlayerOrderMsg order=47;  // 排名
+	optional int32 startFree=48;
+	optional int64 totalGp = 49;		// 当前总经验
+	optional bool refuseFriend = 50;	// 拒绝添加好友
+	optional bool refuseInvite = 51;	// 拒绝房间邀请
+	optional int32 consortia_totaloffer = 52;// 公会贡献
+	optional bool show_version = 53;		// 是否显示公告
+	optional int32 campaign_count=54;      //副本进入次数
+	optional int32 time_run = 55;		   // 新手时间宝箱运行时长
+	optional int32 qte_guide = 56;		   // QTE引导
+	optional int32 starpoint = 57;         //星运积分
+	optional bool  is_auto = 58;           //是否主动退出公会
+	optional string lastOutConsortia=59;    //最后一次退出公会时间
+	optional int32 geste = 60;             //荣誉
+	optional int32 storeGrade=61;          //宝石等级
+	optional int32 storeGp=62;			   //宝石经验
+
+	optional int32 relogin_process=63;	   // 再次登录进度
+	optional int32 relogin_count=64;	   // 登陆次数
+
+	optional int32 blessingCount=65;       //祝福次数
+	optional int32 blessingBuff=66;		   //祝福效果
+	optional int32 blessingMaxCount=67;	   //祝福最大次数
+	
+	optional bool first_charge=68;		   //首次充值
+	optional int32 charm=69;               //魅力值
+	optional int32 match_room_count=70;	  //竞技场进入次数
+	optional bool king_buff = 71;		  //专属BUFF是否领取
+	optional int32 leave_gp = 72;		  //离线经验
+	optional int32 altar_consortiaId = 73;//当天参加过魔神祭坛的ID
+	optional string server_name = 74;	//服务器名称
+	optional int32 reward_times = 75;	//悬赏次数
+	optional int32 war_field_count=76;	//跨服战场进入的次数
+	optional int32 trial_count=77;		//试炼之塔进入次数
+	optional int32 appell_id=78;		//玩家称号ID
+	optional int32 cross_score=79;		//跨服积分
+	optional int32 trial_max_count=80;	//试炼之塔最大次数
+	optional int32 weary_limit=81;		//当天使用药水增加的体力总值
+	optional int32 lords_score = 82;// 众神之战获得数值
+	
+	optional bool is_received = 83; // 本周是否分配到公会宝箱
+	optional int32 mine_score = 84; // 玩家当前矿场总积分
+	optional bool is_back_player = 85; // 是否是老玩家
+	optional bool refuseTeamInvite = 86;//是否拒绝组队邀请
+	optional int32 campaign_maxcount=87;	//多人副本最大次数
+	optional int32 seniorStoreGrade=88;	//高级宝石等级 
+	optional int32 seniorStoreGp=89;	//高级宝石经验
+	optional int32 dragonCampaign_Count=90;	//魔龙副本剩余次数
+	optional int32 dragonCampaign_MaxCount=91;	//魔龙副本最大次数
+	optional int32 cross_guild_score = 92; // 跨服公会战积分
+}
+

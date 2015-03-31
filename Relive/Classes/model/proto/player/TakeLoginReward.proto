@@ -1,0 +1,7 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "TakeLoginRewardProto";
+
+message TakeLoginReward {
+	optional int32 index = 1;     // 领取位置
+}

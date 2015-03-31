@@ -15,6 +15,8 @@ google::protobuf::MessageLite * parseMessage(int protocalType, void *buffer, int
 {
     MessageLite *pMessage = nullptr;
     
+    CCLOG("parseMessage %u", protocalType);
+    
     switch (protocalType)
     {
         case U_C_PLAYER_NOVICE_BOX:

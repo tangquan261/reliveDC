@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "PlayerSignRspMsgProto";
+
+message PlayerSignRspMsg {
+	optional string signDate = 1;	// 签到时间
+	optional int32 signTimes = 2;   // 签到次数	
+	optional int32 signSite = 4;	// 签到记录
+
+}

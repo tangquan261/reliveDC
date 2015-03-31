@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "SystemPropertyMsgProto";
+// 玩家基本信息
+message SystemPropertyMsg {
+	optional string sys_curtime = 1;
+	optional string sys_starTime = 2;
+}

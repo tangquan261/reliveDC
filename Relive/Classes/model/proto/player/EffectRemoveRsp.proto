@@ -1,0 +1,10 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "EffectRemoveRspMsgProto";
+
+message EffectRemoveRspMsg {
+
+	optional bool result = 1;	// 是否除
+	optional int32 templateId=2;    //移除Id
+}
+

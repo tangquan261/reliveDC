@@ -1,0 +1,17 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "RateUpdateReqMsgProto";
+
+message RateUpdateReqMsg {
+	optional int32 rate = 1;	// 倍率
+	optional int32 begin_time=2;  //开始时间段
+	optional int32 end_time=3;    //结束时间段
+	optional string beginDay=4;    //开始日期
+	optional string endDay=5;      //结束日期
+	optional int32 buffer_type = 6;// 类型
+	optional string param1 = 7;
+	optional string param2 = 8;
+	optional string rate_name = 9;
+	optional string rate_desc = 10;
+}
+

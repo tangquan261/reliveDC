@@ -1,0 +1,8 @@
+package com.road.yishi.proto.player;
+option java_package = "com.road.yishi.pb.player";
+option java_outer_classname = "AppellExchangeMsgProto";
+
+message AppellExchangeMsg{
+	optional int32 appellId = 1;//×°±¸³ÆºÅ
+	optional bool look = 2 ;//²éÑ¯³ÆºÅ
+}
