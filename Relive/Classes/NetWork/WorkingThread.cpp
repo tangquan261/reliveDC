@@ -70,28 +70,28 @@ int Connect()
     
     socketfd = socket(sa.sin_family, SOCK_STREAM, 0);
     
-    if (sockfd < 0)
+    if (socketfd < 0)
     {
         return -1;
     }
     
     //设置非堵塞的链接
-    int flags = fcntl(sockfd, F_GETFL, 0);
+    int flags = fcntl(socketfd, F_GETFL, 0);
     
-    fcntl(sockfd, F_SETFL, flags | O_NONBLOCK);
+    fcntl(socketfd, F_SETFL, flags | O_NONBLOCK);
 
-    connect(sockfd, (sockaddr*)&sa, sizeof(sa));
+    connect(socketfd, (sockaddr*)&sa, sizeof(sa));
     
     fd_set fdwrite;
     struct timeval tvSelect;
     
     FD_ZERO(&fdwrite);
-    FD_SET(sockfd, &fdwrite);
+    FD_SET(socketfd, &fdwrite);
     
     tvSelect.tv_sec = 10;
     tvSelect.tv_usec = 0;
     
-    int retval = select(sockfd+1, nullptr, &fdwrite, NULL, &tvSelect);
+    int retval = select(socketfd+1, nullptr, &fdwrite, NULL, &tvSelect);
     
     if (retval < 0)
     {
@@ -104,21 +104,21 @@ int Connect()
             perror("error");
         }
         
-        close(sockfd);
+        close(socketfd);
         return -1;
     }
     else if(retval == 0)
     {
         perror("select timeout...");
-        close(sockfd);
+        close(socketfd);
         return -1;
     }
     else
     {
         //设置回堵塞
-        flags = fcntl(sockfd, F_GETFL, 0);
+        flags = fcntl(socketfd, F_GETFL, 0);
         flags &= ~ O_NONBLOCK;
-        fcntl(sockfd, F_SETFL, flags);
+        fcntl(socketfd, F_SETFL, flags);
         
         //设置不被SIGPIPE信号中断，物理链路损坏时才不会导致程序直接被Terminate
         //在网络异常的时候如果程序收到SIGPIRE是会直接被退出的。
@@ -126,7 +126,7 @@ int Connect()
         sig.sa_handler = SIG_IGN;
         sigaction(SIGPIPE, &sig, NULL);
         
-        return sockfd;
+        return socketfd;
     }
 }
 
@@ -153,8 +153,8 @@ void swapHeader(Packageheader* header)
     
 }
 
-extern sem_t avail;
-extern sem_t avail1;
+extern sem_t SendSem;
+extern sem_t ListenSem;
 
 extern void decrptBytes(uint8_t* src, int length, uint8_t key[8]);
 extern google::protobuf::MessageLite * parseMessage(int protocalType, void *buffer, int length);
@@ -254,12 +254,14 @@ void * WorkingThread(void *p)
     static pthread_t listenid = 0;
     
     int reConnectCount = 0;
+
+ReStart:
     
     while (true)
     {
         sockfd = Connect();
         
-        if (sockfd <  0)
+        if (sockfd <=  0)
         {
             if (reConnectCount == 2)
             {
@@ -270,33 +272,55 @@ void * WorkingThread(void *p)
             
             reConnectCount++;
             usleep(20000);
+            
+            goto ReStart;
         }
+        
         break;
     }
     
     if (listenid)
     {
         //等待信号量
-        sem_wait(&avail1);
+        sem_wait(&ListenSem);
     }
     
     int nRet = pthread_create(&listenid, NULL, ReadSocketThread, p);
    
     if (-1 == nRet)
     {
-        return NULL;
+        return nullptr;
     }
     
+    pNetWork->m_bShouldReConnect = false;
     
     while (true)
     {
-        sem_wait(&avail);
+        sem_wait(&SendSem);
+        
+//        
+//        if (pNetWork->m_bShouldIsConnect)
+//        {
+//            listenid = 0;
+//            break;
+//        }
+//        
+//        if (pNetWork->m_bShouldReConnect)
+//        {
+//            close(sockfd);
+//            sockfd = 0;
+//            
+//            break;
+//        }
         
         DCRequest *request = pNetWork->getRequest();
         
         if (nullptr == request)
         {
-            break;
+            sem_wait(&SendSem);
+           
+            return NULL;
+           // request = pNetWork->getRequest();
         }
         int nSize = 0;
         uint8_t *buf = nullptr;

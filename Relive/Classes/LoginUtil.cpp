@@ -90,7 +90,7 @@ void LoginUtil::ApplySelectList()
 {
     
     uint32_t random = arc4random()%10000000;
-    std::string param = StringUtils::format("username=%s&site=%s&ran=%u&udid=%s&idfa=%s", m_userID.c_str(), m_stChoosedServer.serverId.c_str(),random,"anysssssdfsf1","");
+    std::string param = StringUtils::format("username=%s&site=%s&ran=%u&udid=%s&idfa=%s", m_userNameID.c_str(), m_stChoosedServer.serverId.c_str(),random,"anysssssdfsf1","");
     
     std::string url = m_stChoosedServer.ipAddress;
     
@@ -294,9 +294,9 @@ void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jso
         }
     }
     
-    std::string server_address;
-    std::string server_port;
-    std::string res_server_url;
+    extern std::string server_address;
+    extern int g_server_port;
+    extern std::string ResourceServer_address;
     
     size_t pos1 = strMsg.find("Address=\"");
     pos1 += 9;
@@ -305,20 +305,20 @@ void LoginUtil::onLoginResponse(std::string &strMsg, const rapidjson::Value& jso
     pos1 = strMsg.find("Port=\"", pos2);
     pos1 += 6;
     pos2 = strMsg.find("\"", pos1);
-    server_port = atoi(std::string(strMsg, pos1, pos2-pos1).c_str());
+    g_server_port = atoi(std::string(strMsg, pos1, pos2-pos1).c_str());
     
     pos1 = strMsg.find("Resources=\"");
     pos1 += 11;
     pos2 = strMsg.find("\"", pos1);
-    res_server_url = std::string(strMsg, pos1, pos2-pos1);
+    ResourceServer_address = std::string(strMsg, pos1, pos2-pos1);
     
 #ifdef COCOS2D_DEBUG
-    res_server_url = "http://192.168.1.13/ct/sq_resources/";
+    ResourceServer_address = "http://192.168.1.13/ct/sq_resources/";
 #endif
 
-    if (*res_server_url.rbegin() != '/')
+    if (*ResourceServer_address.rbegin() != '/')
     {
-        res_server_url += "/";
+        ResourceServer_address += "/";
     }
     //暂不考虑资源更新问题。
     
@@ -385,7 +385,7 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             }
             else
             {
-                HLStringUtil::GetJsonString(jsonMap, "user", m_userID);
+                HLStringUtil::GetJsonString(jsonMap, "user", m_userNameID);
                 HLStringUtil::GetJsonString(jsonMap, "key", m_Password);
                 
                 if (nCode == 1000)
@@ -421,10 +421,11 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             
             uint32_t unRandom = arc4random()%10000000;
             
+            
             m_tempPassword = HLStringUtil::Format("%u", unRandom * 10000000);
             m_key = HLStringUtil::Format("%u", unRandom);
             
-            std::string toencrypt = HLStringUtil::Format("%s|%s|%s|%s",m_userID.c_str(),m_Password.c_str(),m_key.c_str(),m_userID.c_str());
+            std::string toencrypt = HLStringUtil::Format("%s|%s|%s|%s", m_userNameID.c_str(), m_Password.c_str(), m_key.c_str(),m_userID.c_str());
             
             std::vector<unsigned char> MODULUS;
             std::vector<unsigned char> e;
@@ -452,7 +453,7 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             BIGNUM *bne,*bnn;//,*bnd;
             int ret, tlen;
             
-            unsigned  char *encData;
+            //unsigned  char *encData;
             
             bne = BN_new();
             
@@ -465,8 +466,11 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             r->n=bnn;
             
             tlen =  RSA_size(r);
-            encData =  (unsigned char *)malloc(tlen);
+            unsigned  char encData[128];
+            //encData =  (unsigned char *)malloc(tlen);
             bzero(encData, tlen);
+            
+            //toencrypt = "100000067|89761256462143696784213727312570|1140248|37310061";
             
             ret =  RSA_public_encrypt((int)toencrypt.length(), (const unsigned char *)toencrypt.c_str(), encData, r,  RSA_PKCS1_PADDING);
 
@@ -476,9 +480,7 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             }
             
             std::string encStr = CCSafety::encodeBase64(encData, ret);
-            
-            free(encData);
-            
+          
             RSA_free(r);
             
             std::string url = m_stChoosedServer.ipAddress;

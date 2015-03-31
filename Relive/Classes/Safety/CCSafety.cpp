@@ -53,7 +53,7 @@ std::string CCSafety::encodeBase64(const void* input, int inputLength)
     
     std::string strRet;
     
-    for (int i = 0; i < dataUsed; i++)
+    for (int i = 0; i < dataUsed-1; i++)
     {
         strRet.push_back(buffer[i]);
     }

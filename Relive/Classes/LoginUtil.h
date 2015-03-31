@@ -78,6 +78,8 @@ private:
     std::string m_strSessionID;
     
     std::string m_userName;
+    std::string m_userNameID;
+    
     std::string m_userID;
     std::string m_Password;
     

@@ -69,6 +69,13 @@ public:
     DCRequest * removeRequest();
     
     void clearQueue();
+    
+    bool empty()
+    {
+        pthread_mutex_lock(&m_Mutex);
+        return m_ListRequest.empty();
+        pthread_mutex_unlock(&m_Mutex);
+    }
 
 private:
     std::list<DCRequest *>m_ListRequest;
@@ -88,7 +95,9 @@ public:
     
     bool empty()
     {
+        pthread_mutex_lock(&m_Mutex);
         return m_ListRequest.empty();
+        pthread_mutex_unlock(&m_Mutex);
     }
     
 private:
@@ -121,9 +130,10 @@ public:
     virtual void update(float fDelta);
     void notifyNetEvent(const Packageheader& header, MessageLite* pMessage);
     
-private:
     bool m_bShouldReConnect;
     bool m_bShouldIsConnect;
+
+private:
     
     pthread_t workingID;
     pthread_mutex_t m_Mutex;
