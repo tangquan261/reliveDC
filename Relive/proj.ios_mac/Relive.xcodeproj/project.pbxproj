@@ -761,12 +761,12 @@
 				110F4C391ACB861E00650E4B /* HLSemaphore.h */,
 			);
 			name = Thread;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				110F4C321ACB85DF00650E4B /* Thread */,
 				117B7AB11AC5449600DC153D /* NetWork */,
 				11D341A01AC3BC70001FC9AD /* EventCommon */,
 				117BC6851AB17FAD00710C09 /* DataBase */,
@@ -827,6 +827,7 @@
 		117B7AB11AC5449600DC153D /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				110F4C321ACB85DF00650E4B /* Thread */,
 				117B7AB21AC544BC00DC153D /* HLProtocalType.h */,
 				117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */,
 				117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */,

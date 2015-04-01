@@ -16,7 +16,7 @@ typedef struct
     uint16_t length;
     uint16_t checksum;
     uint16_t code;
-    uint16_t toID;
+    uint32_t toID;
     uint32_t extend1;
     uint32_t extend2;
     

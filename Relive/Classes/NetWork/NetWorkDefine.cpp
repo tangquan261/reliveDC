@@ -58,7 +58,7 @@ void encryptPacketOut(uint8_t *msg, int length)
     {
         if (i > 0)
         {
-            SEND_KEY[i%8] = (SEND_KEY[i%8] + msg[i-1]^i);
+            SEND_KEY[i%8] = (SEND_KEY[i%8] + msg[i-1]) ^ i;
             msg[i] = (msg[i] ^ SEND_KEY[i%8]) + msg[i-1];
         }
         else

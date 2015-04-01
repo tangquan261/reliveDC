@@ -517,7 +517,7 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             
             using namespace com::road::yishi::proto::player;
             LoginReqMsg *pLoginReq = new LoginReqMsg();
-            
+    
             std::string md5 = CCSafety::ToMD5String(m_key.c_str());
             
             pLoginReq->set_key(md5);
@@ -526,7 +526,8 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
             
             for(int i = 0; i < 8; i++)
             {
-                KEY[i] = arc4random()%256-1;
+                KEY[i] = i+10;
+                
                 pLoginReq->add_ekeys(KEY[i]);
             }
             

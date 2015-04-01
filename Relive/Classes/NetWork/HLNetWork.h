@@ -34,6 +34,7 @@ public:
     
     DCRequest(unsigned int nType, MessageLite *pMessage):m_nType(nType),m_pMessage(pMessage)
     {
+        m_nextend1 = 0;
     }
     
     ~DCRequest()

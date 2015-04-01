@@ -29,7 +29,7 @@ public:
     
     void wait()
     {
-        std::unique_lock<std::mutex> lock{m_mutex};
+        std::unique_lock<std::mutex> lock(m_mutex);
         
         if (--m_nCount < 0)
         {

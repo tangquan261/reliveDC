@@ -38,7 +38,7 @@ void resetKeys()
     memcpy(RECV_KEY, TKEY, 8);
 }
 
-int sockfd = 0;
+int g_sockfd = 0;
 
 extern int g_server_port;
 extern std::string server_address;
@@ -130,17 +130,26 @@ int Connect()
     }
 }
 
+void EndianSwitch(int size, void* p)
+{
+    uint8_t* bytes = static_cast<uint8_t*>(p);
+    for (int i = 0; i < size/2; ++i)
+    {
+        std::swap(bytes[i], bytes[size-i-1]);
+    }
+}
+
 void swapHeader(Packageheader* header)
 {
     if(!HOST_IS_BIG_ENDIAN)
     {
-        NTOHS(header->header);
-        NTOHS(header->length);
-        NTOHS(header->checksum);
-        NTOHS(header->code);
-        NTOHLL(header->toID);
-        NTOHLL(header->extend1);
-        NTOHLL(header->extend2);
+        EndianSwitch(sizeof(int16_t), &header->header);
+        EndianSwitch(sizeof(int16_t), &header->length);
+        EndianSwitch(sizeof(int16_t), &header->checksum);
+        EndianSwitch(sizeof(int16_t), &header->code);
+        EndianSwitch(sizeof(int32_t), &header->toID);
+        EndianSwitch(sizeof(int32_t), &header->extend1);
+        EndianSwitch(sizeof(int32_t), &header->extend2);
         
 //        NativeToBigEndian<sizeof(int16_t)>(&header->header);
 //        NativeToBigEndian<sizeof(int16_t)>(&header->length);
@@ -163,8 +172,6 @@ extern google::protobuf::MessageLite * parseMessage(int protocalType, void *buff
 
 void * ReadSocketThread(void*p)
 {
-    CCLOG("hello world%u ",sockfd);
-    
     HLNetWork *pNetWork = (HLNetWork*)p;
     
     while (true)
@@ -178,9 +185,11 @@ void * ReadSocketThread(void*p)
         //读取消息头
         while (recvBytes <headSize)
         {
+            CCLOG("connect onlines by romote host begin");
             
-            ssize_t res = recv(sockfd, (uint8_t*)buffer+recvBytes, headSize-recvBytes, 0);
+            ssize_t res = recv(g_sockfd, (uint8_t*)buffer+recvBytes, headSize-recvBytes, 0);
             
+            CCLOG("connect onlines by romote host %ld", res);
             if (res <= 0)
             {
                 CCLOG("connect closed by romote host %ld", res);
@@ -218,7 +227,9 @@ void * ReadSocketThread(void*p)
             
             while (recvBytes < header.length - headSize)
             {
-                res = recv(sockfd, (uint8_t*)buffer+headSize+recvBytes, header.length-headSize-recvBytes, 0);
+                res = recv(g_sockfd, (uint8_t*)buffer+headSize+recvBytes, header.length-headSize-recvBytes, 0);
+                
+                CCLOG("connect onlines by romote host %ld", res);
                 
                 if (res <= 0)
                 {
@@ -250,6 +261,7 @@ void * ReadSocketThread(void*p)
 }
 
 #include "HLProtocalType.h"
+#include "HLStringUtil.h"
 
 void * WorkingThread(void *p)
 {
@@ -263,11 +275,12 @@ ReStart:
     
     while (true)
     {
-        sockfd = Connect();
+        g_sockfd = Connect();
         
-        if (sockfd <=  0)
+        if (g_sockfd <=  0)
         {
-            if (reConnectCount == 2)
+            //连续5次失败，则返回关闭
+            if (reConnectCount == 5)
             {
                 pNetWork->disconnect(true);
                 
@@ -289,10 +302,12 @@ ReStart:
         g_ListenSemaphone.wait();
     }
     
+    //创建接受网络线程
     int nRet = pthread_create(&listenid, NULL, ReadSocketThread, p);
    
     if (-1 == nRet)
     {
+        CCLOG("receive thread for read socket error");
         return nullptr;
     }
     
@@ -300,22 +315,37 @@ ReStart:
     
     while (true)
     {
+        
+        if (pNetWork->m_bShouldReConnect)
+        {
+            listenid = 0;
+            return nullptr;
+        }
+        
+        if (pNetWork->m_bShouldIsConnect)
+        {
+            goto  ReStart;
+        }
+        
         DCRequest *request = pNetWork->getRequest();
         
         while (NULL == request)
         {
-          
             g_SendSemaphone.wait();
             
             request = pNetWork->getRequest();
         }
         
         int nSize = 0;
-        uint8_t *buf = nullptr;
+        uint8_t buf[1000]; //= nullptr;
         
         if (request->m_nType == 0xffffffff)
         {
+            std::string qqKey = HLStringUtil::Format(qqKey.c_str(), server_address.c_str(), g_server_port);
+         
+            //buf = (uint8_t*)malloc(qqKey.length());
             
+            memcpy(buf, (uint8_t*)qqKey.c_str(), qqKey.length());
         }
         else
         {
@@ -338,7 +368,7 @@ ReStart:
             header.extend1  = request->m_nextend1;
             header.extend2  = getVersionInt();
             
-            buf = (uint8_t*)malloc(nSize);
+           // buf = (uint8_t*)malloc(nSize);
             
             header.length = nSize;
             memcpy(buf, &header, headSize);
@@ -365,7 +395,7 @@ ReStart:
         
         while (true)
         {
-            ssize_t res = send(sockfd, buf, nSize, 0);
+            ssize_t res = send(g_sockfd, buf, nSize, 0);
             
             if (res < 0)
             {
@@ -375,7 +405,7 @@ ReStart:
             else if(res != nSize)
             {
                 nSize -= res;
-                buf+=res;
+                //buf+=res;
             }
             else
             {
@@ -383,7 +413,6 @@ ReStart:
             }
         }
         
-        free(buf);
         delete request;
         request = nullptr;
     }

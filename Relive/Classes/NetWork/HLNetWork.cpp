@@ -25,7 +25,7 @@ std::string server_address;
 std::string ResourceServer_address;
 
 
-extern int sockfd;
+extern int g_sockfd;
 
 HLSemaphone g_SendSemaphone(0);
 HLSemaphone g_ListenSemaphone(0);
@@ -269,9 +269,9 @@ void HLNetWork::disconnect(bool berror)
        //不需要再重链接
        m_bShouldIsConnect = true;
        
-       close(sockfd);
+       close(g_sockfd);
        
-       sockfd = 0;
+       g_sockfd = 0;
        
        g_SendSemaphone.nofity_one();
    }
@@ -280,7 +280,7 @@ void HLNetWork::disconnect(bool berror)
 bool HLNetWork::isConnected()
 {
    
-    return sockfd !=  0;
+    return g_sockfd !=  0;
 }
 
 
