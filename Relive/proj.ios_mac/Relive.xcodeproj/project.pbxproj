@@ -373,6 +373,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		110F4C391ACB861E00650E4B /* HLSemaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSemaphore.h; path = Common/HLSemaphore.h; sourceTree = "<group>"; };
 		1139F90D1AA9876300E7530C /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		1139F9111AA98DD800E7530C /* CommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonDefine.h; sourceTree = "<group>"; };
 		1139F96E1AA9A5BD00E7530C /* libb64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = libb64.c; sourceTree = "<group>"; };
@@ -754,9 +755,18 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		110F4C321ACB85DF00650E4B /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				110F4C391ACB861E00650E4B /* HLSemaphore.h */,
+			);
+			name = Thread;
+			sourceTree = "<group>";
+		};
 		1139F9101AA98DAE00E7530C /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				110F4C321ACB85DF00650E4B /* Thread */,
 				117B7AB11AC5449600DC153D /* NetWork */,
 				11D341A01AC3BC70001FC9AD /* EventCommon */,
 				117BC6851AB17FAD00710C09 /* DataBase */,

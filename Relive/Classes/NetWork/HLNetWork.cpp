@@ -5,18 +5,30 @@
 //	Date        :   2015-03-27
 //	Description :网络协议
 //
-
-#include "HLNetWork.h"
 #include <string>
 #include <semaphore.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netdb.h>
+#include <sys/fcntl.h>
+
+#include "HLNetWork.h"
+
+#include "HLSemaphore.h"
+#include "HLServerDataManager.h"
+#include "UIServerManager.h"
+
 
 int g_server_port = 5000;
 std::string server_address;
 std::string ResourceServer_address;
 
 
-sem_t* SendSem;
-sem_t ListenSem;
+extern int sockfd;
+
+HLSemaphone g_SendSemaphone(0);
+HLSemaphone g_ListenSemaphone(0);
 
 DCRequestQueue::DCRequestQueue()
 {
@@ -171,7 +183,7 @@ void HLNetWork::addRequest(DCRequest *request)
         
         if (bNeedSem)
         {
-            sem_post(SendSem);
+            g_SendSemaphone.nofity_one();
         }
     }
 }
@@ -185,7 +197,7 @@ void HLNetWork::reconnect()
 {
     m_bShouldReConnect = true;
     
-    sem_post(SendSem);
+   g_SendSemaphone.nofity_one();
 }
 
 void HLNetWork::connect()
@@ -193,20 +205,13 @@ void HLNetWork::connect()
     extern void resetKeys();
     resetKeys();
     
-    //m_queue.clearQueue();
+    m_queue.clearQueue();
    
     if (m_bShouldIsConnect)
     {
-        sem_close(SendSem);
-        sem_close(&ListenSem);
+        
     }
-    
-    SendSem = sem_open("HLSendSem", O_CREAT, 0644, 0);
-    
-    //ListenSem = sem_open("HLLintenSem", O_CREAT, 0644, 0);
-    
-    //sem_init(&ListenSem, 0, 0);
-    
+   
     extern void * WorkingThread(void *p);
     
     pthread_create(&workingID, NULL, WorkingThread, this);
@@ -248,9 +253,6 @@ void HLNetWork::update(float fDelta)
     
 }
 
-#include "HLServerDataManager.h"
-#include "UIServerManager.h"
-
 void HLNetWork::notifyNetEvent(const Packageheader& header, MessageLite* pMessage)
 {
     HLServerDataManager::getSingleton()->parseResponse(header.code, pMessage);
@@ -259,14 +261,6 @@ void HLNetWork::notifyNetEvent(const Packageheader& header, MessageLite* pMessag
     UIServerManager::getSingleton()->notifyNetEvent(header, pMessage);
     
 }
-
- extern int sockfd;
-
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netdb.h>
-#include <sys/fcntl.h>
 
 void HLNetWork::disconnect(bool berror)
 {
@@ -279,7 +273,7 @@ void HLNetWork::disconnect(bool berror)
        
        sockfd = 0;
        
-       sem_post(SendSem);
+       g_SendSemaphone.nofity_one();
    }
 }
 

@@ -153,8 +153,10 @@ void swapHeader(Packageheader* header)
     
 }
 
-extern sem_t *SendSem;
-extern sem_t ListenSem;
+#include "HLSemaphore.h"
+
+extern HLSemaphone g_SendSemaphone;
+extern HLSemaphone g_ListenSemaphone;
 
 extern void decrptBytes(uint8_t* src, int length, uint8_t key[8]);
 extern google::protobuf::MessageLite * parseMessage(int protocalType, void *buffer, int length);
@@ -284,7 +286,7 @@ ReStart:
     if (listenid)
     {
         //等待信号量
-        sem_wait(&ListenSem);
+        g_ListenSemaphone.wait();
     }
     
     int nRet = pthread_create(&listenid, NULL, ReadSocketThread, p);
@@ -302,10 +304,8 @@ ReStart:
         
         while (NULL == request)
         {
-            int nValue = 0;
-           // sem_getvalue(SendSem, &nValue);
-            
-            sem_wait(SendSem);
+          
+            g_SendSemaphone.wait();
             
             request = pNetWork->getRequest();
         }
