@@ -150,16 +150,7 @@ void swapHeader(Packageheader* header)
         EndianSwitch(sizeof(int32_t), &header->toID);
         EndianSwitch(sizeof(int32_t), &header->extend1);
         EndianSwitch(sizeof(int32_t), &header->extend2);
-        
-//        NativeToBigEndian<sizeof(int16_t)>(&header->header);
-//        NativeToBigEndian<sizeof(int16_t)>(&header->length);
-//        NativeToBigEndian<sizeof(int16_t)>(&header->checksum);
-//        NativeToBigEndian<sizeof(int16_t)>(&header->code);
-//        NativeToBigEndian<sizeof(int32_t)>(&header->toID);
-//        NativeToBigEndian<sizeof(int32_t)>(&header->extend1);
-//        NativeToBigEndian<sizeof(int32_t)>(&header->extend2);
     }
-    
 }
 
 #include "HLSemaphore.h"
@@ -192,6 +183,9 @@ void * ReadSocketThread(void*p)
                 CCLOG("connect closed by romote host %ld", res);
                 
                 pNetWork->disconnect(true);
+                
+                g_ListenSemaphone.nofity_one();
+                
                 return NULL;
             }
             recvBytes += res;
@@ -216,7 +210,8 @@ void * ReadSocketThread(void*p)
             continue;
         }
         
-        uint8_t _buffer[1000];
+        static uint8_t _buffer[1000];
+        memset(_buffer, 0, 1000);
         
         if (header.length > sizeof(header))
         {
@@ -344,7 +339,8 @@ ReStart:
         }
         
         int nSize = 0;
-        uint8_t buf[1000];
+        static uint8_t buf[1000];
+        memset(buf, 0, 1000);
         
         if (request->m_nType == 0xffffffff)
         {
@@ -367,7 +363,7 @@ ReStart:
             
             if(nSize > 1000)
             {
-                CCLOG("error type: %u is too length %u", request->m_nType, nSize);
+                CCLOG("Send msg error type: %u is too length %u", request->m_nType, nSize);
                 
                 delete request;
                 request = nullptr;
