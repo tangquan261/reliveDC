@@ -8,6 +8,7 @@
 
 #ifndef Relive_NetWorkDefine_h
 #define Relive_NetWorkDefine_h
+
 #include <google/protobuf/message_lite.h>
 
 typedef struct

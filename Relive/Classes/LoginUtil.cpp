@@ -512,7 +512,7 @@ void LoginUtil::DoTaskRequest(int nType, cocos2d::network::HttpResponse *respons
         {
             onLoginResponse(strMsg, jsonMap);
             
-            HLNetWork::getInstance()->connect();
+            HLNetWork::getInstance()->NetWorkconnect();
             
             
             using namespace com::road::yishi::proto::player;

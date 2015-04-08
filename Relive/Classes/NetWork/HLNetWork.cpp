@@ -146,16 +146,16 @@ HLNetWork::HLNetWork()
     
     this->scheduleUpdate();
     
-    m_bShouldReConnect = false;
-    m_bShouldIsConnect = false;
+    m_bShouldReconnect = false;
+    m_bShouldDisconnect = false;
 }
 
 HLNetWork::~HLNetWork()
 {
     this->unscheduleUpdate();
     
-    m_bShouldReConnect = false;
-    m_bShouldIsConnect = false;
+    m_bShouldReconnect = false;
+    m_bShouldDisconnect = false;
 }
 
 HLNetWork * HLNetWork::getInstance()
@@ -193,24 +193,19 @@ DCRequest *HLNetWork::getRequest()
     return m_queue.removeRequest();
 }
 
-void HLNetWork::reconnect()
+void HLNetWork::NetWorkReconnect()
 {
-    m_bShouldReConnect = true;
+    m_bShouldReconnect = true;
     
    g_SendSemaphone.nofity_one();
 }
 
-void HLNetWork::connect()
+void HLNetWork::NetWorkconnect()
 {
     extern void resetKeys();
     resetKeys();
     
     m_queue.clearQueue();
-   
-    if (m_bShouldIsConnect)
-    {
-        
-    }
    
     extern void * WorkingThread(void *p);
     
@@ -264,22 +259,35 @@ void HLNetWork::notifyNetEvent(const Packageheader& header, MessageLite* pMessag
 
 void HLNetWork::disconnect(bool berror)
 {
-   if(!m_bShouldIsConnect)
+    if (0 == g_sockfd)
+    {
+        return;
+    }
+    
+   if(!m_bShouldDisconnect)
    {
        //不需要再重链接
-       m_bShouldIsConnect = true;
+       m_bShouldDisconnect = true;
        
        close(g_sockfd);
        
        g_sockfd = 0;
        
        g_SendSemaphone.nofity_one();
+       
+       if (berror)
+       {
+           CCLOG("网络异常错误提示");
+       }
+       else
+       {
+           CCLOG("网络异常，登出");
+       }
    }
 }
 
 bool HLNetWork::isConnected()
 {
-   
     return g_sockfd !=  0;
 }
 

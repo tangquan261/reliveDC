@@ -23,7 +23,6 @@ const uint16_t PackageOutHeaderNo = 0x71ab;
 using namespace google::protobuf;
 
 
-
 class DCRequest
 {
 public:
@@ -58,8 +57,6 @@ private:
         m_nType = 0;
         m_nextend1 = 0;
     }
-    
-    
 };
 
 class DCRequestQueue
@@ -130,8 +127,8 @@ public:
     
     DCRequest *getRequest();
     
-    void reconnect();
-    void connect();
+    void NetWorkReconnect();
+    void NetWorkconnect();
     void disconnect(bool berror = false);
     
     bool isConnected();
@@ -142,8 +139,8 @@ public:
     virtual void update(float fDelta);
     void notifyNetEvent(const Packageheader& header, MessageLite* pMessage);
     
-    bool m_bShouldReConnect;
-    bool m_bShouldIsConnect;
+    bool m_bShouldReconnect;
+    bool m_bShouldDisconnect;
 
 private:
     

@@ -179,17 +179,14 @@ void * ReadSocketThread(void*p)
         const int headSize = sizeof(Packageheader);
         Packageheader header;
         
-        void *buffer = &header;
+        void *bufferTemp = &header;
         int recvBytes = 0;
         
         //读取消息头
-        while (recvBytes <headSize)
+        while (recvBytes < headSize)
         {
-            CCLOG("connect onlines by romote host begin");
+            ssize_t res = recv(g_sockfd, (uint8_t*)bufferTemp+recvBytes, headSize-recvBytes, 0);
             
-            ssize_t res = recv(g_sockfd, (uint8_t*)buffer+recvBytes, headSize-recvBytes, 0);
-            
-            CCLOG("connect onlines by romote host %ld", res);
             if (res <= 0)
             {
                 CCLOG("connect closed by romote host %ld", res);
@@ -212,14 +209,19 @@ void * ReadSocketThread(void*p)
             swapHeader(&header);
         }
         
-        CCLOG("header received 0x%04X  ",header.code);
+        CCLOG("header received 0x%04X lenght:%d",header.code, header.length);
+        
+        if (header.length > 1000)
+        {
+            continue;
+        }
+        
+        uint8_t _buffer[1000];
         
         if (header.length > sizeof(header))
         {
             //包体有继续要读的内容
-            buffer = malloc(header.length);
-            
-            memcpy(buffer, &headTemp, headSize);
+            memcpy(_buffer, &headTemp, headSize);
             
             recvBytes = 0;
             
@@ -227,33 +229,32 @@ void * ReadSocketThread(void*p)
             
             while (recvBytes < header.length - headSize)
             {
-                res = recv(g_sockfd, (uint8_t*)buffer+headSize+recvBytes, header.length-headSize-recvBytes, 0);
-                
-                CCLOG("connect onlines by romote host %ld", res);
+                res = recv(g_sockfd, (uint8_t*)_buffer+headSize+recvBytes, header.length-headSize-recvBytes, 0);
                 
                 if (res <= 0)
                 {
                     CCLOG("connect closed by romote host %ld", res);
                     pNetWork->disconnect(true);
+                    
+                    g_ListenSemaphone.nofity_one();
+                    
                     return NULL;
                 }
 
                 recvBytes += res;
             }
             
-            decrptBytes((uint8_t*)buffer, header.length, RECV_KEY);
+            decrptBytes((uint8_t*)_buffer, header.length, RECV_KEY);
             
-            MessageLite *message = parseMessage(header.code, (uint8_t*)buffer+headSize, header.length-headSize);
+            MessageLite *message = parseMessage(header.code, (uint8_t*)_buffer+headSize, header.length-headSize);
             
-            free(buffer);
             
             pNetWork->addResponseQueue(header, message);
-            
             
         }
         else
         {
-            decrptBytes((uint8_t*)buffer, header.length, RECV_KEY);
+            decrptBytes((uint8_t*)&header, header.length, RECV_KEY);
             
             pNetWork->addResponseQueue(header, nullptr);
         }
@@ -263,15 +264,21 @@ void * ReadSocketThread(void*p)
 #include "HLProtocalType.h"
 #include "HLStringUtil.h"
 
+static pthread_t g_listenid = 0;
+
 void * WorkingThread(void *p)
 {
     HLNetWork *pNetWork = (HLNetWork*)p;
     
-    static pthread_t listenid = 0;
-    
     int reConnectCount = 0;
 
 ReStart:
+    
+    if (g_listenid != 0)
+    {
+        ////异常重连，等待读线程释放 ReadSocketThread
+        g_ListenSemaphone.wait();
+    }
     
     while (true)
     {
@@ -288,6 +295,7 @@ ReStart:
             }
             
             reConnectCount++;
+            
             usleep(20000);
             
             goto ReStart;
@@ -296,14 +304,8 @@ ReStart:
         break;
     }
     
-    if (listenid)
-    {
-        //等待信号量
-        g_ListenSemaphone.wait();
-    }
-    
     //创建接受网络线程
-    int nRet = pthread_create(&listenid, NULL, ReadSocketThread, p);
+    int nRet = pthread_create(&g_listenid, NULL, ReadSocketThread, p);
    
     if (-1 == nRet)
     {
@@ -311,21 +313,10 @@ ReStart:
         return nullptr;
     }
     
-    pNetWork->m_bShouldReConnect = false;
+    pNetWork->m_bShouldReconnect = false;
     
     while (true)
     {
-        
-        if (pNetWork->m_bShouldReConnect)
-        {
-            listenid = 0;
-            return nullptr;
-        }
-        
-        if (pNetWork->m_bShouldIsConnect)
-        {
-            goto  ReStart;
-        }
         
         DCRequest *request = pNetWork->getRequest();
         
@@ -333,11 +324,27 @@ ReStart:
         {
             g_SendSemaphone.wait();
             
+            if (pNetWork->m_bShouldDisconnect)
+            {
+                //某地方调用了disconnect 导致网络关闭，退出线程
+                g_listenid = 0;
+                return nullptr;
+            }
+            
+            if (pNetWork->m_bShouldReconnect)
+            {
+                //需要重新连接网络 goto ReStart
+                close(g_sockfd);
+                g_sockfd = 0;
+                
+                goto  ReStart;
+            }
+            
             request = pNetWork->getRequest();
         }
         
         int nSize = 0;
-        uint8_t buf[1000]; //= nullptr;
+        uint8_t buf[1000];
         
         if (request->m_nType == 0xffffffff)
         {
@@ -358,6 +365,16 @@ ReStart:
                 nSize = request->m_pMessage->ByteSize() + headSize;
             }
             
+            if(nSize > 1000)
+            {
+                CCLOG("error type: %u is too length %u", request->m_nType, nSize);
+                
+                delete request;
+                request = nullptr;
+                
+                continue;
+            }
+            
             memset(&header, 0, headSize);
             header.header   = PackageOutHeaderNo;
             header.code     = request->m_nType;
@@ -371,6 +388,7 @@ ReStart:
            // buf = (uint8_t*)malloc(nSize);
             
             header.length = nSize;
+            
             memcpy(buf, &header, headSize);
             
             if (nullptr != request->m_pMessage)
@@ -393,19 +411,23 @@ ReStart:
             }
         }
         
+        int nIndex = 0;
+        
         while (true)
         {
-            ssize_t res = send(g_sockfd, buf, nSize, 0);
+            ssize_t res = send(g_sockfd, buf + nIndex, nSize, 0);
             
             if (res < 0)
             {
                 CCLOG("error send");
-                pNetWork->disconnect();
+                pNetWork->disconnect(true);
+                break;
             }
             else if(res != nSize)
             {
+                nIndex += res;
+                
                 nSize -= res;
-                //buf+=res;
             }
             else
             {
