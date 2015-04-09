@@ -26,7 +26,7 @@ HLMapDataLoader::~HLMapDataLoader()
 
 void HLMapDataLoader::LoadFiles()
 {
-    string filepath = CCFileUtils::getInstance()->fullPathForFilename(HLStringUtil::Format("%d.tl", m_nMapFileID));
+    string filepath = CCFileUtils::getInstance()->fullPathForFilename(HLStringUtil::Format("Map/mapData/%d.tl", m_nMapFileID));
     
     //读取的内容
     Data data= CCFileUtils::getInstance()->getDataFromFile(filepath);
@@ -74,4 +74,13 @@ int HLMapDataLoader::GetTileValue(int nx, int ny)
     return 0;
 }
 
+bool HLMapDataLoader::isBlock(const MapPosition &pos)
+{
+    //不可行走区域
+    return  0 == GetTileValue(pos.x, pos.y);
+}
 
+bool HLMapDataLoader::isBlock(int nX, int nY)
+{
+     return  0 == GetTileValue(nX, nY);
+}

@@ -19,6 +19,13 @@
 
 #include "CustomRootNode.h"
 
+
+#include "HLTiledMapDraw.h"
+#include "HLMapDataLoader.h"
+#include "HLPathFinder.h"
+
+
+
 using namespace cocos2d;
 using namespace cocostudio;
 using namespace ui;
@@ -58,6 +65,10 @@ void LoginViewScene::clear()
 
 bool LoginViewScene::init()
 {
+    
+    HLTiledMapDraw * p = new HLTiledMapDraw();
+    p->RegisterScene(100);
+    
     // 1. super init first
     if ( !Layer::init() )
     {

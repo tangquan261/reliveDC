@@ -8,11 +8,18 @@
 
 #ifndef __HL_MAP_DATA_LOADER_H__
 #define __HL_MAP_DATA_LOADER_H__
+// F = G + H
+// H = current to end 预估余下部分的数值（计算H的方法很多）
+// G start to Current节点的的移动数值
+// H的计算方法 1.MAX(dx, dy) 2. sqrt(dx*dx + dy*dy)欧几里德距离
+//  3. min(dx,dy)*0.414 + max(dx, dy) 4. D*(abs(nx-gx) + abs(ny-gy) 曼哈顿距离
 
 #include <stdio.h>
 #include <map>
 
 #include "HLSingleton.h"
+#include "CityMinHeap.h"
+
 using namespace cocos2d;
 
 enum MAP_TILE_TYPE
@@ -41,7 +48,7 @@ const int MAX_TILE_TYPE = 8;
 class HLMapDataLoader : public HLSingleton<HLMapDataLoader>
 {
 public:
-    
+    HLMapDataLoader();
     ~HLMapDataLoader();
     
     void LoadFiles();
@@ -51,27 +58,36 @@ public:
     
     int GetTileValue(int nx, int ny);
     
-
+    //是否不可行走
+    bool isBlock(const MapPosition &pos);
+    bool isBlock(int nX, int nY);
+    
     template < typename T>
     void ReadFile(Data &Filedata)
     {
+        int nIndex = 0;
+        
         uint8_t *pFile = Filedata.getBytes();
         
-        pFile += sizeof(uint16_t);
+        nIndex += sizeof(uint16_t);
         
         T pos;
         int nKey;
         
         uint16_t nCnt[MAX_TILE_TYPE-1];
         
-        memcpy(nCnt, pFile, sizeof(nCnt));
+        memcpy(nCnt, pFile + nIndex, sizeof(nCnt));
         
-        for (int i = 0; i < MAX_TILE_TYPE; i++)
+        nIndex += sizeof(nCnt);
+        
+        for (int i = 1; i < MAX_TILE_TYPE; i++)
         {
-            for (int j = 0; j < nCnt[i]; j++)
+            for (int j = 0; j < nCnt[i-1]; j++)
             {
-                memcpy(&pos, pFile, sizeof(pos));
-                nKey = pos.x << 16 ||  pos.y;
+                memcpy(&pos, pFile + nIndex, sizeof(pos));
+                nIndex += sizeof(pos);
+                nKey = pos.x << 16 |  pos.y;
+                
                 m_maptiles[nKey] = i;
             }
         }
@@ -79,7 +95,6 @@ public:
     }
     
 private:
-     HLMapDataLoader();
     int m_nMapFileID;
     
     std::map<int, char> m_maptiles;
