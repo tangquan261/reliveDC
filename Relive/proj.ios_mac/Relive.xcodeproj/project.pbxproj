@@ -23,6 +23,12 @@
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
 		1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
+		1174FAB01AD50B73001BF4DB /* HLMapDataLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAAE1AD50B73001BF4DB /* HLMapDataLoader.cpp */; };
+		1174FAB11AD50B73001BF4DB /* HLMapDataLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAAE1AD50B73001BF4DB /* HLMapDataLoader.cpp */; };
+		1174FAB41AD51C44001BF4DB /* CityMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAB21AD51C44001BF4DB /* CityMinHeap.cpp */; };
+		1174FAB51AD51C44001BF4DB /* CityMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAB21AD51C44001BF4DB /* CityMinHeap.cpp */; };
+		1174FAB81AD51C98001BF4DB /* HLPathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAB61AD51C98001BF4DB /* HLPathFinder.cpp */; };
+		1174FAB91AD51C98001BF4DB /* HLPathFinder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1174FAB61AD51C98001BF4DB /* HLPathFinder.cpp */; };
 		117B7AB41AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
 		117B7AB51AC5452F00DC153D /* HLProtocalType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */; };
 		117B7AB81AC54B9B00DC153D /* HLNetWork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */; };
@@ -392,6 +398,12 @@
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
 		1156DE421AC8F96300836687 /* HLVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLVersion.cpp; path = Common/HLVersion.cpp; sourceTree = "<group>"; };
 		1156DE431AC8F96300836687 /* HLVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLVersion.h; path = Common/HLVersion.h; sourceTree = "<group>"; };
+		1174FAAE1AD50B73001BF4DB /* HLMapDataLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLMapDataLoader.cpp; path = Scene/HLMapDataLoader.cpp; sourceTree = "<group>"; };
+		1174FAAF1AD50B73001BF4DB /* HLMapDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLMapDataLoader.h; path = Scene/HLMapDataLoader.h; sourceTree = "<group>"; };
+		1174FAB21AD51C44001BF4DB /* CityMinHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CityMinHeap.cpp; path = Scene/CityMinHeap.cpp; sourceTree = "<group>"; };
+		1174FAB31AD51C44001BF4DB /* CityMinHeap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityMinHeap.h; path = Scene/CityMinHeap.h; sourceTree = "<group>"; };
+		1174FAB61AD51C98001BF4DB /* HLPathFinder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLPathFinder.cpp; path = Scene/HLPathFinder.cpp; sourceTree = "<group>"; };
+		1174FAB71AD51C98001BF4DB /* HLPathFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLPathFinder.h; path = Scene/HLPathFinder.h; sourceTree = "<group>"; };
 		117B7AB21AC544BC00DC153D /* HLProtocalType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLProtocalType.h; sourceTree = "<group>"; };
 		117B7AB31AC5452F00DC153D /* HLProtocalType.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLProtocalType.cpp; sourceTree = "<group>"; };
 		117B7AB61AC54B9B00DC153D /* HLNetWork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLNetWork.cpp; sourceTree = "<group>"; };
@@ -824,6 +836,19 @@
 			path = sha1;
 			sourceTree = "<group>";
 		};
+		1174FAA81AD50B43001BF4DB /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				1174FAB21AD51C44001BF4DB /* CityMinHeap.cpp */,
+				1174FAB31AD51C44001BF4DB /* CityMinHeap.h */,
+				1174FAAE1AD50B73001BF4DB /* HLMapDataLoader.cpp */,
+				1174FAAF1AD50B73001BF4DB /* HLMapDataLoader.h */,
+				1174FAB61AD51C98001BF4DB /* HLPathFinder.cpp */,
+				1174FAB71AD51C98001BF4DB /* HLPathFinder.h */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
 		117B7AB11AC5449600DC153D /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
@@ -1223,6 +1248,7 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1174FAA81AD50B43001BF4DB /* Scene */,
 				1139F9101AA98DAE00E7530C /* Common */,
 				11F78DDC1AA8430D008034E5 /* Login */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
@@ -1605,6 +1631,7 @@
 				11815D071ACAB1D00029E9FB /* CheckNick.pb.cpp in Sources */,
 				11815D6F1ACAB1D00029E9FB /* PlayerRenameReq.pb.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
+				1174FAB01AD50B73001BF4DB /* HLMapDataLoader.cpp in Sources */,
 				11815D371ACAB1D00029E9FB /* PayType.pb.cpp in Sources */,
 				11815D731ACAB1D00029E9FB /* PlayerRenameRsp.pb.cpp in Sources */,
 				1139F97C1AA9A5BD00E7530C /* md5.cpp in Sources */,
@@ -1622,6 +1649,8 @@
 				11815CEF1ACAB1D00029E9FB /* AppellExchange.pb.cpp in Sources */,
 				11815D431ACAB1D00029E9FB /* PlayerAASReq.pb.cpp in Sources */,
 				1139F9831AA9B32D00E7530C /* md5String.cpp in Sources */,
+				1174FAB41AD51C44001BF4DB /* CityMinHeap.cpp in Sources */,
+				1174FAB81AD51C98001BF4DB /* HLPathFinder.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				11815D9B1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */,
 				11815D4F1ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */,
@@ -1655,6 +1684,7 @@
 				11815D281ACAB1D00029E9FB /* LoginReq.pb.cpp in Sources */,
 				11815D481ACAB1D00029E9FB /* PlayerAASRsp.pb.cpp in Sources */,
 				11815D7C1ACAB1D00029E9FB /* PlayerSignRsp.pb.cpp in Sources */,
+				1174FAB11AD50B73001BF4DB /* HLMapDataLoader.cpp in Sources */,
 				11815D881ACAB1D00029E9FB /* RefuseFriendRsp.pb.cpp in Sources */,
 				11815D2C1ACAB1D00029E9FB /* LoginState.pb.cpp in Sources */,
 				11815D241ACAB1D00029E9FB /* KingContractMsg.pb.cpp in Sources */,
@@ -1673,6 +1703,7 @@
 				1139F97B1AA9A5BD00E7530C /* CCSafety.cpp in Sources */,
 				11815D841ACAB1D00029E9FB /* RateUpdateReq.pb.cpp in Sources */,
 				11815D9C1ACAB1D00029E9FB /* SystemPropertyMsg.pb.cpp in Sources */,
+				1174FAB51AD51C44001BF4DB /* CityMinHeap.cpp in Sources */,
 				1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */,
 				11815D5C1ACAB1D00029E9FB /* PlayerMoveCamera.pb.cpp in Sources */,
 				11815D601ACAB1D00029E9FB /* PlayerMovie.pb.cpp in Sources */,
@@ -1692,6 +1723,7 @@
 				11D4317D1AC80986004D730E /* UIServerManager.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 				11D431601AC804F3004D730E /* HLServerDataManager.cpp in Sources */,
+				1174FAB91AD51C98001BF4DB /* HLPathFinder.cpp in Sources */,
 				11815D4C1ACAB1D00029E9FB /* PlayerActiveReq.pb.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				11815D501ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */,
