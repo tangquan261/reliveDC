@@ -115,16 +115,16 @@ int Connect()
     }
     else
     {
-        //设置回堵塞
-        flags = fcntl(socketfd, F_GETFL, 0);
-        flags &= ~ O_NONBLOCK;
-        fcntl(socketfd, F_SETFL, flags);
-        
-        //设置不被SIGPIPE信号中断，物理链路损坏时才不会导致程序直接被Terminate
-        //在网络异常的时候如果程序收到SIGPIRE是会直接被退出的。
-        struct sigaction sig;
-        sig.sa_handler = SIG_IGN;
-        sigaction(SIGPIPE, &sig, NULL);
+//        //设置回堵塞
+//        flags = fcntl(socketfd, F_GETFL, 0);
+//        flags &= ~ O_NONBLOCK;
+//        fcntl(socketfd, F_SETFL, flags);
+//        
+//        //设置不被SIGPIPE信号中断，物理链路损坏时才不会导致程序直接被Terminate
+//        //在网络异常的时候如果程序收到SIGPIRE是会直接被退出的。
+//        struct sigaction sig;
+//        sig.sa_handler = SIG_IGN;
+//        sigaction(SIGPIPE, &sig, NULL);
         
         return socketfd;
     }
@@ -180,6 +180,13 @@ void * ReadSocketThread(void*p)
             
             if (res <= 0)
             {
+                if(res < 0 && errno == EAGAIN)
+                {
+                    //当errno为EAGAIN时,表示当前缓冲区已无数据可读
+                    usleep(20000);
+                    continue;
+                }
+                
                 CCLOG("connect closed by romote host %ld", res);
                 
                 pNetWork->disconnect(true);
@@ -188,6 +195,7 @@ void * ReadSocketThread(void*p)
                 
                 return NULL;
             }
+            
             recvBytes += res;
         }
         
@@ -228,6 +236,14 @@ void * ReadSocketThread(void*p)
                 
                 if (res <= 0)
                 {
+                    
+                    if(res < 0 && errno == EAGAIN)
+                    {
+                        //当errno为EAGAIN时,表示当前缓冲区已无数据可读
+                        usleep(20000);
+                        continue;
+                    }
+                
                     CCLOG("connect closed by romote host %ld", res);
                     pNetWork->disconnect(true);
                     
