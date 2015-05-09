@@ -25,6 +25,9 @@
 #include "HLPathFinder.h"
 
 
+#include "TiledMapDrawTest.h"
+
+
 
 using namespace cocos2d;
 using namespace cocostudio;
@@ -63,11 +66,30 @@ void LoginViewScene::clear()
     
 }
 
+void LoginViewScene::draw(Renderer* renderer, const Mat4 &transform, uint32_t flags)
+{
+    Layer::draw(renderer, transform, flags);
+    
+//    Image p;
+//    p.initWithImageFile("CloseNormal.png");
+//    
+//    Texture2D p1;
+//    p1.initWithImage(&p);
+    
+   // p1.drawAtPoint(Point(50,110));
+    
+}
+
 bool LoginViewScene::init()
 {
+    //HLTiledMapDraw * p = new HLTiledMapDraw();
+    //p->RegisterScene(100);
     
-    HLTiledMapDraw * p = new HLTiledMapDraw();
-    p->RegisterScene(100);
+    TiledMapDrawTest *p = new TiledMapDrawTest();
+    
+    p->RegisterScene(10000);
+    
+    this->addChild(p);
     
     // 1. super init first
     if ( !Layer::init() )
@@ -83,7 +105,7 @@ bool LoginViewScene::init()
     
     rootNode->setScale(0.5);
     
-    addChild(rootNode);
+    //addChild(rootNode);
     
     LoginUtil::getSingleton()->ApplyServerList();
 

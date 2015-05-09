@@ -21,6 +21,8 @@
 		1139F9841AA9B32D00E7530C /* md5String.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9811AA9B32D00E7530C /* md5String.cpp */; };
 		1139F9871AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
 		1139F9881AA9B91E00E7530C /* LoginUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1139F9851AA9B91E00E7530C /* LoginUtil.cpp */; };
+		115480FF1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115480FD1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp */; };
+		115481051ADCFB1B008C1CE0 /* TiledMapDrawTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115480FD1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp */; };
 		1156DE441AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
 		1156DE451AC8F96300836687 /* HLVersion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1156DE421AC8F96300836687 /* HLVersion.cpp */; };
 		115CA8391AD6983A00557CC3 /* CityMinHeap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 115CA8311AD6983A00557CC3 /* CityMinHeap.cpp */; };
@@ -398,6 +400,8 @@
 		1139F9851AA9B91E00E7530C /* LoginUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoginUtil.cpp; sourceTree = "<group>"; };
 		1139F9861AA9B91E00E7530C /* LoginUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginUtil.h; sourceTree = "<group>"; };
 		1139F9891AA9BBA400E7530C /* HLSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLSingleton.h; path = Common/HLSingleton.h; sourceTree = "<group>"; };
+		115480FD1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TiledMapDrawTest.cpp; sourceTree = "<group>"; };
+		115480FE1ADCFB14008C1CE0 /* TiledMapDrawTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TiledMapDrawTest.h; sourceTree = "<group>"; };
 		1156DE421AC8F96300836687 /* HLVersion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HLVersion.cpp; path = Common/HLVersion.cpp; sourceTree = "<group>"; };
 		1156DE431AC8F96300836687 /* HLVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HLVersion.h; path = Common/HLVersion.h; sourceTree = "<group>"; };
 		115CA8311AD6983A00557CC3 /* CityMinHeap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CityMinHeap.cpp; sourceTree = "<group>"; };
@@ -851,6 +855,8 @@
 				115CA8361AD6983A00557CC3 /* HLPathFinder.h */,
 				115CA8371AD6983A00557CC3 /* HLTiledMapDraw.cpp */,
 				115CA8381AD6983A00557CC3 /* HLTiledMapDraw.h */,
+				115480FD1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp */,
+				115480FE1ADCFB14008C1CE0 /* TiledMapDrawTest.h */,
 			);
 			name = Map;
 			path = Scene/Map;
@@ -1622,6 +1628,7 @@
 				11815D3B1ACAB1D00029E9FB /* Player.pb.cpp in Sources */,
 				11815D0B1ACAB1D00029E9FB /* CheckSend.pb.cpp in Sources */,
 				11815D031ACAB1D00029E9FB /* ChallengeRankReward.pb.cpp in Sources */,
+				115480FF1ADCFB14008C1CE0 /* TiledMapDrawTest.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				11815D131ACAB1D00029E9FB /* EffectRemoveReq.pb.cpp in Sources */,
 				11815D1B1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */,
@@ -1742,6 +1749,7 @@
 				115CA83E1AD6983A00557CC3 /* HLPathFinder.cpp in Sources */,
 				11F78DCA1AA80F74008034E5 /* LoginViewScene.cpp in Sources */,
 				11815D501ACAB1D00029E9FB /* PlayerActiveRsp.pb.cpp in Sources */,
+				115481051ADCFB1B008C1CE0 /* TiledMapDrawTest.cpp in Sources */,
 				117BC6FE1AB18F9100710C09 /* DataBaseHelper.cpp in Sources */,
 				117B7AC41AC5840500DC153D /* NetWorkDefine.cpp in Sources */,
 				11815D1C1ACAB1D00029E9FB /* GuardMsg.pb.cpp in Sources */,
